@@ -1,0 +1,35 @@
+@mixin MainSlaiderImage_320px {
+    @media (min-width:320px)and (max-width:425px) {
+    width: 100vw;
+    height:100vw;
+    object-fit: cover;
+        animation: none;
+        @content
+    }
+}
+@mixin MainSlaiderCPanelBtn_320px {
+    @media (min-width:320px)and (max-width:425px) {
+    width: 10px;
+    height:10px;
+    border-radius: 5px solid white;
+        @content
+    }
+}
+
+@mixin MainSlaiderTextPromo_320px {
+    @media (min-width:320px)and (max-width:425px) {
+    font-size:1vw ;
+        @content
+    }
+}
+
+@mixin MainSlaiderTargetBtn_320px {
+    @media (min-width:320px)and (max-width:425px) {
+     position: absolute;
+    width: 30vw;
+    left: 15%;
+    top: 10%;
+    font-size: 3vw;
+        @content
+    }
+}

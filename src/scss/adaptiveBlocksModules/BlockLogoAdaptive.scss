@@ -1,0 +1,89 @@
+@mixin fontAdpt($sizePCMonitor:15px,$sizeTablet:2vw,$sizeLowMobile:4vw) {
+    @media  (min-width:1024px) {
+         font-size: $sizePCMonitor;
+         @content
+    }
+     @media  (min-width:769px) and (max-width:1440px) {
+        font-size: 15px;
+         left: 50px;
+         top: 19%;
+         margin: 0;
+         position: absolute;
+     width:70px;
+         @content
+    }
+     @media  (min-width:425px) and (max-width:768px) {
+         font-size: 15px;
+         left: 50px;
+         top: 19%;
+         margin: 0;
+         position: absolute;
+     width:70px;
+         @content
+    }
+    @media  (min-width:320px) and (max-width:425px) {
+         font-size: 3.3vw;
+         left: 11vw;
+         top: 19%;
+         margin: 0;
+         position: absolute;
+     width:25vw;
+         @content
+    }
+}
+@mixin ClayAgeLogo {
+
+@media  (min-width:769px) and (max-width:1440px) {
+       position: absolute;
+         left:10px;
+         top:19%;
+         margin: 0;
+         width:9.4vw;
+         max-width: 40px;
+    height: auto;
+         @content
+    } 
+
+   @media  (min-width:425px) and (max-width:768px) {
+       position: absolute;
+         left:10px;
+         top:19%;
+         margin: 0;
+         width:9.4vw;
+         max-width: 40px;
+    height: auto;
+         @content
+    } 
+    @media  (min-width:320px) and (max-width:425px) {
+         position: absolute;
+         left:2%;
+         top:19%;
+         margin: 0;
+         width:9.4vw;
+    height: auto;
+         @content
+    } 
+
+   
+}
+@mixin blockLogo_Width{
+@media  (min-width:769px) and (max-width:1440px) {
+         
+     width:30vw;
+     margin-left: -11px;
+         @content
+    }
+
+@media  (min-width:425px) and (max-width:768px) {
+         
+     width:30vw;
+     margin-left: -11px;
+         @content
+    }
+@media  (min-width:320px) and (max-width:425px) {
+         
+     width:30vw;
+     margin-left: -11px;
+         @content
+    }
+}

@@ -1,0 +1,27 @@
+@mixin InfoHeadersMobileRender {
+    @media (min-width:320px)and(max-width:425px){
+        background: white;
+        width:100vw;
+        padding-top: 12%;
+        padding-bottom: 5%;
+        color:black;
+      
+    }
+    @content
+}
+@mixin InfoBlockMobileRender {
+    @media (min-width:320px)and(max-width:425px){
+         width:100vw;
+        padding-top:0;
+     }
+    @content
+
+}
+@mixin InfoBlockBackgroundMobileRender {
+    @media (min-width:320px)and(max-width:425px){
+         left:0;
+        
+     }
+    @content
+
+}

@@ -1,0 +1,45 @@
+@mixin ExampleWorksCont_Width_Position ($SmallMobile:100vw, $LargeMobile:40vw) {
+  @media  (min-width:769px) and (max-width:1440px) {
+        width: calc(600px - 6vw);
+        margin: auto;
+        margin-top: 15%;
+        box-shadow: 0px 0px 10px 1px black;
+         @content
+    } 
+  
+  
+     @media  (min-width:425px) and (max-width:768px) {
+        width: calc(425px - 6vw);
+        margin: auto;
+        margin-top: 35%;
+        box-shadow: 0px 0px 10px 1px black;
+         @content
+    } 
+
+    @media  (min-width:320px) and (max-width:425px) {
+       width:$SmallMobile;
+        margin-top: 35%;
+         @content
+    } 
+
+}
+
+@mixin ExampleWorksImage_Width ($SmallMobile:100vw, $LargeMobile:40vw) {
+
+     @media  (min-width:769px) and (max-width:1440px) {
+        width: calc(600px - 6vw);
+
+         @content
+    } 
+  @media  (min-width:425px) and (max-width:768px) {
+        width: calc(425px - 6vw);
+
+         @content
+    } 
+
+    @media  (min-width:320px) and (max-width:425px) {
+       width:$SmallMobile;
+         @content
+    } 
+
+}

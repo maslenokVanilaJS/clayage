@@ -1,0 +1,239 @@
+@import 'main.scss';
+@import 'masterClasses.scss';
+
+.SlaidersContainer{
+   margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    width:100vw;
+    height:auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.GetLessonsButton{
+    border-radius: 10px;
+    
+    
+    
+   
+    background-color: green;
+    &:hover{
+      background-color: rgb(13, 228, 13);
+  }
+}
+.ImageBox{
+    margin-bottom: 50px;
+    width:30vw;
+    height:auto;
+    display: flex;
+   // border:1px solid black;
+    flex-direction: column;
+    box-shadow:  2px 2px 5px 1px gray;
+
+    &:hover > &-Item{
+            transform: scale(1.1);
+            transition: all 1s ease-out;
+        }
+    &-Item{
+        margin: auto;
+        height:20vw;
+        width:20vw;
+        object-fit: cover;
+        
+    }
+    &-GetLessonsButton{
+        width: 80%;
+         margin: auto;
+          margin-bottom: 10px;
+    }
+}
+.HidenGalery{
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index: 999999;
+    display: none;
+    background-color: black;
+ &_Visible{
+  display: block;   
+ }   
+ &-TogleModule{
+     width:50px;
+     position: absolute;
+     top:0;
+     left:0;
+ }
+ 
+ &_WhiteBackground{
+  background-color: white;   
+ }
+    &-Arrow{
+        width:100px;
+       position: absolute;
+       right: 0;
+       z-index: 999999;
+       top:50%;
+      pointer-events: all;
+      height: 50px;
+    }
+    &-ArrowLeft{
+     position: absolute;
+       left: 0;
+       z-index: 999999;
+ pointer-events: all;
+       top:50%; 
+       width:100px;  
+       height: 50px;
+    }
+    &-CloseSlider{
+      width:50px;
+       position: absolute;
+       right: 0;
+       top:0;   
+    }
+}
+.ImgContainer{
+    width: 80%;
+    position:absolute;
+    left:10%;
+    height:100%;
+    background-color: #d8caca;
+opacity:0;
+text-align: center;
+    display: flex;
+    flex-direction: row;
+    z-index: -1;
+   &_JustifyBetween{
+justify-content: space-between;
+flex-wrap: wrap;
+overflow-y: scroll; 
+overflow-x:hidden;
+   } 
+   &-MonoliteTogle{
+      position: fixed;
+      top:0;
+      left:0;
+      width:50px;
+      
+   }
+   &-CloseModule{
+     position:fixed;
+     top:0;
+     right:0;
+     width: 50px;
+ }
+  &-ItemModule{
+ 
+ width:23%; 
+height:43%;
+ object-fit: cover;
+  }  
+    &-Item{
+      object-fit: cover;
+      max-width: 80%;  
+    }
+    &_Visible{
+       opacity: 1;
+        transition: opacity 0.3s;
+        will-change: opacity;
+        z-index: 1;
+    }
+  &-ModalMessage{
+background-color: white;
+opacity:0.7;
+width: 23%;
+position: absolute;
+z-index:999999;
+transition: all 0.5s;
+border-radius:10px;
+border-bottom-left-radius: 0px;
+  }
+}
+.InfoBlock{
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+&-GetLessonsButton{
+ opacity: inherit;   
+}
+&-TextDescrition{
+   text-align: center;
+}
+}
+.PurchaseFormContainer{
+  width:60vw;
+  height:600px;
+  background-color: rgb(255, 255, 255); 
+  position: fixed;
+  z-index: 999999; 
+  top:5%;
+  left:20%;
+  text-align: left;
+  border:black 1px solid;
+  border-radius:10px;
+  display: none;
+  pointer-events: all;
+  &_Visible{
+      display: block;
+  }
+  &-Close{
+      width:30px;
+      position: absolute;
+      top:10px;
+      right:10px;
+      &:hover{
+          border:1px solid black;
+      }
+  }
+}
+.PurchaseForm{
+ margin: auto;
+ width: 60%;  
+ margin-top:40px;
+ &-Field{
+     width:100%;
+     margin-bottom: 40px;
+     border-radius: 10px;
+  //   box-shadow: black 1px 1px;
+     height: 29px;
+     border-style: outset;
+ } 
+ &-Select{
+     margin-bottom: 40px;
+ }
+&-Button{
+    width: 60%;
+    margin: auto;
+   display: block;
+   background-color: rgb(70, 77, 77);
+   height: 30px;
+   border-radius: 10px;
+}
+}
+.SuccesFormSend{
+width:60vw;
+  height:600px;
+  background-color: rgb(255, 255, 255); 
+  position: fixed;
+  z-index: 999999; 
+  top:5%;
+  left:20%;
+  text-align: left;
+  border:black 1px solid;
+  border-radius:10px;
+  text-align: center;
+display: none;
+&_Visible{
+    display: block;
+}
+}
+img {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+ 
+img[data-src] {
+  opacity: 0;
+}

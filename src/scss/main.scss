@@ -1,0 +1,1191 @@
+@import '/adaptive/adaptive.scss';
+@import '/commonCSS/commonStyles.scss';
+.InstButton-Path{
+&__Black{
+fill:black;
+}
+&__White{
+fill:white;
+}
+}
+.VKButton-Path{
+&__Black{
+fill:black;
+}
+&__White{
+   fill:white; 
+}
+}
+.ReverseCall-Path{
+&__Black{
+fill: black;
+}
+&__White{
+    fill:white;
+}
+
+}
+.Hamburger-Path{
+&__Black{
+fill:black;
+}
+&__White{
+   fill:white; 
+}
+}
+.InstButton:hover{
+        border-radius:7px;
+        box-shadow: 0px 0px 5px 0px white;
+    
+}
+.ControlPanelBlock{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    right:5%;
+    top:30%;
+    z-index:1;
+    height:200px;
+
+    &-QButton{
+        @include MainSlaiderCPanelBtn_320px{
+
+        }
+        width:20px;
+        height:20px;
+       border:white 2px solid;
+        border-radius: 10px;
+        transition: all 0.5s ease-in-out;
+        &__Selected{
+             background: rgb(209, 205, 205);
+             opacity:0.5;
+             border-radius:5px;
+             box-sizing: padding-box;
+
+        }
+        &:hover{
+            box-shadow: 0px 0px 0px 2.5px white;
+        }
+    }
+}
+.PromoBlockHeader{
+    position: absolute;
+    top:20%;
+    width:50%;
+    left:25%;
+    z-index: 1;
+    display:none;
+    &-TextPromo{
+        @include font_H__InfoWB{
+
+        }
+        &__H3{
+            @include font_P__InfoWB{
+
+        }
+        }
+    }
+    &__Visible{
+        display:block;
+        animation: TextEffects 1s linear;
+      //  animation: BlockProgression 1s ease-in-out;
+    }
+}
+.TAB{
+    margin: auto;
+    display: block;
+    width: 30%;
+    height: 50px;
+    margin-top: 150px;
+    font-weight: 1000;
+    background: none;
+    border-radius: 15px;
+    border: 2px white solid;
+    /* text-shadow: 1px 1px white; */
+    color: white;
+    box-shadow: 1px 1px 5px 1px white;
+    animation: TABProgression 3s infinite;
+    &__HeaderRender{
+        @include MainSlaiderTargetBtn_320px{
+
+        }
+    }
+
+    &:hover{
+        animation:none;
+        box-shadow: 1px 1px 20px 1px white;
+        transition: all 1s;
+    }
+    &:active{
+        box-shadow: 1px 1px 100px 1px white;
+        transition: all 1s;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+.MasterTeacherAbout{
+    margin-top:35%;
+}
+
+
+.PhotoDescription{
+margin-left:0;
+padding-top: 15%;
+margin-inline-end: 0;
+ &-Image{
+     width:100vw;
+     height:auto;
+     @include InfoContextPhotoAdaptive{
+         padding-top: none;
+     }
+ }  
+ &-Description{
+     padding-top: 5%;
+     padding-bottom: 5%;
+     border:#8c3232 dashed 2px; 
+     @include DescriptionPhotoAdaptive{
+         
+     }
+ } 
+}
+.Footer{
+width:100%;
+height:auto;
+background: #000000;
+color:white;
+display: flex;
+flex-wrap:nowrap;
+background-image: url("/src/img/pattern.png") ;
+//background-repeat: no-repeat;
+//background-size: cover;
+flex-direction:row;
+justify-content: space-between;
+@include Footer320px{
+
+}
+}
+.Copyright{
+    display:flex;
+    flex-direction: column;
+    padding-top: 5%;
+ //   padding-bottom: 20%;
+    &-Info{
+ //       text-align: center;
+        width:80%;
+        margin:auto;
+        padding-bottom: 20px;
+    }
+    
+}
+.CiteInformationBlock{
+ //   width:100%;
+    height:auto;
+  //  padding-bottom: 20%;
+    padding-top: 5%;
+    display:flex;
+    flex-direction: column;
+    &-NavMenu{
+        color: white;
+        text-align:center;
+       // text-decoration:none;
+      //  flex-direction: column;
+       height:50px;
+    }
+    & :last-child{
+        }
+}
+
+.GetCertificateMain{
+   position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    z-index: 10;
+    &AppContainer{
+        top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    display: none;
+    position: fixed;
+     z-index: 10;
+    &-CloseApp{
+    position: fixed;
+    top: 0;
+    right:0;
+    z-index: 11;
+    width:30px;    
+    }
+    &__Visible{
+        display:block;
+    }
+}
+}
+.ClayAgeLogo{
+    width:80px;
+    height: 80px;
+    margin-left:20px;
+    @include ClayAgeLogo{
+
+    }
+}
+.Contact{
+    position: fixed;
+left:0;
+top:0px;
+display: none;
+flex-direction: column;
+justify-content: space-evenly;
+ overflow: hidden;
+height:100%;
+width:100vw;
+ text-align: center;
+ background-image: url('/src/img/pattern.png');
+z-index: 19999;
+&-Close{
+right:28px;
+top:0;
+position: absolute;
+ 
+ width:40px;
+font-size: 30px;
+color: white;
+border-radius: 20px;
+border:2px solid white;
+text-align: center;
+}
+&-Data{
+    color:white;
+}
+&_OnOpen{
+    animation: MapOpen 1s ease-in-out;
+}
+&__Visible{
+    display:flex;
+}
+}
+.YandexMap{
+position: fixed;
+left:0;
+top:0px;
+display: none; 
+overflow: hidden;
+width:100vw;
+ text-align: center;
+ background-image: url('/src/img/pattern.png');
+z-index: 19999;
+
+&-Location{
+    color: white;
+   // display:block;
+   // width:40%;
+  //  margin:auto;
+}
+&-Close{
+right:28px;
+top:0;
+position: absolute;
+ 
+ width:40px;
+font-size: 30px;
+color: white;
+border-radius: 20px;
+border:2px solid white;
+text-align: center;
+}
+
+@include YandexMapAdaptiveControl{
+
+}
+&-YMapCont{
+
+    //position:absolute;
+    height:58%;
+    width:80%;
+    margin:auto;
+    margin-top:5%;
+    position:relative;
+}
+&_Visible{
+    display:block;
+}
+&-Iframe{
+    height:100%;
+    width:100%;
+}
+&_OnOpen{
+    animation: MapOpen 1s ease-in-out;
+}
+}
+.Location{
+    display: flex;
+    flex-direction: row;
+    width:40vw;
+    margin: auto;
+    &-SVG{
+    width: 10vw;
+    height:5vw;
+}
+&-MetroName{
+    color: #0e52aa;
+}
+}
+.BlockLogo{
+    display: flex;
+    @include blockLogo_Width{
+
+    }
+    &-Name{
+        @include fontAdpt{
+
+        }
+        &__NOBacknd{
+            color:white;
+        }
+        &__Scroled{
+            color:black;
+        }
+    }
+}
+.LocationInfo-MetroStreetIcon{
+width: 30px;
+height:auto;
+&:hover{
+     box-shadow: 4px 4px 5px 0 #fff;
+    border-radius: 0px 0px 10px 10px;
+    transition: all 0.3s;
+}
+&_SW{
+    @include location_SW{
+margin-top:16px;
+margin-bottom:16px;
+    }
+ &_Clicked{
+    animation: YMapLR 1s  infinite;
+}   
+}
+
+}
+.HamburgerIcon{
+    
+    transition: all;
+    width:38px;
+    display:none;
+    z-index:6;
+    &:hover{
+    box-shadow: 0px 0px 15px 0px #fff;
+    }
+    @include hamburgerMediaQ{
+
+    }
+&__TogglePosition{
+    position: fixed;
+    top:80px;
+}
+}
+.hamburgerPath__White{
+    fill:white;
+    @include hamburgerAnimation{
+
+    }
+}
+.HamburgerMenu{
+position:fixed;
+top:81px;
+width:40vw;
+height:88%;
+transition: all 1s;
+display:none;
+background-image: url("/src/img/pattern.png");
+color:black;
+z-index:6;
+text-align: center;
+@include hamburgerMenuNavAdapt{
+   
+}
+  &-NavMenu{
+flex-flow: column;
+justify-content: space-evenly;
+height:100%;
+margin-top: 0;
+margin-bottom: 0;
+
+  }  
+  &_Visible{
+      display:block;
+      animation: rollingMenu 1s ease-in-out;
+      @include hamburgerMenuAnimation {}
+  }
+}
+.NavMenuOnHover{
+        margin-left:-40px;
+    &-Link{
+        display:none;
+
+    }
+   
+   
+}
+ .NavMenuOnHover:hover  .NavMenuOnHover-Link{
+        display: block;
+    }
+    .NavMenuOnHover:hover  .NavMenuOnHover-Target{
+        text-decoration: underline;
+        color: ivory;
+    }
+.LocationInfo-MetroStreet{
+    font-size:inherit;
+    @include location_LW{
+margin-top:16px;
+margin-bottom:16px;
+    }
+}
+@keyframes backPositioning{
+ 0%{transform: translateY(0);
+//transform: scale(1);
+}
+ 50%{transform: translateY(-17%);
+  //  transform: scale(1.2);
+  }
+ 51% {transform: translateY(-17%);
+  //  transform: scale(1.1);
+};
+ 100%{transform: translateY(0);
+   // transform: scale(1);
+}
+ }
+@keyframes rollingMenu{
+ from{ margin-left: -60vw;}
+ to{ margin-left: 0;}   
+}
+
+@keyframes rollingMenuFromRight{
+ from{ margin-right: -60vw;}
+ to{ margin-right: 0;}   
+}
+.AuthorCeramics{
+width:100vw;
+height:auto; 
+display: flex;
+margin: auto;
+flex-direction: row;
+margin-top: 40px;
+flex-wrap: wrap;
+margin-bottom:15vw;
+@include PreviewGalleryMetric{
+
+}
+&-ImageBox{
+    width:25vw;
+    height:21vw;
+    @include controlAll_FotoAuthCeramics__InfoWB {
+
+    }
+    
+    background-size: cover;
+   &:first-child{
+     background-image: url("/src/img/Example.jpg");   
+    }
+    &:nth-child(2){
+        background-image: url("/src/img/Pialas.jpg");
+    }
+    &:nth-child(3){
+background-image: url("/src/img/Florists.jpg");
+    } 
+     &:nth-child(4){
+background-image: url("/src/img/TeaCeremony.jpg");
+    }  
+}  
+}
+.ImageBox-Image{
+        width:100%;
+    //  object-fit: cover;
+    }
+.Info-GetLessonsButton{
+  display: block;
+  margin: auto;
+  margin-top: 80px;  
+  background-color: #16ef16;
+  width:40vw;
+  height:50px;
+  font-size: 30px;
+  box-shadow: 0px 0px 7px#353a35;
+  border:none;
+  @include width_btn__InfoWB{}
+  &:hover{
+      background-color: #13ff13;
+  }
+}
+
+.MasterClassContent{
+ list-style-image: url(/src/img/icons8-галочка.svg);
+    vertical-align: top;
+    display:inline-block;
+    @include width_UL__InfoWB{
+
+    }
+    &-Details{
+        @include font_P__InfoWB{
+            
+        }
+    }
+}
+.BackgroundMastcls{
+    position: absolute;
+    top:0;
+    left:-10vw;
+    width:100vw;
+    height:100%;
+    z-index: -1;
+    
+    background-attachment: fixed;
+    @include InfoBlockBackgroundMobileRender{
+
+    }
+    &__Basic{
+     background-image: url("/src/img/FloristItem (4).jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+
+    }
+
+    &__Advanced{
+     background-image: url("/src/img/TeaCeremonyItem6.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+    }
+
+    &__Gift{
+     background-image: url("/src/img/TeaCeremonyDark.jpg");
+         background-repeat: no-repeat;
+     background-size: cover;
+    }
+    &__Author{
+     background-image: url("/src/img/InterierItem.jpg");
+
+    }
+}
+.Info{
+height:auto;
+margin:auto;
+text-align: center;
+width:80vw;
+position: relative;
+padding-bottom:20%;
+padding-top:10%;
+transition:0.5s all;
+display:flex;
+flex-wrap:wrap;
+justify-content: space-between;
+flex-direction:row;
+color:white;
+@include InfoBlockMobileRender{
+
+}
+&-ContextImage{
+  
+  height: auto;  
+  @include InfoContextPhotoAdaptive{
+box-shadow: 0px 0px 10px 0px gray;
+  }
+}
+
+&_FixHMobile{ @include height_Fix__Info}
+&_WhiteBackground{
+ 
+}
+&-DescribeBlock{
+    background:white;
+    height:25vw;
+    width:25vw;
+    margin-top:50px;
+    background-image: url("/src/img/InterierVase (19).jpg");
+    background-size: cover;
+    box-shadow:0px 0px 20px 0px white;
+    &__Large{
+        width:80vw;
+    }
+}
+&_GrayBackground{
+ }
+&-MasterClasses{
+ text-align: center;
+ margin-top: 0px;
+ &_MobileRender{
+     @include InfoHeadersMobileRender{
+
+     }
+ }
+ &_Center{
+     @include center{
+         
+     }
+
+ }
+  &_Heading{
+@include font_H__InfoWB{
+
+}
+  }  
+  &_Paragraph{
+@include font_P__InfoWB{
+    padding-top:0%;
+}
+&__MasterAboutStyle{
+    width:95%;
+    margin:auto;
+    text-align:justify;
+    padding-top:20%;
+    line-height:1.5;
+    
+}
+  }
+ 
+}
+&-MasterClasses_Link{
+    display: block;
+    list-style: none;
+    margin-top: 10px;
+    color: #6b4848;
+    padding-top: 10%;
+}
+ &-StudentsWorkExamplesSlaider{
+  
+  position: relative;
+      
+  }
+}
+
+.DescribeBlock{
+    @include DescribeBlock__320px{
+        
+    }
+    background:white;
+    height:25vw;
+    width:25vw;
+    margin-top:50px;
+    background-image: url("/src/img/FloristItem (4).jpg");
+    background-size: cover;
+    box-shadow:0px 0px 20px 0px white;
+    &__Large{
+        width:80vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-image: url("/src/img/FloristItem (3).jpg");
+        margin-bottom: 3vw;
+        @include DescribeBlockLargeMobileRender{
+
+        }
+    }
+    &__Mobile{
+        @include DescribeBlockMobile__320px{
+
+        }
+    }
+    &__LargeAdvanced{
+  //  background-image: url("/src/img/TeaCeremonyItem17.jpg");
+  background: none; 
+    }
+    &__Slaider{
+       width:80vw;
+       height: 30vw;
+       background: #353a35; 
+       overflow-x: hidden;
+       display: flex;
+        flex-direction: row;
+    }
+    &__SlaiderMobileRender{
+        @include DescribeBlockSlaiderMobileRender{
+
+        }
+    }
+    &-ImageContainer{
+        display:flex;
+        flex-direction: row;
+        width:80vw;
+         
+    }
+    &-Img{
+        width:20%;
+        object-fit: cover;
+        margin-left:-3%;
+        @include DescribeBlockLarge_ImageMobileRender{
+
+        }
+    }
+
+    &__Advanced{
+        background-image: url("/src/img/TeaCeremonyItem11.jpg");
+    }
+    &__Gift{
+        background-image: url("/src/img/FloristItem (4).jpg");
+    }
+}
+.ImageContainer{
+   transition: all 0.6s;
+       &-ArrowBack{
+        position: absolute;
+    left: -13%;
+    z-index: 9;
+    height: 10vw;
+    top: 62%;
+        }
+        &-ArrowNext{
+        position: absolute;
+    right: -12%;
+    height: 10vw;
+    z-index: 10;
+    top: 62%;
+        }
+}
+.TextBlock{
+    display:flex;    
+    flex-direction:column;
+    width:60vw;
+    color:white;
+    overflow: hidden;
+    @include DescribeBlockLarge_TextBlockMobileRender{
+
+    }
+    &-Link{
+        color:inherit;
+     }
+    
+&-MasterClasses{
+ text-align: center;
+ margin-top: 0px;
+ &_MobileRender{
+     @include InfoHeadersMobileRender{
+
+     }
+ }
+ &_Center{
+     @include center{
+         
+     }
+
+ }
+  &_Heading{
+@include font_H__InfoWB{
+
+}
+  }  
+  &_Paragraph{
+@include font_P__InfoWB{
+     margin-top:-5%;
+ // margin:0;
+  padding:0;
+  //margin-bottom:3%;
+}
+&__MasterAboutStyle{
+    width:95%;
+    margin:auto;
+    text-align:justify;
+  //  padding-top:20%;
+    line-height:1.5;
+    
+}    
+
+}
+}
+}
+.StudentsWorkExamplesSlaider{
+height:auto;
+margin-top:15%;
+transition: all 0.3s ease-in-out;
+position: relative;
+@include ExampleWorksCont_Width_Position{
+
+}
+  width:100%;
+  &-WorkImage{
+   position: absolute;
+   top:0;
+   left:0;
+   width: 100vw; 
+   height: auto; 
+   z-index: -1;
+   @include ExampleWorksImage_Width{
+    
+}
+   &HugeHeight{
+
+        }
+    &__Visible{
+z-index:1;
+
+        
+    }
+
+  }
+ &-ArrowBack{
+position: absolute;
+left:0;
+top:40%;
+width:15%;  
+opacity: 0.6;
+z-index: 2;
+ }
+ &-ArrowNext{
+ position: absolute;
+right:0;
+top:40%;  
+opacity: 0.6;
+width:15%; 
+z-index: 2; 
+ } 
+}
+.SlaiderContainer{
+height: 55vw; 
+//margin-top:100px;
+width: 100vw;   
+@include MainSlaiderImage_320px{
+
+}
+//@include slaiderContainerMediaQ{
+
+//}
+}
+.SlaiderStudio{
+    position: relative;
+    margin:auto;
+    width: 100vw;
+    height:55vw;
+    color: #ffffff;
+    overflow: hidden;
+    
+    @include MainSlaiderImage_320px{
+
+    }
+    &-Line{
+        width:10px;
+        background-color: #ffffff;
+        width: 40%;
+    }
+    &-TextPromo{
+        position: absolute;
+        width:40%;
+        height: 40%;
+        left:30%;
+        top:30%;
+        z-index: 999;
+        display:none;
+        @include  font_H__InfoWB{
+
+        }
+        &__Visible{
+            display:block;
+            animation: TextEffects 2s linear ;
+        }
+    }
+}
+.SlaiderStudio-Image{
+    position: absolute;
+    top:0;
+    display: flex;
+    opacity:0;
+    left: 0;
+    @include MainSlaiderImage_320px{
+
+   }
+    width:100vw;
+    will-change: transform;
+    &__Visible{
+        opacity:1;
+        @include MainSlaiderImage_320px{
+        
+    }
+      //  transition:all 0.1s linear;
+       animation: backPositioning 20s infinite linear  ;
+will-change: opacity;
+    }
+    
+}
+
+
+
+.Header{
+    position: fixed;
+   // height:80px;
+    width:100vw;
+ //   background-color: #ffffff;
+    display: flex;
+    z-index: 3;
+ //   box-shadow: 0px 0px 6px 0px black;
+    top:0;
+    justify-content: space-evenly;
+    &:hover{
+        opacity:1;
+    }
+    &-NavMenu{
+    justify-content: space-between;
+    width: 400px;
+    @include position_NavIcons{
+
+
+    }
+
+}
+    &Component{
+    position: fixed;
+ //   top:80px;
+    background-color: #000000;
+    font-family: Bradley Hand,cursive;
+    width:100%;
+    font-size: calc(5px +1vw);
+    z-index: 1;
+    @include nav__fontAdpt{
+        
+    }
+}
+&-LocationInfo{
+@include font_widthAdpt{
+
+}
+
+}
+transition:all 1s;
+&__OnScroll{
+    height:auto;
+    background: white;
+    opacity:0.6;
+    box-shadow:0px 0px 10px 0px black;
+}
+}
+.NavMenu{
+    display: flex;
+    list-style: none;
+    flex-wrap:wrap;
+    margin-left:-40px;
+    justify-content: space-evenly;
+    
+}
+
+.InstButton,.VKButton,.ReverseCall{
+    width:30px;
+    height:auto;
+    border:none;
+    &:hover{
+         box-shadow: 4px 4px 5px 0 #fff;
+    border-radius: 0px 0px 10px 10px;
+    transition: all 0.3s;
+          
+    
+}
+@include smallWidthSizeHeaderIcons{
+    
+}
+
+}
+.Link_LargeVisible{
+display: block;
+@include callLW {
+   
+}
+}
+.Link_SWVisible{
+display: none;
+@include callSW {
+   
+}
+}
+.Link-image{
+ width:25px;
+ height:25px;
+ display:block;  
+    
+}
+.Link-item{
+ text-decoration:none;  
+ 
+ color:#faf0f0; 
+ &:hover{
+color: #f5e3e3;
+ }
+}
+.Link-tel{
+    font-size: 20px;
+
+}
+.ShortAboutUs{
+height: 836px; 
+width: 100%; 
+display: flex;
+
+position: absolute;
+top:101px; 
+border:solid black 2px; 
+
+}
+.MainPage{
+background-color: pink;
+overflow-x: hidden;
+width: 100%;
+font-family: Bradley Hand,cursive;
+&__FlowControlDependencie{
+ overflow-y: hidden;   
+ 
+}
+}
+.MasterClassSignUpForm{
+width: 80%;
+height:auto;
+margin:auto;
+
+text-align: left;
+color:#ffffff;
+//box-shadow: 0px 0px 10px 0px white;
+@include lessonSignUpFormControl{
+
+}
+&__Advanced{
+   margin-top:5%;
+}
+&-HeadLogo{
+max-width: 200px;
+margin:auto;
+}    
+&-InputField{
+    display: block;
+    margin: auto;
+    margin-bottom: 10%;
+      
+    width:100%;
+    height:40px;
+    border-radius: 5px;
+   box-shadow: 0px 0px 7px#f8faf8;
+  border:none;
+}
+&-CloseForm{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 30px;
+    @include ScrollBarCheck{
+        
+    }
+ }
+&-Button{
+    width: 30%;
+    padding: 15px 30px;
+    letter-spacing: 4px;
+    border: none;
+    color: white;
+   display: block;
+   position: absolute;
+   left:35%;
+   bottom:10%;
+    box-shadow: 0px 0px 10px rgb(247, 246, 244);
+ //  
+   background: none;
+    text-transform: uppercase;
+   border-radius: 10px;
+  // 
+  
+  border:none;
+  &:hover{
+  background-color: rgb(255, 217, 0);
+  color:black;
+  box-shadow: 0px 0px 55px rgb(255, 217, 0);
+  transition: 0,5s all;
+  }
+  @include ButtonSignUpFormControl{
+
+  }
+}
+&Container{
+height:100%;
+width:100vw;
+top:0;
+left:0;
+position: fixed;
+z-index: 999999;
+background-image: url('/src/img/pattern.png'); 
+display: none;
+&__Visible{
+    display: block;
+}
+}
+}
+
+.MasterClassAdvancedSignUpForm{
+width: 100%;
+height:100%;
+margin-top:10%;
+@include lessonSignUpFormControl{
+
+}
+&-HeadLogo{
+width:50%;
+margin:auto;
+}    
+&-InputField{
+    display: block;
+    margin: auto;
+    margin-bottom: 10%;
+    width:80%;
+    border-radius: 5px;
+    
+}
+&-CloseForm{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 30px;
+}
+&-Button{
+    width: 60%;
+    margin: auto;
+   display: block;
+   background-color: aqua;
+   height: 30px;
+   border-radius: 10px;
+   margin-top: 15%;
+}
+&Container{
+height:100%;
+width:100vw;
+top:0;
+left:0;
+position: fixed;
+z-index: 9;
+background: #ffffff;
+display: none;
+&__Visible{
+    display: block;
+}
+}
+}
+@keyframes YMapLR{
+    from{opacity:1;}
+    to{opacity:0;}
+}
+@keyframes MapOpen{
+    from{opacity:0;}
+    to{opacity: 1;}
+}
+@keyframes TextEffects {
+from{opacity:0;}
+    to{opacity: 1;}
+}
+
+@keyframes BlockProgression {
+from{left:0;}
+    to{left: 25%;}
+}
+@keyframes TABProgression {
+0%{transform: scale(1);}
+    50%{transform: scale(1.1);
+    }
+    51%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
+@keyframes TABClick {
+from{background:none;}
+    to{background:white ;}
+}

@@ -1,0 +1,98 @@
+@mixin DescribeBlock__320px {
+    @media (min-width:320px) and (max-width:425px) {
+        width: 100vw;
+        height: 100vw;
+        color:white;
+        display:none;
+        @content
+    }
+}
+@mixin DescribeBlockMobile__320px {
+    @media (min-width:320px) and (max-width:425px) {
+        width: 95vw;
+        height: auto;
+        color:white;
+        display:block;
+        margin:auto;
+        margin-top: 0;
+        box-shadow: none;
+        border: 10px white solid;
+        background: none;
+        @content
+    }
+    @media (min-width:426px) and (max-width:1444px) {
+        width: 100vw;
+        height: auto;
+        color:white;
+        display:none;
+        @content
+    }
+}
+@mixin DescribeBlockLargeMobileRender {
+    @media (min-width:320px) and (max-width:425px) {
+        width: 100vw;
+        height: auto;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin-top: 0;
+        background-image: none;
+        background: white;
+        @content
+    }
+    @media (min-width:426px) and (max-width:1444px) {
+        width: 100vw;
+        height: auto;
+         
+        @content
+    }
+}
+@mixin DescribeBlockLarge_ImageMobileRender {
+    @media (min-width:320px) and (max-width:425px) {
+        width: 70%;
+        height: 40%;
+         object-position: top;
+         margin: auto;
+         margin-top:-1%;
+        @content
+    }
+    @media (min-width:426px) and (max-width:1444px) {
+         
+         
+        @content
+    }
+}
+ 
+
+@mixin DescribeBlockLarge_TextBlockMobileRender {
+    @media (min-width:320px) and (max-width:425px) {
+        width: 100vw;
+        margin: auto;
+        justify-content: space-between;
+        height: 50%;
+        margin-top:0;
+        color: black;
+         
+        @content
+    }
+    @media (min-width:426px) and (max-width:1444px) {
+         
+         
+        @content
+    }
+}
+
+@mixin DescribeBlockSlaiderMobileRender {
+    @media (min-width:320px) and (max-width:425px) {
+         display: flex;
+         width:90vw;
+         height: 50vw;
+         margin: auto;
+         margin-top: 15%;
+        @content
+    }
+    @media (min-width:426px) and (max-width:1444px) {
+         
+         
+        @content
+    }
+}

@@ -1,0 +1,18 @@
+@mixin width_Height {
+      @media  (min-width:769px) and (max-width:1440px) {
+          width:100vw;
+         @content
+    }  
+   @media  (min-width:425px) and (max-width:768px) {
+         animation:none;
+         height:60.2vw;
+         width:100vw;
+         @content
+    }  
+    @media  (min-width:320px) and (max-width:425px) {
+         animation:none;
+         height:60.2vw;
+         width:100vw;
+         @content
+    }  
+}

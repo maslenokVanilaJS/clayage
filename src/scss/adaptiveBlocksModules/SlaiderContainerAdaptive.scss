@@ -1,0 +1,19 @@
+@mixin slaiderContainerMediaQ {
+    @media (min-width:769px)and (max-width:1440px) {
+      //  margin-top:80px;
+     
+        width:100vw;
+        
+    }
+    @media (min-width:425px)and (max-width:768px) {
+     //   margin-top:80px;
+        height:60.2vw;
+        width:100vw;
+    }
+     @media (min-width:320px)and (max-width:425px) {
+    //    margin-top:80px;
+        height:60.2vw;
+        width:100vw;
+    }
+    @content
+}

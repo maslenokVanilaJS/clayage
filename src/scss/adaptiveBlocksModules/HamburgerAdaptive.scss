@@ -1,0 +1,50 @@
+@mixin hamburgerMediaQ {
+    @media (min-width:769px)and (max-width:1440px) {
+        display: block;
+        position: fixed;
+        top:16px;
+        right:16px;
+        width:25px;
+    }
+    @media (min-width:425px)and (max-width:768px) {
+        display: block;
+    }
+ @media (min-width:320px)and (max-width:425px) {
+        display: block;
+        width:30px;
+    }
+    @content
+}
+
+@mixin hamburgerMenuNavAdapt {
+    @media (min-width:769px)and (max-width:1440px) {
+       right: 0;
+    }
+    @media (min-width:425px)and (max-width:768px) {
+        width:60vw;
+        
+    }
+ @media (min-width:320px)and (max-width:425px) {
+       width: 60%;
+       font-size: 3.3vw;
+    }
+    @content
+}
+
+
+@mixin hamburgerMenuAnimation {
+    @media (min-width:769px)and (max-width:1440px) {
+        animation: rollingMenuFromRight 1s ease-in-out;
+    }
+   
+    @content
+}
+
+@mixin hamburgerAnimation {
+    @media (min-width:769px)and (max-width:1440px) {
+    fill:black;
+    animation:YMapLR infinite  2,5s  ease-in-out;
+    }
+   
+    @content
+}
