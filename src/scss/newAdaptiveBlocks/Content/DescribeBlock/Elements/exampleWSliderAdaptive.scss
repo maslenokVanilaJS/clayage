@@ -1,0 +1,9 @@
+ @mixin exampleWSliderImageMobileRender {
+     @media (min-width: 320px)and(max-width: 426px) {
+         width: auto;
+         height: 100%;
+         //   object-fit: cover;
+         flex-basis: auto;
+         @content
+     }
+ }

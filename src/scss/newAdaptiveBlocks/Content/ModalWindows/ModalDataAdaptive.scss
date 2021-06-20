@@ -1,0 +1,21 @@
+ @mixin CloseIconMobileRender {
+     @media (min-width: 320px) and (max-width: 425px) {
+         right: 0;
+         @content
+     }
+     @media (min-width: 426px) and (max-width: 768px) {
+         right: 0;
+         @content
+     }
+ }
+ 
+ @mixin MetroIconsMobileRender {
+     @media (min-width: 320px)and (max-width: 425px) {
+         width: 80%;
+         @content
+     }
+     @media (min-width: 426px)and (max-width: 768px) {
+         width: 80%;
+         @content
+     }
+ }

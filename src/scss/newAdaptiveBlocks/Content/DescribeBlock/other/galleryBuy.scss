@@ -1,0 +1,188 @@
+    @mixin GalleryPreview_Image {
+        @media (min-width: 320px) and (max-width: 425px) {
+            width: 95vw;
+            margin: auto;
+            height: auto;
+            @content
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            width: 95vw;
+            margin: auto;
+            height: auto;
+            @content
+        }
+    }
+    
+    @mixin SlaidersContainer {
+        @media (min-width: 320px) and (max-width: 425px) {
+            flex-direction: column;
+            @content
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            flex-direction: column;
+            @content
+        }
+    }
+    
+    @mixin Gallery_ImgContainer {
+        @media (min-width: 320px) and (max-width: 425px) {
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+            left: 0;
+            @content
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+            left: 0;
+            @content
+        }
+    }
+    
+    @mixin Gallery_ImgContainer__ImagesRatio {
+        @media (min-width: 320px) and (max-width: 425px) {
+            height: 45vh;
+            margin: auto;
+            margin-top: 0px;
+            margin-bottom: 0;
+            max-width: 100%;
+            @content
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            height: 45vh;
+            margin: auto;
+            margin-top: 0px;
+            margin-bottom: 0;
+            max-width: 100%;
+            @content
+        }
+    }
+    
+    @mixin Gallery_ImgContainer__Icons {
+        @media (min-width: 320px) and (max-width: 425px) {
+            z-index: 5;
+            height: 35px;
+            width: 35px;
+            @content
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            z-index: 5;
+            height: 35px;
+            width: 35px;
+            @content
+        }
+    }
+    
+    @mixin Gallery_ImgContainer__Arrows {
+        @media (min-width: 320px) and (max-width: 425px) {
+            width: 55px;
+            top: 25%;
+            @content
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            width: 55px;
+            top: 25%;
+            @content
+        }
+    }
+    
+    @mixin Gallery_ImgContainer__Icons {
+        @media (min-width: 320px) and (max-width: 425px) {
+            z-index: 5;
+            height: 35px;
+            @content
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            z-index: 5;
+            height: 35px;
+            @content
+        }
+    }
+    
+    @mixin Gallery_ImgContainerGrid {
+        @media (min-width: 320px) and (max-width: 425px) {
+            flex-direction: row !important;
+            @content
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            flex-direction: row !important;
+            @content
+        }
+    }
+    
+    @mixin Gallery_ImgContainerGridItem {
+        @media (min-width: 320px) and (max-width: 425px) {
+            width: 100vw;
+            height: auto;
+            @content
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            width: 100vw;
+            height: auto;
+            @content
+        }
+    }
+    
+    @mixin Gallery_ImgContainerButton {
+        @media (min-width: 320px) and (max-width: 425px) {
+            width: 80vw;
+            margin: auto;
+            margin-bottom: 35px;
+            @content
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            margin: auto;
+            margin-bottom: 35px;
+            width: 80vw;
+            @content
+        }
+    }
+    
+    @mixin Gallery_PurchaseForm {
+        @media (min-width: 320px) and (max-width: 425px) {
+            width: 100vw;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            border: none;
+            border-radius: 0;
+            @content
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            width: 100vw;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            border: none;
+            border-radius: 0;
+            @content
+        }
+    }
+    
+    @mixin Gallery_PurchaseFormSendOrFail {
+        @media (min-width: 320px) and (max-width: 425px) {
+            border: none;
+            height: 100vh;
+            border-radius: 0;
+            @content
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            border: none;
+            height: 100vh;
+            border-radius: 0;
+            @content
+        }
+    }
+    
+    @mixin Gallery_InfoBlock {
+        @media (min-width: 320px) and (max-width: 425px) {
+            height: 55vh;
+            @content
+        }
+        @media (min-width: 426px) and (max-width: 768px) {
+            height: 55vh;
+            @content
+        }
+    }

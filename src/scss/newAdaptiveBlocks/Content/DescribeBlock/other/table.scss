@@ -1,0 +1,10 @@
+@mixin Table_PricesFont {
+    @media (min-width: 320px) and (max-width: 425px) {
+        font-size: 2.95vw;
+        @content
+    }
+    @media (min-width: 426px) and (max-width: 768px) {
+        font-size: 2.95vw;
+        @content
+    }
+}
