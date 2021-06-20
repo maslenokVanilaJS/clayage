@@ -4,3 +4,4 @@
 busika.html
 *.json
 /node_modules
+/dist

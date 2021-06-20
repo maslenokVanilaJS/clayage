@@ -1,210 +1,191 @@
 @mixin font_H__InfoWB {
-
- @media  (min-width:769px) and (max-width:1440px) {
-        font-size:calc(12px + 1.5vw);
-         width:100%;
-        color:white;
-         @content
-    } 
-
-  @media  (min-width:426px) and (max-width:768px) {
-        font-size:calc(12px + 1.5vw);
-        padding-top: 10%;
+    @media (min-width: 769px) and (max-width: 1440px) {
+        font-size: calc(12px + 1.5vw);
+        width: 100%;
         color: white;
-         @content
-    } 
-
-    @media  (min-width:320px) and (max-width:425px) {
-        font-size:4vw;
-       // padding-top: 10%;
-    // color: white;
-     margin: auto;
-         @content
-    } 
-
+        @content
+    }
+    @media (min-width:426px) and (max-width:768px) {
+        font-size: calc(12px + 1.5vw);
+        // padding-top: 10%;
+        // color: white;
+        margin: auto;
+        @content
+    }
+    @media (min-width:320px) and (max-width:425px) {
+        font-size: 5vw;
+        // padding-top: 10%;
+        // color: white;
+        margin: auto;
+        @content
+    }
 }
+
 @mixin font_P__InfoWB {
-      @media  (min-width:768px) and (max-width:1440px) {
-        font-size:calc(10px + 0.5vw);
-        width:100%;
+    @media (min-width: 769px) and (max-width: 1440px) {
+        font-size: calc(10px + 0.5vw);
+        width: 100%;
         padding-top: 10%;
         margin: auto;
-        color:white;
-         @content
-    } 
-
-  @media  (min-width:425px) and (max-width:767px) {
-        font-size:calc(10px + 0.5vw);
-        padding-top: 5%;
-                color: white;
-
-         @content
-    } 
-  @media  (min-width:320px) and (max-width:425px) {
-        font-size:3.3vw;
+        color: white;
+        margin: 5%!important;
+        @content
+    }
+    @media (min-width:426px) and (max-width:768px) {
+        font-size: calc(12px + 0.5vw);
         padding-bottom: 5%;
-      //          color: white;
-     margin: auto;
-         @content
-    }      
+        //          color: white;
+        margin: auto;
+        padding-top: 10%;
+        @content
+    }
+    @media (min-width:320px) and (max-width:425px) {
+        font-size: 4.5vw;
+        padding-bottom: 5%;
+        //          color: white;
+        margin: auto;
+        @content
+    }
 }
 
 @mixin width_btn__InfoWB {
- @media  (min-width:769px) and (max-width:1440px) {
-        width:60vw;
+    @media (min-width: 769px) and (max-width: 1440px) {
+        width: 60vw;
         font-size: calc(30px + 0.2vw);
-         @content
-    } 
-
-  @media  (min-width:425px) and (max-width:768px) {
-        width:60vw;
-        font-size: 4vw;
-         @content
-    } 
-       @media  (min-width:320px) and (max-width:425px) {
-        width:60vw;
-        border-radius:10px;
-        font-size:5vw;
-         @content
-    } 
+        @content
+    }
+    @media (min-width:426px) and (max-width:768px) {
+        width: 60vw;
+        border-radius: 10px;
+        font-size: 5vw;
+        @content
+    }
+    @media (min-width:320px) and (max-width:425px) {
+        width: 60vw;
+        border-radius: 10px;
+        font-size: 5vw;
+        @content
+    }
 }
 
 @mixin width_UL__InfoWB {
- @media  (min-width:769px) and (max-width:1440px) {
-        width:90%;
-      list-style-image: url(/src/img/icons8-галочка.svg);
-         @content
-    } 
-
-  @media  (min-width:425px) and (max-width:768px) {
-        width:80%;
-      list-style-image: url(/src/img/icons8-галочкаcopyMobileLW.svg);
-         @content
-    } 
-     @media  (min-width:320px) and (max-width:425px) {
-        width:80%;
-        list-style-image: url(/src/img/icons8-галочкаcopyMobileLW.svg);
-         @content
-    } 
-       
+    @media (min-width: 769px) and (max-width: 1440px) {
+        width: 90%;
+        list-style-image: url('/src/img/mainContent/icons8-галочка.svg');
+        @content
+    }
+    @media (min-width:426px) and (max-width:768px) {
+        width: 80%;
+        list-style-image: url('/src/img/mainContent/icons8-галочкаcopyMobileLW.svg');
+        @content
+    }
+    @media (min-width:320px) and (max-width:425px) {
+        width: 80%;
+        list-style-image: url('/src/img/mainContent/icons8-галочкаcopyMobileLW.svg');
+        @content
+    }
 }
 
 @mixin controlAll_FotoAuthCeramics__InfoWB {
- @media  (min-width:769px) and (max-width:1440px) {
+    @media (min-width: 769px) and (max-width: 1440px) {
         flex-wrap: wrap;
-        width:40vw;
+        width: 40vw;
         height: 200px;
         overflow: hidden;
-         @content
-    } 
-
-  @media  (min-width:425px) and (max-width:768px) {
+        @content
+    }
+    @media (min-width:426px) and (max-width:768px) {
         flex-wrap: wrap;
-        width:40vw;
-        height: 200px;
-        overflow: hidden;
-         @content
-    } 
-     @media  (min-width:320px) and (max-width:425px) {
-        flex-wrap: wrap;
-        width:50vw;
+        width: 50vw;
         height: 39vw;
         overflow: hidden;
-         @content
-    } 
-       
+        @content
+    }
+    @media (min-width:320px) and (max-width:425px) {
+        flex-wrap: wrap;
+        width: 50vw;
+        height: 39vw;
+        overflow: hidden;
+        @content
+    }
 }
-@mixin center{
-@media  (min-width:769px) and (max-width:1440px) {
-        margin:auto;
-        width:90%;
-         @content 
-    } 
 
-@media  (min-width:425px) and (max-width:768px) {
-        margin:auto;
-        width:90%;
-         @content 
-    } 
-    @media  (min-width:320px) and (max-width:425px) {
-        margin:auto;
-        width:90%;
-         @content 
-    } 
-
+@mixin center {
+    @media (min-width: 769px) and (max-width: 1440px) {
+        margin: auto;
+        width: 90%;
+        @content
+    }
+    @media (min-width:426px) and (max-width:768px) {
+        margin: auto;
+        width: 90%;
+        @content
+    }
+    @media (min-width:320px) and (max-width:425px) {
+        margin: auto;
+        width: 90%;
+        @content
+    }
 }
-@mixin height_Fix__Info{
-@media  (min-width:769px) and (max-width:1440px) {
-        height:auto;
-        padding-bottom: 15vw;
-         @content
-    } 
 
-@media  (min-width:425px) and (max-width:768px) {
-        height:auto;
+@mixin height_Fix__Info {
+    @media (min-width: 769px) and (max-width: 1440px) {
+        height: auto;
         padding-bottom: 15vw;
-         @content
-    } 
-@media  (min-width:320px) and (max-width:425px) {
-        height:auto;
+        @content
+    }
+    @media (min-width:426px) and (max-width:768px) {
+        height: auto;
         padding-bottom: 20%;
-         @content
-    } 
+        @content
+    }
+    @media (min-width:320px) and (max-width:425px) {
+        height: auto;
+        padding-bottom: 20%;
+        @content
+    }
 }
 
-@mixin InfoContextPhotoAdaptive($SmallMobile:100vw, $LargeMobile:60vw){
-
-     @media  (min-width:769px) and (max-width:1440px) {
+@mixin InfoContextPhotoAdaptive($SmallMobile:100vw,
+$LargeMobile:60vw) {
+    @media (min-width: 769px) and (max-width: 1440px) {
         width: calc(600px - 6vw);
         margin-top: 10%;
-         
-
-         @content
-    } 
-@media  (min-width:425px) and (max-width:768px) {
-        width: calc(425px - 6vw);
+        @content
+    }
+    @media (min-width:426px) and (max-width:768px) {
+        width: $SmallMobile;
         margin-top: 10%;
-         
-
-         @content
-    } 
-@media  (min-width:320px) and (max-width:425px) {
-       width:$SmallMobile;
-         @content
-    } 
+        @content
+    }
+    @media (min-width:320px) and (max-width:425px) {
+        width: $SmallMobile;
+        @content
+    }
 }
+
 @mixin PreviewGalleryMetric {
-      @media  (min-width:769px) and (max-width:1440px) {
-       width:80vw;
+    @media (min-width: 769px) and (max-width: 1440px) {
+        width: 80vw;
         margin-top: 10%;
         box-shadow: 0px 0px 10px 0px black;
-         
-
-        
-         @content
-    } 
-   @media  (min-width:425px) and (max-width:768px) {
-       width:80vw;
-        margin-top: 10%;
-        box-shadow: 0px 0px 10px 0px black;
-         
-
-        
-         @content
-    } 
-@media  (min-width:320px) and (max-width:425px) {
-       width:100vw;
-         @content
-    }   
+        @content
+    }
+    @media (min-width:426px) and (max-width:768px) {
+        width: 100vw;
+        @content
+    }
+    @media (min-width:320px) and (max-width:425px) {
+        width: 100vw;
+        @content
+    }
 }
 
-@mixin DescriptionPhotoAdaptive($SmallMobile:100vw, $LargeMobile:60vw){
-
-     @media  (min-width:769px) and (max-width:1440px) {
+@mixin DescriptionPhotoAdaptive($SmallMobile:100vw,
+$LargeMobile:60vw) {
+    @media (min-width: 769px) and (max-width: 1440px) {
         padding-top: 2%;
-        padding-bottom:2%;
-         
-
-         @content
-    } 
+        padding-bottom: 2%;
+        @content
+    }
 }

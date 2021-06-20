@@ -1,65 +1,62 @@
-@mixin font_widthAdpt($sizePCMonitor:1.6vw,$sizeTablet:1.5vw) {
-    @media  (min-width:1024px) {
-         font-size: $sizePCMonitor;
-       
-         @content
+@mixin font_widthAdpt($sizePCMonitor:1.6vw, $sizeTablet:1.5vw) {
+    @media (min-width: 1024px) {
+        font-size: $sizePCMonitor;
+        @content
     }
-    @media  (min-width:768px) {
-         font-size: $sizeTablet;
-         @content
+    @media (min-width:768px) {
+        font-size: $sizeTablet;
+        @content
     }
-    @media  (min-width:425px) {
-         font-size: $sizeTablet;
-         @content
+    @media (min-width:425px) {
+        font-size: $sizeTablet;
+        @content
     }
-    @media  (min-width:320px) {
-         font-size: $sizeTablet;
-         @content
+    @media (min-width:320px) {
+        font-size: $sizeTablet;
+        @content
     }
 }
-@mixin location_SW{
 
- @media  (max-width:1440px) and (min-width:769px) {
+@mixin location_SW {
+    @media (max-width: 1440px) and (min-width: 769px) {
         display: block;
-         margin-left:15px;
-       width:7vw;
-       max-width:30px;
-       position:relative;
-       z-index:99;
-         @content
+        margin-left: 15px;
+        width: 7vw;
+        max-width: 30px;
+        position: relative;
+        z-index: 99;
+        @content
     }
-
-     @media  (max-width:768px) and (min-width:425px) {
+    @media (max-width:768px) and (min-width:425px) {
         display: block;
-         margin-left:15px;
-       width:7vw;
-       max-width:30px;
-       position:relative;
-       z-index:99;
-         @content
+        margin-left: 15px;
+        width: 7vw;
+        max-width: 27px;
+        position: relative;
+        z-index: 99;
+        @content
     }
-    @media  (max-width:425px) and (min-width:320px) {
-         display: block;
-         margin-left:15px;
-       width:7vw;
-       position:relative;
-       z-index:99;
-         @content
+    @media (max-width:425px) and (min-width:320px) {
+        display: block;
+        margin-left: 15px;
+        width: 7vw;
+        position: relative;
+        z-index: 99;
+        @content
     }
-   
 }
-@mixin location_LW{
-     @media  (max-width:768px) and (min-width:425px) {
-         display: none;
-         @content
+
+@mixin location_LW {
+    @media (max-width: 768px) and (min-width: 425px) {
+        display: none;
+        @content
     }
-    @media  (max-width:425px) and (min-width:320px) {
-         display: none;
-         @content
+    @media (max-width:425px) and (min-width:320px) {
+        display: none;
+        @content
     }
-    @media  (max-width:1440px) and (min-width:769px) {
-         display: none;
-         
-         @content
+    @media (max-width:1440px) and (min-width:769px) {
+        display: none;
+        @content
     }
 }

@@ -1,8 +1,10 @@
 @mixin Footer320px {
-    @media (min-width:320px) and (max-width:425px) {
+    @media (min-width: 320px) and (max-width: 425px) {
         flex-direction: column;
-        
         @content
-        
+    }
+    @media (min-width:426px) and (max-width:768px) {
+        flex-direction: column;
+        @content
     }
 }

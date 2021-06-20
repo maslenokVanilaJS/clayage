@@ -1,27 +1,114 @@
 @mixin InfoHeadersMobileRender {
-    @media (min-width:320px)and(max-width:425px){
+    @media (min-width: 320px)and(max-width: 425px) {
         background: white;
-        width:100vw;
+        width: 100vw;
         padding-top: 12%;
         padding-bottom: 5%;
-        color:black;
-      
+        color: black;
+    }
+    @media (min-width: 426px)and(max-width: 768px) {
+        background: white;
+        width: 100vw;
+        padding-top: 12%;
+        padding-bottom: 5%;
+        color: black;
     }
     @content
 }
-@mixin InfoBlockMobileRender {
-    @media (min-width:320px)and(max-width:425px){
-         width:100vw;
-        padding-top:0;
-     }
-    @content
 
+@mixin InfoHeadersMobileRender__HideMobile {
+    @media (min-width: 320px)and(max-width: 425px) {
+        display: none;
+    }
+    @media (min-width: 426px)and(max-width: 768px) {
+        display: none;
+    }
+    @content
 }
-@mixin InfoBlockBackgroundMobileRender {
-    @media (min-width:320px)and(max-width:425px){
-         left:0;
-        
-     }
-    @content
 
+@mixin InfoBlockMobileRender {
+    @media (min-width: 320px)and(max-width: 425px) {
+        width: 100vw;
+        padding-top: 0;
+        z-index: 1;
+        background-color: white;
+        color: black;
+    }
+    @media (min-width: 426px)and(max-width: 768px) {
+        width: 100vw;
+        padding-top: 0;
+        z-index: 1;
+        background-color: white;
+        color: black;
+    }
+    @content
+}
+
+@mixin InfoBlockBackgroundMobileRender {
+    @media (min-width: 320px)and(max-width: 425px) {
+        left: 0;
+        height: 50%;
+        animation: backMastcls 20s infinite;
+        background-size: auto;
+        background-attachment: initial;
+    }
+    @media (min-width: 426px)and(max-width: 768px) {
+        left: 0;
+        height: 60%;
+        animation: backMastcls 20s infinite;
+        // background-size: auto;
+        // background-attachment: initial;
+    }
+    @content
+}
+
+@mixin InfoBlockSliderArrowsMobileRender {
+    @media (min-width: 320px)and(max-width: 425px) {
+        display: none;
+    }
+    @media (min-width: 426px)and(max-width: 768px) {
+        display: none;
+    }
+    @content
+}
+
+@mixin InfoBlockSliderArrowsBlackMobileRender {
+    @media (min-width: 769px)and(max-width: 1444px) {
+        display: none;
+    }
+    @content
+}
+
+@mixin InfoBlockTABContentMobileRender {
+    @media (min-width: 320px)and(max-width: 425px) {
+        color: black;
+        border: 2px rgb(5, 5, 5) solid;
+        box-shadow: 1px 1px 5px 1px rgb(8, 8, 8);
+    }
+    @media (min-width: 426px)and(max-width: 768px) {
+        color: black;
+        border: 2px rgb(5, 5, 5) solid;
+        box-shadow: 1px 1px 5px 1px rgb(8, 8, 8);
+    }
+    @content
+}
+
+@mixin InfoBackgroundMobileRender__ClearBackground {
+    @media (min-width: 320px)and(max-width: 425px) {
+        background-color: transparent !important;
+    }
+    @media (min-width: 426px)and(max-width: 768px) {
+        background-color: transparent !important;
+    }
+    @content
+}
+
+@mixin InfoBlockBackgroundMobileRender__Author {
+    @media (min-width: 320px)and(max-width: 425px) {
+        min-height: 600px;
+    }
+    @media (min-width: 426px)and(max-width: 768px) {
+        min-height: 900px;
+    }
+    @content
 }

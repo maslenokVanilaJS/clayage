@@ -1,65 +1,73 @@
 @import 'main.scss';
-.MasterPage{
-background-color: pink;
-overflow-x: hidden;
-width: 100%;
-font-family: Bradley Hand,cursive;
-
-}
-.Info_WhiteBackgroundAndAutoH{
-background-color: #ffffff;
-height:auto; 
- margin-top: 120px;  
+@import '/adaptive/adaptiveOther.scss';
+.MasterPage {
+    background-color: pink;
+    overflow-x: hidden;
+    width: 100%;
+    font-family: Bradley Hand, cursive;
 }
 
-.Info-Title{
-    padding-top: 70px;
-    margin: 0;
+.Info_WhiteBackgroundAndAutoH {
+    background-color: #ffffff;
+    height: auto;
+    margin-top: 120px;
 }
 
-.DescriptionBlock{
+.Info-Title {
+    padding-bottom: 80px;
+    margin: auto;
+}
+
+.DescriptionBlock {
+    @include Description {}
     display: flex;
     flex-direction: row;
     width: 100vw;
     text-align: left;
     justify-content: space-evenly;
     padding-top: 40px;
-    &-Text{
-    width:50vw;
-    
-}
-&-LessonsImage{
-    width:30vw;
-    height:20vw;
-    border-radius: 5px;
-    object-fit: cover;
-    &_Minify{
-    width:19.95vw;
-    height:15vw;
-   object-fit: cover; 
+    &__Reverse {
+        @include Description__Reverse {}
+    }
+    &-Text {
+        width: 50vw;
+        @include Description_Text {}
+    }
+    &-LessonsImage {
+        @include Description_Image {}
+        width: 30vw;
+        height: 20vw;
+        border-radius: 5px;
+        object-fit: cover;
+        &_Minify {
+            width: 19.95vw;
+            height: 15vw;
+            object-fit: cover;
+        }
     }
 }
 
-}
-.TablePrices{
-    display:table;
+.TablePrices {
+    display: table;
     margin: auto;
     margin-top: 70px;
     border-collapse: collapse;
 }
-.TableHeaderGroup{
+
+.TableHeaderGroup {
     display: table-header-group;
 }
-.TableRow{
+
+.TableRow {
     display: table-row;
-    &-Cell{
+    &-Cell {
+        @include Table_PricesFont {}
         display: table-cell;
         padding: 10px;
-        border:black solid 1px;
-        
+        border: rgb(247, 243, 243) solid 1px;
     }
 }
 
-.GetLessonsButton_Margin{
+.GetLessonsButton_Margin {
     margin-top: 180px;
 }

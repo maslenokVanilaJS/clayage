@@ -1,37 +1,63 @@
 @mixin DescribeBlock__320px {
-    @media (min-width:320px) and (max-width:425px) {
+    @media (min-width: 320px) and (max-width: 425px) {
         width: 100vw;
         height: 100vw;
-        color:white;
-        display:none;
+        color: white;
+        display: none;
+        @content
+    }
+    @media (min-width: 426px) and (max-width: 768px) {
+        width: 40vw;
+        height: 40vw;
+        color: white;
+        margin: auto;
+        margin-top: 10%;
+        display: block;
+        color: white;
         @content
     }
 }
+
 @mixin DescribeBlockMobile__320px {
-    @media (min-width:320px) and (max-width:425px) {
+    @media (min-width: 320px) and (max-width: 425px) {
         width: 95vw;
         height: auto;
-        color:white;
-        display:block;
-        margin:auto;
+        color: white;
+        display: block;
+        margin: auto;
         margin-top: 0;
         box-shadow: none;
-        border: 10px white solid;
+        border: 3vw white solid;
         background: none;
         @content
     }
-    @media (min-width:426px) and (max-width:1444px) {
+    @media (min-width: 426px) and (max-width: 768px) {
+        width: 95vw;
+        height: auto;
+        color: white;
+        display: none;
+        margin-left: 5%;
+        margin-top: 15%;
+        margin-bottom: 15%;
+        box-shadow: none;
+        border: 3vw white solid;
+        background: none;
+        @content
+    }
+    @media (min-width:769px) and (max-width:1444px) {
         width: 100vw;
         height: auto;
-        color:white;
-        display:none;
+        color: white;
+        display: none;
         @content
     }
 }
+
 @mixin DescribeBlockLargeMobileRender {
-    @media (min-width:320px) and (max-width:425px) {
+    @media (min-width: 320px) and (max-width: 425px) {
         width: 100vw;
         height: auto;
+        min-height: 600px;
         flex-direction: column-reverse;
         justify-content: space-between;
         margin-top: 0;
@@ -39,60 +65,177 @@
         background: white;
         @content
     }
-    @media (min-width:426px) and (max-width:1444px) {
+    @media (min-width:426px) and (max-width:768px) {
         width: 100vw;
         height: auto;
-         
+        min-height: 400px;
+        /* -webkit-box-orient: vertical; */
+        /* -webkit-box-direction: reverse; */
+        -ms-flex-direction: column-reverse;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        /* justify-content: space-between; */
+        margin-top: 0;
+        background-image: none;
+        background: #fff;
+        box-shadow: none;
         @content
     }
 }
+
 @mixin DescribeBlockLarge_ImageMobileRender {
-    @media (min-width:320px) and (max-width:425px) {
+    @media (min-width: 320px) and (max-width: 425px) {
         width: 70%;
         height: 40%;
-         object-position: top;
-         margin: auto;
-         margin-top:-1%;
+        object-position: top;
+        margin: auto;
+        margin-top: -1%;
         @content
     }
-    @media (min-width:426px) and (max-width:1444px) {
-         
-         
+    @media (min-width:426px) and (max-width:768px) {
+        width: 30%;
+        height: 65%;
+        -o-object-position: top;
+        object-position: top;
+        /* margin: -1% auto auto; */
+        margin-top: 4%;
+        margin-left: 4%;
         @content
     }
 }
- 
 
 @mixin DescribeBlockLarge_TextBlockMobileRender {
-    @media (min-width:320px) and (max-width:425px) {
+    @media (min-width: 320px) and (max-width: 425px) {
         width: 100vw;
         margin: auto;
         justify-content: space-between;
         height: 50%;
-        margin-top:0;
+        min-height: 296px;
+        margin-top: 0;
         color: black;
-         
         @content
     }
-    @media (min-width:426px) and (max-width:1444px) {
-         
-         
+    @media (min-width:426px) and (max-width:768px) {
+        width: 60vw;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        height: 50%;
+        min-height: 296px;
+        margin: 0 auto auto;
+        color: #000;
         @content
     }
 }
 
-@mixin DescribeBlockSlaiderMobileRender {
-    @media (min-width:320px) and (max-width:425px) {
-         display: flex;
-         width:90vw;
-         height: 50vw;
-         margin: auto;
-         margin-top: 15%;
+@mixin TextBlockMobileRender__Author {
+    @media (min-width: 320px) and (max-width: 425px) {
+        color: white !important;
+        min-height: 500px !important;
         @content
     }
-    @media (min-width:426px) and (max-width:1444px) {
-         
-         
+    @media (min-width:426px) and (max-width:768px) {
+        color: white !important;
+        min-height: 800px !important;
+        @content
+    }
+}
+
+@mixin TextBlockMobileRender__AuthorClearMargin {
+    @media (min-width: 320px) and (max-width: 425px) {
+        margin-top: 5%!important;
+        @content
+    }
+    @media (min-width:426px) and (max-width:768px) {
+        margin-top: 5%!important;
+        @content
+    }
+}
+
+@mixin DescribeBlockHeadersMobileRender {
+    @media (min-width: 320px)and(max-width: 425px) {
+        width: 100vw;
+        padding-top: 0%;
+        padding-bottom: 5%;
+        color: black;
+    }
+    @media (min-width: 426px)and(max-width: 768px) {
+        width: 100%;
+        padding-top: 0%;
+        padding-bottom: 5%;
+        color: black;
+    }
+    @content
+}
+
+@mixin DescribeBlockHeadersMobileRender__HideDesktop {
+    @media (min-width: 769px)and(max-width: 1444px) {
+        display: none;
+    }
+    @content
+}
+
+@mixin DescribeBlockSlaiderMobileRender {
+    @media (min-width: 320px) and (max-width: 425px) {
+        display: flex;
+        width: 90vw;
+        height: 50vw;
+        margin: auto;
+        margin-top: 5%;
+        flex-shrink: 0;
+        @content
+    }
+    @media (min-width:426px) and (max-width:768px) {
+        display: flex;
+        width: 90vw;
+        height: 50vw;
+        margin: auto;
+        margin-top: 5%;
+        flex-shrink: 0;
+        @content
+    }
+}
+
+@mixin DescribeImageContainerMobileRender {
+    @media (min-width: 320px) and (max-width: 425px) {
+        width: 90vw;
+        @content
+    }
+    @media (min-width:426px) and (max-width:768px) {
+        width: 90vw;
+        @content
+    }
+}
+
+@mixin DescribeBlockSlaiderMobileRender__HideDeskTop {
+    @media (min-width: 769px) and (max-width: 1444px) {
+        display: none;
+        @content
+    }
+}
+
+@mixin DescribeBlockSlaiderMobileRender__HideMobile {
+    @media (min-width: 320px) and (max-width: 425px) {
+        display: none !important;
+        @content
+    }
+    @media (min-width: 426px) and (max-width: 768px) {
+        display: none !important;
+        @content
+    }
+}
+
+@mixin DescribeBlock__MidleRender {
+    @media (min-width: 320px) and (max-width: 425px) {
+        @content
+    }
+    @media (min-width: 426px) and (max-width: 768px) {
+        margin-bottom: 10%;
+        @content
+    }
+    @media (min-width: 769px) and (max-width: 1444px) {
+        height: auto;
         @content
     }
 }
