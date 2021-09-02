@@ -1,0 +1,6 @@
+@mixin MasterPage_WidthM {
+    @media (min-width: 426px) and (max-width: 1024px) {
+        width: 100vw;
+        @content
+    }
+}

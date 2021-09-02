@@ -1,73 +1,20 @@
-@import 'main.scss';
-@import '/adaptive/adaptiveOther.scss';
-.MasterPage {
-    background-color: pink;
-    overflow-x: hidden;
-    width: 100%;
-    font-family: Bradley Hand, cursive;
-}
-
-.Info_WhiteBackgroundAndAutoH {
-    background-color: #ffffff;
-    height: auto;
-    margin-top: 120px;
-}
-
-.Info-Title {
-    padding-bottom: 80px;
-    margin: auto;
-}
-
-.DescriptionBlock {
-    @include Description {}
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    text-align: left;
-    justify-content: space-evenly;
-    padding-top: 40px;
-    &__Reverse {
-        @include Description__Reverse {}
-    }
-    &-Text {
-        width: 50vw;
-        @include Description_Text {}
-    }
-    &-LessonsImage {
-        @include Description_Image {}
-        width: 30vw;
-        height: 20vw;
-        border-radius: 5px;
-        object-fit: cover;
-        &_Minify {
-            width: 19.95vw;
-            height: 15vw;
-            object-fit: cover;
-        }
-    }
-}
-
-.TablePrices {
-    display: table;
-    margin: auto;
-    margin-top: 70px;
-    border-collapse: collapse;
-}
-
-.TableHeaderGroup {
-    display: table-header-group;
-}
-
-.TableRow {
-    display: table-row;
-    &-Cell {
-        @include Table_PricesFont {}
-        display: table-cell;
-        padding: 10px;
-        border: rgb(247, 243, 243) solid 1px;
-    }
-}
-
-.GetLessonsButton_Margin {
-    margin-top: 180px;
-}
+ @import '/commonCSS/commonNotMain.scss';
+ .DescriptionBlock-MasterClassSignUpForm {
+     color: black;
+     margin-top: 10%;
+     font-size: 24px;
+ }
+ 
+ .MasterClassSignUpForm-InputField__BlackBorder {
+     box-shadow: 0px 0px 7px#181a18;
+     margin-bottom: 5%;
+ }
+ 
+ .Button__Black {
+     box-shadow: 0px 0px 10px rgb(41, 40, 37);
+     color: black;
+     position: initial;
+     margin: auto;
+     width: 100%;
+     margin-top: 15%;
+ }

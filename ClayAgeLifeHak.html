@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="/src/js/pagesCommonModules/inject.js"></script>
+
+
+</head>
+
+
+
+<body class="MasterPage">
+    <img src="/src//img/Icons/tech.svg" alt="" class="MasterPage-Tech Tech">
+    <img src="/src//img/Icons/goUp.svg" alt="" class="MasterPage-Up Up">
+    <div class="MasterPage-Suport Suport">
+        <div class="Suport-Close Close">X</div>
+
+        <h3 class="Suport-H3">Неверное отображение? Исправим!</h3>
+        <form action="mail.php" name="Support" class="Suport-Form Form">
+            <input type="hidden" name="project_name" value="ClayAge">
+            <input type="hidden" name="admin_email" value="test@a0555389.xsph.ru">
+            <input type="hidden" name="form_subject" value="Обычный Мастер-Класс заявка">
+
+
+            <input type="hidden" name="браузер" class="Form-Field Form-Field__Hidden">
+
+
+            <label for="image" class="Form-Label Label">Скриншот проблемы
+
+            </label>
+            <input type="file" id="image" name="скриншот проблемы" class="Form-Field Form-Field__File">
+
+            <label for="more" class="Form-Label Label">
+                Опишите проблему*
+
+            </label>
+            <input type="text" required id="more" maxlength="300" name="дополнительно" class="Form-Field">
+
+            <button type="submit" class="Form-Button Button">Отправить!</button>
+        </form>
+    </div>
+
+    <div class="MasterPage-YandexMap YandexMap">
+        <div class="YandexMap-Close Close">X</div>
+        <h1 class="YandexMap-Location">Наш адрес :</h1>
+        <h3 class="YandexMap-Location">Санкт‑Петербург,ул. Невский Проспект д.60,ClayAge</h3>
+        <div class="YandexMap-Locaction Location">
+            <img class="Location-SVG" src="/src/img/mainContent/Spb_metro_logo.svg" alt="">
+            <h3 class="Location-MetroName"> Невский Проспект 600м</h3>
+            <img class="Location-SVG" src="/src/img/mainContent/Spb_metro_logo.svg" alt="">
+            <h3 class="Location-MetroName">Гостиный Двор 300метров</h3>
+        </div>
+
+
+
+        <div class="YandexMap-YMapCont YMapCont">
+
+            <a class="YandexMap-Link" href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a>
+            <a class="YandexMap-Link" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.336523%2C59.934246&mode=routes&rtext=59.933950%2C30.339095~59.934075%2C30.333911&rtt=pd&ruri=~&utm_medium=mapframe&utm_source=maps&z=17.6" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты</a>
+            <iframe class="YandexMap-Iframe " src="https://yandex.ru/map-widget/v1/-/CKqwVOiy" frameborder="1" allowfullscreen="true"></iframe>
+        </div>
+    </div>
+
+    <div class="MasterPage-Contact Contact">
+        <div class="Contact-Close">X</div>
+        <h1 class="Contact-Data">Контакты</h1>
+        <h3 class="Contact-Data Data"><a href="tel:+79313918079" class="Data-Phone">+7-931-391-80-79</a></h3>
+        <p class="Contact-Data">Телефон для дополнительных вопросов , для записи используйте пожалуйста форму на саите.</p>
+    </div>
+    <div class="MasterPage-Header Header">
+        <div class="Header-BlockLogo BlockLogo">
+            <object data="/src/img/mainContent/ClayAgeLogo.svg" type="image/svg+xml" class="BlockLogo-ClayAgeLogo ClayAgeLogo"></object>
+            <h1 class="BlockLogo-Name BlockLogo-Name__NOBacknd">ClayAge Студия Керамики</h1>
+        </div>
+        <div class="Header-LocationInfo">
+            <h3 class="LocationInfo-MetroStreet LocationInfo-MetroStreet_LW">Метро Чернышевская,Ул. Кирочная ,д. 17
+                <br>(Артклассер-Мультиспейс)</h3>
+            <img src="/src/img/mainContent/map.svg" type="" class="LocationInfo-MetroStreetIcon LocationInfo-MetroStreetIcon_SW"></img>
+        </div>
+        <ul class="Header-NavMenu NavMenu">
+            <li class="NavMenu-Link Link">
+                <a class="Link-image" target="_blank" href="http://www.vk.com"><img src="/src/img/mainContent/vk-social-network-logo.svg" class="Link-VKButton VKButton"></a>
+            </li>
+            <li class="NavMenu-Link Link">
+                <a class="Link-image" target="_blank" href="http://www.instagram.com"><img src="/src/img/mainContent/inst-logo.svg" class="Link-InstButton InstButton"></a>
+            </li>
+            <li class="NavMenu-Link Link Link_LargeVisible"><a class="Link-tel" target="_blank" type="tel">+7xxxxxxxxxx</a></li>
+            <li class="NavMenu-Link Link Link_SWVisible">
+                <a class="Link-tel tel Link-image" target="_blank" type="tel"><img src="/src/img/mainContent/call.svg" class="tel-ReverseCall ReverseCall"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="MasterPage-HeaderComponent HeaderComponent">
+        <ul class="HeaderComponent-NavMenu NavMenu">
+            <ul class="NavMenu-NavMenuOnHover NavMenuOnHover">
+                <span class="NavMenuOnHover-Target Link-item">Мастер-Классы</span>
+                <li class="NavMenuOnHover-Link Link"><a class="Link-item" target="_blank" href="/dist/ClayAgeMasterClasses.html">Мастер-Классы по керамике</a></li>
+                <li class="NavMenuOnHover-Link Link"><a class="Link-item" target="_blank" href="/dist/Tematic.html">Тематические Мастер-Классы</a> </li>
+            </ul>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="dist/AuthorCeramics.html">Авторская Керамика</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Оплата и доставка</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Подарочные Сертификаты</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Запись на тематический мастер-класс</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">ClayAge Лайфхаки</a></li>
+        </ul>
+    </div>
+
+
+    <div class="MainPage-HamburgerMenu HamburgerMenu">
+        <ul class="HamburgerMenu-NavMenu NavMenu">
+
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/ClayAgeMasterClasses.html">Мастер-Классы по керамике</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/Tematic.html">ТематическиеМастер-Классы</a> </li>
+
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="dist/AuthorCeramics.html">Авторская
+            Керамика</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="dist/PayInfo.html">Оплата и доставка</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/GiftCertificate.html">Подарочные Сертификаты</a></li>
+        </ul>
+    </div>
+    <img src="/src/img/mainContent//hamb.svg" class="MasterPage-HamburgerIcon HamburgerIcon"></img>
+    <div class="MasterPage-Info Info Info_WhiteBackgroundAndAutoH">
+
+        <h2 id="Moon" class="Info-Title"> Карманный справочник керамиста</h1>
+
+            <div class="Info-DescriptionBlock DescriptionBlock DescriptionBlock__Column">
+                <img src="/src/img/mainContent/MasterTeacher.jpg" alt="Процесс познания волшебства" title="Процесс познания волшебства" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage__Column DescriptionBlock-LessonsImage__NoFit LoaderIgnore">
+                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column  DescriptionBlock-MainData__JustifyTop">Просто и понятно</p>
+                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Полезная жизненая информация о керамике</p>
+                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Регулярный выпуск</p>
+
+            </div>
+
+            <div class="Info-SlaidersContainer SlaidersContainer">
+
+                <div class="SlaidersContainer-ImageBox ImageBox">
+                    <img data-src="/src/img/mainContent/Sculpt1.jpg" alt="" class="ImageBox-Item">
+                    <p class="ImageBox-Text">Скульптура из глины!</p>
+                    <p class="ImageBox-Text ImageBox-Text__In">Часть 1</p>
+                    <button id="glina1Bind" class="ImageBox-GetLessonsButton GetLessonsButton  GetLessonsButton__Out">
+  Прочитать   
+</button>
+
+
+                </div>
+                <div class="SlaidersContainer-ImageBox ImageBox  ">
+                    <img data-src="/src/img/mainContent/Sculpt2.jpg" alt="" class="ImageBox-Item">
+                    <p class="ImageBox-Text">Скульптура из глины!</p>
+                    <p class="ImageBox-Text ImageBox-Text__In">Часть 2</p>
+
+                    <button id="glina2Bind" class="ImageBox-GetLessonsButton GetLessonsButton">
+                            Посмотреть !
+                        </button>
+
+
+                </div>
+                <div class="SlaidersContainer-ImageBox ImageBox">
+                    <img data-src="/src/img/mainContent/Sculpt3.jpg" alt="" class="ImageBox-Item">
+                    <p class="ImageBox-Text">Скульптура из глины!</p>
+                    <p class="ImageBox-Text ImageBox-Text__In">Часть 3</p>
+
+                    <button id="glina3Bind" class="ImageBox-GetLessonsButton GetLessonsButton GetLessonsButton__Out">
+                            Посмотреть !
+                        </button>
+
+
+                </div>
+                <div class="SlaidersContainer-ImageBox ImageBox">
+                    <img data-src="/src/img/mainContent/music.jpg" alt="" class="ImageBox-Item">
+                    <p class="ImageBox-Text">Керамические музыкальные инструменты!</p>
+
+
+                    <button id="glina4Bind" class="ImageBox-GetLessonsButton GetLessonsButton GetLessonsButton__In">
+                            Посмотреть !
+                        </button>
+
+
+                </div>
+                <div class="SlaidersContainer-ImageBox ImageBox">
+                    <img data-src="/src/img/mainContent/angobs.jpg" alt="" class="ImageBox-Item">
+                    <p class="ImageBox-Text">Ангобы</p>
+
+
+                    <button id="glina5Bind" class="ImageBox-GetLessonsButton GetLessonsButton GetLessonsButton__In">
+                            Посмотреть !
+                        </button>
+
+
+                </div>
+
+                <div class="SlaidersContainer-ImageBox ImageBox  ">
+                    <img data-src="/src/img/mainContent/teatea.jpg" alt="" class="ImageBox-Item">
+                    <p class="ImageBox-Text">Как сделать чайник из глины</p>
+
+                    <button id="glina6Bind" class="ImageBox-GetLessonsButton GetLessonsButton">
+                            Посмотреть !
+                        </button>
+
+
+                </div>
+
+                <div class="SlaidersContainer-ImageBox ImageBox  ">
+                    <img data-src="/src/img/mainContent/peci.jpg" alt="" class="ImageBox-Item">
+                    <p class="ImageBox-Text">Дровянная\Газовая печь для обжига глины</p>
+
+                    <button id="glina7Bind" class="ImageBox-GetLessonsButton GetLessonsButton">
+                            Посмотреть !
+                        </button>
+
+
+                </div>
+                <div class="SlaidersContainer-ImageBox ImageBox  ">
+                    <img data-src="/src/img/mainContent/scars.jpg" alt="" class="ImageBox-Item">
+                    <p class="ImageBox-Text">Трещины в керамике </p>
+
+
+                    <button id="glina8Bind" class="ImageBox-GetLessonsButton GetLessonsButton">
+                            Посмотреть !
+                        </button>
+
+
+                </div>
+
+
+
+            </div>
+            <h2 class="Info-Title" id="glina1"> Как сделать скульптуру из глины?</h1>
+
+                <div class="Info-DescriptionBlock DescriptionBlock DescriptionBlock__Column">
+                    <img src="/src/img/mainContent/SculptureItem (13).jpg" alt="Процесс познания волшебства" title="Процесс познания волшебства" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage__Column LoaderIgnore">
+                    <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column  DescriptionBlock-MainData__JustifyTop">Необходимые материалы</p>
+                    <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Особенности строения </p>
+                    <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Техники</p>
+                    <h3 class="DescriptionBlock-PartName">Часть 1</h3>
+                    <div class="DescriptionBlock-FiguresBox FiguresBox">
+                        <figure class="FiguresBox-ContextIllu ContextIllu">
+                            <img src="/src/img/mainContent/shamot.jpg" alt="Японский чайник" class="ContextIllu-IlluImg">
+                            <figcaption class="ContextIllu-Caption">Шамотная глина</figcaption>
+                        </figure>
+                        <figure class="DescriptionBlock-ContextIllu ContextIllu">
+                            <img src="/src/img/mainContent/dogu.jpg" alt="Тяван" class="ContextIllu-IlluImg">
+                            <figcaption class="ContextIllu-Caption">Догу из глины</figcaption>
+
+                        </figure>
+                    </div>
+
+                    <p class="DescriptionBlock-Text DescriptionBlock-Text__Column">Чаще всего скульптуру из глины делают из шамотной глины, то есть из глины, в которой есть измолотая уже керамика или песок. Для чего это делается? Для того, чтобы во время обжига керамическая скульптура не лопнула, так как в ней
+                        могут быть места, где толщина стенок может превышает необходимые для безопасного обжига 6 мм.
+
+                    </p>
+
+                    <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">Когда мы создаем бюст или большую скульптуру то неминуемо встаёт вопрос: как её создать полой или другими словами пустой внутри? Есть несколько вариантов, как это сделать. Либо вы используете манекен, на который равномерным слоем
+                        накладываите глину в виде пластов или кусков , отбивая их деревянной палкой для утрамбовывания стенок. Либо вы делаете основу из скомканной мятой бумаги и скотча, чтобы потом через техническое отверстия вытащить её перед обжигом
+                        (или она сгорает в печке если сделать скульптуру целиком).
+
+
+                    </p>
+                    <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                        Создание скульптур из глины - это особое искусство из за сложности создания каркаса. И если вы создаёте большую фигуру человека или животного, можно предварительно сделать каркас из проволоки, который обязательно дополнительно обматывается бумагой
+                        или тряпками. Если вы не обмотайте каркас, то в момент обжига металл расширяется, а глина при этом уменьшается в размере, и из за этого может произойти опять же растрескивание. Скульптура делается пока глина мягкая и пластичная,
+                        для того чтобы все детали соединились вместе воедино. Но мелкие детали и окончательные контуры легче всего делать в стояние когда глина уже чуть-чуть подсохла или в кожетвердом состоянии. Кожетвердым называется состояние глины,
+                        потому что она похожа на состояние дубленой кожи или дерева, и тогда вы можете вырезать по глине резаками либо другими инструментами, придавая самые мелкие детали. Сделать мелкие детали во влажном состоянии практически невозможно.
+                    </p>
+                    <h3 id="glina2" class="DescriptionBlock-PartName">Часть 2</h3>
+
+                    <div class="DescriptionBlock-FiguresBox FiguresBox">
+                        <figure class="FiguresBox-ContextIllu ContextIllu">
+                            <img src="/src/img/mainContent/stangen.jpg" alt="Японский чайник" class="ContextIllu-IlluImg">
+                            <figcaption class="ContextIllu-Caption">Штангенциркули</figcaption>
+                        </figure>
+                        <figure class="DescriptionBlock-ContextIllu ContextIllu">
+                            <img src="/src/img/mainContent/wet.jpg" alt="Тяван" class="ContextIllu-IlluImg">
+                            <figcaption class="ContextIllu-Caption">Влажная глина</figcaption>
+
+                        </figure>
+                    </div>
+                    <p class="DescriptionBlock-Text DescriptionBlock-Text__Column">В закрытом от внешних факторов состояния глина высыхают очень долго, поэтому если вы не успеваете сделать скульптуру за один присест, у вас есть возможность накрыть её клеенкой и продолжать следующий раз (предварительно можно сбрызнуть
+                        её водой и тогда к ней возвращается пластичность, особенно шамотные глины, которые хорошо впитывают воду). Для формирования пропорций скульптуры используют различные штангенциркули. Ими можно мерить пропорции, размеры модели,
+                        в случае, если вы делаете скульптуру с конкретного объекта. Чаще всего отверстия в скульптуре делают в её основании, поэтому обжигать ее лучше на боку. Нужно также учитывать, что все детали вашей будущей скульптуры после её
+                        высыхания уменьшатся в размере. По этой причине надо всегда делать запас на тот процент усадки, которым обладает ваша глина. Например, если вы делаете черты лица человека, то все выступающей части (такие как нос, подбородок,
+                        уши) делаются чуть-чуть больше.
+
+                    </p>
+
+
+                    <h3 id="glina3" class="DescriptionBlock-PartName">Часть 3</h3>
+
+                    <div class="DescriptionBlock-FiguresBox FiguresBox">
+                        <figure class="FiguresBox-ContextIllu ContextIllu">
+                            <img src="/src/img/mainContent/bronze.jpg" alt="Японский чайник" class="ContextIllu-IlluImg">
+                            <figcaption class="ContextIllu-Caption">Бронзовая скульптура</figcaption>
+                        </figure>
+                        <figure class="DescriptionBlock-ContextIllu ContextIllu">
+                            <img src="/src/img/mainContent/belo.jpg" alt="Тяван" class="ContextIllu-IlluImg">
+                            <figcaption class="ContextIllu-Caption">Беложгущейся глина</figcaption>
+
+                        </figure>
+                    </div>
+                    <p class="DescriptionBlock-Text DescriptionBlock-Text__Column">В заключении хотелось бы рассказать про очень интересную древнюю технологию изготовления скульптуры с использованием керамической основы, но в итоге получалось скульптура, сделанная из бронзы. Как такое возможно ? - спросите вы. Секрет
+                        заключается в том, что в начале скульптор делал всю фигуру из глины без самых маленьких деталей, потом она обжигалась (скульптура делась из огнеупорный беложгущейся глины выдерживающий большие температуры). Затем после обжига
+                        керамическая скульптура покрывалась тонким слоем воска, после того как воск застывал, скульптор по нему делал уже мелкие детали. Толщина воскового слоя варьировалась в зависимости от размера скульптуры, но он должен был быть не
+                        меньше 10 мм, для того чтобы в последующем именно в этот промежуток мог затечь металл. Когда восковой слой был готов, и на нём были сделаны мелкие детали, скульптура покрывалась ещё раз огнеупорной глиной или гипсом с песком.
+                        И затем обжигалась ещё раз для того, чтобы весь воск выгорел или вытек из этой конструкции. Таким образом получались верхний саркофаг и внутренняя часть скульптуры. Через отверстия сверху в саркофаг заливалось бронза или другой
+                        металл. В итоге так получалась керамическая скульптура, покрытая слоем металла. Снаружи она выглядела как будто бы вся была сделана из бронзы. Зачем нужна была такая технология? Для экономии металла и для того, чтобы получилась
+                        более долговечная скульптура, которую уже нельзя было так разбить легко, как если бы она была только из керамики!
+
+                    </p>
+
+
+
+                </div>
+                <h2 class="Info-Title" id="glina4"> Как сделать музыкальные инструменты из глины?</h1>
+
+                    <div class="Info-DescriptionBlock DescriptionBlock DescriptionBlock__Column">
+                        <img src="/src/img/mainContent/udu Nr.2.jpg" alt="Процесс познания волшебства" title="Процесс познания волшебства" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage__Column LoaderIgnore">
+                        <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column  DescriptionBlock-MainData__JustifyTop">Необходимые материалы</p>
+                        <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Особенности строения </p>
+                        <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Техники</p>
+                        <div class="DescriptionBlock-FiguresBox FiguresBox">
+                            <figure class="FiguresBox-ContextIllu ContextIllu">
+                                <img src="/src/img/mainContent/drU5XJjala0.jpg" alt="Японский чайник" class="ContextIllu-IlluImg">
+                                <figcaption class="ContextIllu-Caption">Дарбука из глины</figcaption>
+                            </figure>
+                            <figure class="DescriptionBlock-ContextIllu ContextIllu">
+                                <img src="/src/img/mainContent/udu nr.1.jpg" alt="Тяван" class="ContextIllu-IlluImg">
+                                <figcaption class="ContextIllu-Caption">Уду из глины</figcaption>
+
+                            </figure>
+                        </div>
+
+                        <p class="DescriptionBlock-Text DescriptionBlock-Text__Column">Большая часть глиняных инструментов как ни странно ударные (индийский музыкальный горшок- Гаттам, дарбука-ближневосточный барабан, и уду). Это кроме всем известных свистулек и окарин. Теперь подробнее...
+
+                        </p>
+
+                        <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                            ✅Свистульки и окарины существовали в разных культурах начиная с каменного века. В разных культурах они имитировали пение птиц или мычание. Это духовые инструменты. Звук в них извлекается через отверстия, происходит разрезание воздуха при вдувании в полость
+                            пустотелого глянняного резервуара. Они бывают также двухкамерными. И это высший пилотаж глиняных свистулек, когда из одной камеры идёт один звук(бурдонный) (как на волынке), а из другой камеры созвучие (так как там делается
+                            несколько отверстий). И можно создавать мелодию! Чтобы создать такую окарину надо слепить довольно большую камеру (чаще всего она форме большой картошки), которую удобно держать в руках, либо морковки, внутри которой обязательно
+                            должна быть полость. С одного края мы делаем свисток или два свистка если это двухкамерная. Самое сложное в изготовлении окарин это конечно же свисток. главное это чтобы все каналы, по которым идёт воздух, были строго сделаны
+                            деревянными стеками. И главный канал должен упираться в порожек который разрезает воздух под 45°, тогда получится сильный громкий и мощный звук. Все остальное происходит по настройке: делаются отверстия и находятся те
+                            ноты, которые нужны.
+                        </p>
+
+                        <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                            ✅Гаттам это пузатый большой горшок. Он не имеет ножки, то есть дно полукруглое, так как во время игры он держится на коленях. Человек, играющий пальцами, бьёт по стенкам горшка и получает разные по высоте звуки. При изготовлении Гаттама в глину замешивается
+                            различная металлическая пудра в том числе и медная и иногда даже железная. Это делается для того, чтобы итак звенящая керамика стала ещё более звонкой. При обжиге керамики гаттама доходит до придельной температуры, при которой
+                            происходит спекание черепка, и звук приближается к звуку звонящего металла.
+                        </p>
+
+                    </div>
+
+                    <h2 class="Info-Title" id="glina5"> Как сделать ангобы из глины?</h1>
+
+                        <div class="Info-DescriptionBlock DescriptionBlock DescriptionBlock__Column">
+                            <img src="/src/img/mainContent/angob.png" alt="Процесс познания волшебства" title="Процесс познания волшебства" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage__Column LoaderIgnore">
+                            <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column  DescriptionBlock-MainData__JustifyTop">Необходимые материалы</p>
+                            <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Особенности строения </p>
+                            <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Техники</p>
+                            <div class="DescriptionBlock-FiguresBox FiguresBox">
+                                <figure class="FiguresBox-ContextIllu ContextIllu">
+                                    <img src="/src/img/mainContent/redglina.jpg" alt="Японский чайник" class="ContextIllu-IlluImg">
+                                    <figcaption class="ContextIllu-Caption">красножгущаяся глина</figcaption>
+                                </figure>
+                                <figure class="DescriptionBlock-ContextIllu ContextIllu">
+                                    <img src="/src/img/mainContent/belo.jpg" alt="Тяван" class="ContextIllu-IlluImg">
+                                    <figcaption class="ContextIllu-Caption">беложгущаяся глина</figcaption>
+
+                                </figure>
+                            </div>
+
+                            <p class="DescriptionBlock-Text DescriptionBlock-Text__Column">Знаете ли вы, что в древности глину расписывали такой же глиной, только другого цвета?
+                            </p>
+
+                            <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                🍀Как известно, существуют беложгущаяся глина и красножгущаяся. Чтобы создать цветовой орнамент на изделии ещё необоженном использовался так называемый ангоб (глина разведённая в воде до сметанообразного состояния, иногда с добавлением плавня как
+                                глазурь). Ангобы, помимо белого и красного, могли быть разных цветов, в зависимости от того, какой пигмент добавлялся в белую глину: жёлтый, чёрный или синий. Пигменты делались из растертых камней, так как только
+                                в камнях существуют оксиды металлов, которые сохраняют свой цвет после воздействия высоких температур. Такие красители хороши тем, что их можно покрывать и нужно покрывать ещё до первого обжига.
+                            </p>
+
+                            <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                🍀Трудности: нанесение ангоба слишком толстым слоем на изделие, и после обжига он может отшелушиваться либо отпадать как скорлупа. Чтобы этого не происходило, нужно очень равномерно покрывать, когда он не слишком густой (примерно как сливки).
+                            </p>
+                            <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                🍀Ангобы хороши тем, что позволяют создавать контрастные графические орнаменты ( можно процарапывать рисунок и наносить ангоб в эти углубления, лишнее чистить петлей, можно полностью покрывать изделие ангобом, а потом счищать некоторые участки до проявления
+                                цвета самого изделия). Можно также после первого обжига покрыть изделие ещё бесцветной глазурью.
+                            </p>
+                            <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                🍀Всеми любимая сейчас керамика в стиле растрескавшийся коры дерева часто делается с применением ангобов. Вначале изделие выкручивается на гончарном круге, затем покрывается ангобом, затем газовой горелкой обжигается несколько секунд. Глина очень
+                                медленно нагревается, поэтому во влажном состоянии высыхает только верхний слой. Когда ангоб (можно также использовать канцелярский клей, тогда горелка не нужна) подсыхает, нужно выдавливать изделие изнутри, пока не
+                                получиться сеть трещин или фактура коры главное при этом не перестараться!
+                            </p>
+
+                        </div>
+
+                        <h2 class="Info-Title" id="glina6"> Как сделать чайник из глины?</h1>
+
+                            <div class="Info-DescriptionBlock DescriptionBlock DescriptionBlock__Column">
+                                <img src="/src/img/mainContent/japaneseTea.jpg" alt="Процесс познания волшебства" title="Процесс познания волшебства" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage__Column LoaderIgnore">
+                                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column  DescriptionBlock-MainData__JustifyTop">Необходимые материалы</p>
+                                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Особенности строения </p>
+                                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Техники</p>
+                                <div class="DescriptionBlock-FiguresBox FiguresBox">
+                                    <figure class="FiguresBox-ContextIllu ContextIllu">
+                                        <img src="/src/img/mainContent/TeaCeremony.jpg" alt="Традиционый чайник" class="ContextIllu-IlluImg">
+                                        <figcaption class="ContextIllu-Caption">Традиционый чайник</figcaption>
+                                    </figure>
+                                    <figure class="DescriptionBlock-ContextIllu ContextIllu">
+                                        <img src="/src/img/mainContent/TeaCeremonyItem9.jpg" alt="Тяван" class="ContextIllu-IlluImg">
+                                        <figcaption class="ContextIllu-Caption">Японский чайник</figcaption>
+
+                                    </figure>
+                                </div>
+
+                                <p class="DescriptionBlock-Text DescriptionBlock-Text__Column">Чайник это сосуд, состоящий из тулова, носика, ручки и крышки. Чтобы все эти четыре составляющие были идеальны, нужно знать некоторые нюансы.
+                                </p>
+
+                                <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                    🔶Носик. <br>✔️верхняя часть носика должна быть вровень с самой верхний крайней точкой тулова ( тогда можно будет заливать воду до самого верха, и при этом вода не будет вытекать из носика раньше времени). <br>✔️угол
+                                    носика должен быть примерно под 45 градусов
+                                    <br> ✔️выходное отверстие носика не должно быть слишком широким но и не очень узким. Если отверстие будет широким, тогда жидкость из чайника будет булькать. Если он будет очень узкий, то возможно проходящая заварка
+                                    будет его забивать, либо чай начнёт переливаться через край горлышка. носик либо выкручивают на круге нужного размера (он должен быть пропорционален тулову), либо делают из пласта вокруг какой-нибудь деревянной
+                                    подмоги (например черенка от кисточеки).
+                                </p>
+
+                                <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                    🔶Крышка. Она должна быть идеально подходящей. Нужно вначале сделать крышку на пару миллиметров меньше, чем горлышко чайника. После первичного усыхания сточить необходимые миллиметры, чтобы крышка легла впритык. Это делается потому, что тулово высыхает
+                                    дольше крышки, у него больше усадка. Поэтому если сделать крышку слишком большую, то после выставки она вообще не влезет в горлышко.🔶Ручка. Если сделать ручку слишком низко, чайник будет держать неудобно, если она
+                                    будет слишком массивная, то она будет перевешивать чайник либо отобьется в момент падения. </p>
+                                <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                    🔶Ручка. Если сделать ручку слишком низко, чайник будет держать неудобно, если она будет слишком массивная, то она будет перевешивать чайник либо отобьется в момент падения.
+                                </p>
+                                <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                    🔶Горлышко. Если сделать слишком широкое горлышко, тогда чай будет переливаться через края чайника. Если сделать слишком узкое горлышко, тогда будет тяжело вытряхивать заварку и промывать чайник.
+                                </p>
+                                <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                    🍀в заключении стоит упомянуть о том, что существует необычная для нас форма чайника (японская) с боковой ручкой (последнее фото).
+                                </p>
+
+
+                            </div>
+
+                            <h2 class="Info-Title" id="glina7"> Дровяная\газовая печь для обжига</h1>
+
+                                <div class="Info-DescriptionBlock DescriptionBlock DescriptionBlock__Column">
+                                    <img src="/src/img/mainContent/peci2.jpg" alt="Процесс познания волшебства" title="Процесс познания волшебства" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage__Column LoaderIgnore">
+                                    <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column  DescriptionBlock-MainData__JustifyTop">Необходимые материалы</p>
+                                    <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Особенности строения </p>
+                                    <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Техники</p>
+                                    <div class="DescriptionBlock-FiguresBox FiguresBox">
+                                        <figure class="FiguresBox-ContextIllu ContextIllu">
+                                            <img src="/src/img/mainContent/peciIllu.webp" alt="Традиционый чайник" class="ContextIllu-IlluImg">
+                                            <figcaption class="ContextIllu-Caption">Дровянная печь</figcaption>
+                                        </figure>
+                                        <figure class="DescriptionBlock-ContextIllu ContextIllu">
+                                            <img src="/src/img/mainContent/peciGazIllu.jpg" alt="Тяван" class="ContextIllu-IlluImg">
+                                            <figcaption class="ContextIllu-Caption">Газовая печь</figcaption>
+
+                                        </figure>
+                                    </div>
+
+                                    <p class="DescriptionBlock-Text DescriptionBlock-Text__Column">Сегодня мы бы хотели поделиться опытом создания печей для обжига керамики.
+                                    </p>
+                                    <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">Самые простые печи для обжига это печи виде горна (то есть виде колодца).
+                                    </p>
+                                    <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                        Как сделать: собирается круглая печь, оставляется отверстия для топки снизу, высота печи должна быть равна длине газового баллонами 40 литров плюс 40 см на топку (для того чтобы делать чёрнолощеную керамику) Мало кто знает что такое чёрнолощеная керамика
+                                        или задымленный обжиг. Это очень древний способ изготовления керамики при котором за один обжиг вы получаете посуду которая не пропускает воду и имеет цвет чёрного графита. Если керамику перед тем как обжигать
+                                        залощить (то есть натереть её камешком или щеткой), то она ещё и приобретает блеск. Когда вы построили кирпичный колодец (в диаметре он должен быть в полтора раза больше чем диаметр газового у баллона на 40
+                                        л), вы находите старый газовый баллон и спиливаете верхушку баллона так, чтобы у вас получился резервуар в который вы сможете сложить керамику (потому что температура во время обжига керамики должна набираться
+                                        медленно и когда вы используете печь на дровах или на газу этого очень сложно добиться поэтому выходит очень много брака, печь для обжига чёрнолощенной керамики предотвращает взрывы засчет того, что керамика складывается
+                                        непосредственно в газовый баллон предварительно пересыпанные опилками в данном случае опилки желательно брать не еловые, так как в них очень много смолы) всё остальное похоже на слоеный пирог вы закладываете
+                                        вначале опилки потом первую партию ваших изделий, потом опять опилки и так до самого верха, затем вы герметично закрывайте баллон так, чтобы туда не попадал кислород и опускайте баллон в вашу печь в виде колодца.
+                                    </p>
+
+                                    <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                        Сверху такую печь лучше закрывать толстом слоем металла (лист или керамическая плита), сверху насыпается песок для дополнительной теплоизоляции. Выход для дыма остается сбоку. Когда вы начинаете топить, потихоньку опилки внутри баллона начинают сгорать
+                                        и когда вы достигаете температуры 900° ( а это легко увидеть по нагреву баллона - это ярко оранжевый цвет) можно заканчивать обжиг. После остывания, открывая баллон, вы получаете чёрнолощенную керамику количество
+                                        и процент брака при этом не составляет больше 10 % !!!) Эту же печь можно также использовать и на газу. Для этого вам нужен баллон с газом (чаще всего хватает 20 л на один обжиг), большое ведро с горячей водой,
+                                        в которую вы опускайте баллон (так как во время долгого выпускания газа из баллона баллон сильно остывает и покрывается инеем, чтобы этого не было баллон лучше держать в горячей воде и по тихонькуичерез горелку
+                                        подаете пламя опять же через отверстия в топку). </p>
+
+
+
+                                </div>
+
+
+                                <h2 class="Info-Title  " id="glina8"> Трещины в керамике </h1>
+
+                                    <div class="Info-DescriptionBlock DescriptionBlock DescriptionBlock__Column">
+                                        <img src="/src/img/mainContent/scars3.jpg" alt="Процесс познания волшебства" title="Процесс познания волшебства" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage__Column LoaderIgnore">
+                                        <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column  DescriptionBlock-MainData__JustifyTop">Необходимые материалы</p>
+                                        <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Особенности строения </p>
+                                        <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Техники</p>
+
+
+
+
+                                        <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__SpaceTop  ">Самое большое разочарование, которое ждёт керамиста на его пути, это трещина. как возникает трещина? В пластическом состоянии глина содержит 30-40 % влаги, а после высыхания остаются только 10 %. И эти 10 % выходят
+                                            во время обжига, когда глина превращается в керамику (уже при 300 градусах). Поэтому большая часть трещин возникает при высыхании и во время первого обжига. Что делать?
+                                        </p>
+                                        <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">1. Сушить изделия равномерно: обязательно оставлять изделия сохнуть на впитывающей поверхности, лучше всего для этого подходит дерево либо гипс, при этом можно накрывать изделия мешковиной.
+                                        </p>
+                                        <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                            2. Всегда переворачивать изделия на второй день вверх дном (дно высыхает в вертикальном состоянии позже чем верх, верхняя часть изделия уже почти высыхает и уменьшается в размере, а нижняя часть ещё нет, и на стыках возникает напряжение).
+                                        </p>
+
+                                        <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                            3. Во время выкручивания изделия на гончарном круге не забывайте о том, что толщина дна должна быть такой же, как и толщина стенок изделия (можно обтачивать изделие когда оно уже подсохло). </p>
+
+                                        <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                            4. Изделия в печке должны располагаться так, чтобы ни плита, ни какое-либо другое изделие не заслоняло выход этой влаги.
+                                        </p>
+
+                                        <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                            5. Во время обжига нагрев до 300° должен быть очень плавный!
+                                        </p>
+                                        <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin">
+                                            6. Чтобы предотвратить большую часть взрывов (особенно когда вы делаете вещи пластовым методом или занимаетесь скульптурой) не поленитесь и тонкой проволокой проткните все утолщения, все места, где могут остаться воздушные пузыри. Таким образом вы
+                                            предотвратите накопления излишнего давления внутри стенок во время выхода влаги при обжиге. </p>
+
+                                        <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin"> Трещины могут появиться уже после глазуровки. Это связано с тем, что у глазури и глины есть такая характеристика как коэффициент расширения (Коэффицие́нт теплово́го расшире́ния — физическая величина, характеризующая
+                                            относительное изменение объёма или линейных размеров тела с увеличением температуры на 1 К при постоянном давлении).
+                                        </p>
+                                        <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin"> Тут можно ориентироваться по температуре указанной производителем, а также просто опытным путём. Высокотемпературные глиняные массы обычно успешно обжигаются с тугоплавкими глазурями и наоборот.
+                                        </p>
+                                        <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__NoMargin"> И в заключении можно добавить только пару слов о том, можно ли что-то сделать если трещина уже появилась. Если это очень маленькая трещина, возникшая при сушке, можно попробовать зашкурить и намочить, если очень
+                                            маленькая трещина после первого обжига - возможно она зальётся глазурью. Но во всех случаях нужно помнить, что каждый обжиг (из-за того, что изделие испытывает такую большую разницу температур) делает трещины
+                                            больше. Желаем всем как можно меньше трещин)))
+                                        </p>
+                                    </div>
+                                    <h2 class="Info-Title Info-Title__Top"> Продолжение следует..</h1>
+
+
+    </div>
+
+
+
+    <div class="MainPage-Footer Footer ">
+        <div class="Footer-Copyright Copyright ">
+            <p class="Copyright-Info ">ClayAge 2015-2021 </p>
+            <p class="Copyright-Info ">Все материалы сайта защишены авторским правом. </p>
+        </div>
+        <div class="Footer-CiteInformationBlock CiteInformationBlock ">
+            <a href=" " class="CiteInformationBlock-NavMenu ">Ценны и оплата</a>
+            <a href=" " class="CiteInformationBlock-NavMenu ">Доставка и самовывоз</a>
+            <a href=" " class="CiteInformationBlock-NavMenu ">Подарочные сертификаты</a>
+        </div>
+        <div class="Footer-Copyright Copyright ">
+            <p class="Copyright-Info ">Номер телефона : +79052917639</p>
+            <p class="Copyright-Info ">Адрес : Санкт‑Петербург,Невский Проспект 17б,3 этаж</p>
+        </div>
+    </div>
+    <script src="/src/js/pagesCommonModules/commonSvgInjectControll.js "></script>
+
+</body>
+
+</html>

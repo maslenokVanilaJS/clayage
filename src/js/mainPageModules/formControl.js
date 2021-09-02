@@ -97,6 +97,9 @@ function modalFormControl(object) {
                     element.classList.remove("Info__PositionClear");
                 });
                 document.querySelector(".Header").classList.remove("Header__ZIndexClear");
+                if (document.querySelector("body").classList.contains("body__Lock")) {
+                    document.querySelector("body").classList.remove("body__Lock");
+                }
             }
         }
     };
@@ -131,6 +134,9 @@ function certificateGetControl() {
     document.querySelector('.TAB__GetC').onclick = () => {
         document.querySelector(".GetCertificateMainAppContainer").classList.add('GetCertificateMainAppContainer__Visible');
         document.querySelector(".GetCertificate").classList.add('GetCertificateMain');
+        document.querySelector(".Tech").classList.add("Tech__ClearView");
+        document.querySelector(".Up").classList.add("Up__ClearView");
+
         Array.prototype.slice.call(document.querySelectorAll(".Info")).forEach(element => {
             element.classList.add("Info__PositionClear");
         });
@@ -139,6 +145,13 @@ function certificateGetControl() {
             Array.prototype.slice.call(document.querySelectorAll(".Info")).forEach(element => {
                 element.classList.remove("Info__PositionClear");
             });
+            document.querySelector(".Tech").classList.remove("Tech__ClearView");
+
+            document.querySelector(".Up").classList.remove("Up__ClearView");
+
+            if (document.querySelector("body").classList.contains("body__Lock")) {
+                document.querySelector("body").classList.remove("body__Lock");
+            }
         };
     };
 
@@ -153,8 +166,10 @@ function ajaxFormMasterclasses() {
 
         let formData = new FormData(document.forms.basicLesson);
         let xhr = new XMLHttpRequest();
-        xhr.open('POST', '../../../src/php/sendMailBasicLesson', true);
+        xhr.open('POST', '/src/php/mail.php', true);
         xhr.send(formData);
+        document.basicLesson.reset();
+
         xhr.onload = () => {
             if (xhr.status == 200) {
                 document.querySelector(".MasterClassSignUpFormContainer").classList.remove("MasterClassSignUpFormContainer__Visible");
@@ -162,6 +177,7 @@ function ajaxFormMasterclasses() {
                     element.classList.remove("Info__PositionClear");
                 });
                 document.querySelector(".Header").classList.remove("Header__ZIndexClear");
+                document.querySelector("body").classList.remove("body__Lock");
 
                 document.querySelector(".SuccesFormSend__BasicLesson").classList.add('SuccesFormSend_Visible');
                 document.querySelector(".SuccesFormSend__BasicLesson").querySelector(".SuccesFormSend-Button").onclick = () => {
@@ -175,6 +191,7 @@ function ajaxFormMasterclasses() {
                     element.classList.remove("Info__PositionClear");
                 });
                 document.querySelector(".Header").classList.remove("Header__ZIndexClear");
+                document.querySelector("body").classList.remove("body__Lock");
 
                 document.querySelector(".SuccesFormSend_OnFail").classList.add('SuccesFormSend_Visible');
                 setTimeout(() => {
@@ -190,8 +207,10 @@ function ajaxFormMasterclasses() {
 
         let formData = new FormData(document.forms.Advanced);
         let xhr = new XMLHttpRequest();
-        xhr.open('POST', 'sendMailAdvancedLesson', true);
+        xhr.open('POST', '/src/php/mail.php', true);
         xhr.send(formData);
+        document.Advanced.reset();
+
         xhr.onload = () => {
             if (xhr.status == 200) {
                 document.querySelector(".MasterClassSignUpFormContainer__Advanced").classList.remove("MasterClassSignUpFormContainer__Visible");
@@ -199,6 +218,7 @@ function ajaxFormMasterclasses() {
                     element.classList.remove("Info__PositionClear");
                 });
                 document.querySelector(".Header").classList.remove("Header__ZIndexClear");
+                document.querySelector("body").classList.remove("body__Lock");
 
                 document.querySelector(".SuccesFormSend__AdvancedLesson").classList.add('SuccesFormSend_Visible');
                 document.querySelector(".SuccesFormSend__AdvancedLesson").querySelector(".SuccesFormSend-Button").onclick = () => {
@@ -211,6 +231,7 @@ function ajaxFormMasterclasses() {
                     element.classList.remove("Info__PositionClear");
                 });
                 document.querySelector(".Header").classList.remove("Header__ZIndexClear");
+                document.querySelector("body").classList.remove("body__Lock");
 
                 document.querySelector(".SuccesFormSend_OnFail").classList.add('SuccesFormSend_Visible');
                 setTimeout(() => {

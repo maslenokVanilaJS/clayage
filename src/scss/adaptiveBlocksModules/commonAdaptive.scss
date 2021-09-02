@@ -1,0 +1,56 @@
+@mixin SupportMixin {
+    @media (min-width: 320px) and (max-width: 510px) {
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        @content
+    }
+}
+
+@mixin BrwrSMixin {
+    @media (min-width: 320px) and (max-width: 1023px) {
+        width: 100vw;
+        flex-wrap: wrap;
+        @content
+    }
+}
+
+@mixin BrwrSMixin__Item {
+    @media (min-width: 320px) and (max-width: 425px) {
+        width: 40vw;
+        margin: auto;
+        margin-top: 5vw;
+        height: auto;
+        @content
+    }
+    @media (min-width: 426px) and (max-width: 1024px) {
+        width: 40vw;
+        margin: auto;
+        margin-top: 5vw;
+        height: auto;
+        @content
+    }
+}
+
+@mixin BrwrSMixin__Icon {
+    @media (min-width: 320px) and (max-width: 425px) {
+        margin-left: calc(20vw - 30px);
+        width: 60px;
+        height: auto;
+        @content
+    }
+    @media (min-width: 426px) and (max-width: 768px) {
+        margin-left: calc(20vw - 30px);
+        width: 60px;
+        height: auto;
+        @content
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+        margin-left: calc(20vw - 40px -3%);
+        width: 80px;
+        height: auto;
+        @content
+    }
+}

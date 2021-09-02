@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Онлайн</title>
+<link href="external.css" type="text/css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >   
+ 
+</head>
+
+    <body class="online">
+        <header>
+                        <div class="butonactive"><strong>Меню</strong></div>
+                        <nav class="not-main">
+                                
+                                <div class="row"><a href="zazaia.html" target="_blank"><img src="main.png">На главную</a></div> 
+                                <div class="row"><a href="about-me.html" target="_blank"><img src="ja.png">Обо мне</a></div> 
+                                <div class="row"><a href="consultation.html" target="_blank"><img src="cons.png">Личные консультации</a></div> 
+                                <div class="row"><a href="prices.html" target="_blank"><img src="pric.png"> Цены и абонементы</a></div>   
+                                <div class="row"><a href="feelings.html" target="blank"><img src="feel.png">Минута чувств</a></div> 
+                                <div class="row"><a href="master.html" target="blank"><img src="master.png">Мастер-классы</a></div>
+                                <div class="row"><a href="repetitor.html" target="blank"><img src="std.png">Репетиторство</a></div> 
+                                <div class="row"><a href="school.html" target="_blank"><img src="scoola.png" class="scola-left">Подготовка к школе</a></div>
+                               
+                               </nav>
+        </header>
+        <main>
+<article class="margin-top"><br>
+<h1 class="centre">Записаться онлайн</h1>
+<div class="container-atention">
+<h2 class="atention">Важно!</h2>
+<p class="atention"><strong>Запись осуществляется не менее чем за 24 часа до консультаций.</strong></p>
+</div>
+<section>
+<div class="form">
+<form method="POST" action="mail.php">
+ <input type="hidden" name="project_name" value="Zazaia">
+ <input type="hidden" name="admin_email" value="rosipi89@mail.ru">
+ <input type="hidden" name="form_subject" value="Отправка заказа-Важно!">    
+ <label for="direction"> 
+               <strong> Направление</strong><br>      
+<select id="direction" name="направление" required >
+ <option>Подготовка к школе</option> 
+ <option>Репетиторство</option>
+ <option>Личные консультаций</option>      
+</select>
+</label>
+<br><br>
+ <strong>ФИО</strong><br>
+<label for="name"></label>
+<input id="name" type="text" name="ФИО" required><br><br>
+<strong>E-mail</strong><br>
+<label for="mail"></label>
+<input id="mail" type="email" name="E-mail" required><br><br>
+ <strong>Телефон для связи</strong><br>
+<label for="phone-number"></label>
+<input id="phone-number" type="tel" name="номер_телефона" required><br><br>
+<strong>Адрес</strong><br>
+<label for="adress"></label>
+<input id="adress" type="text" name="Адрес-проживания" required><br><br>
+<strong>Дата консультаций</strong><br>
+<label for="data"></label>
+<input id="data" type="date" name="Дата-консультаций"><br><br>
+<strong>Желаемое время консультаций</strong><br>
+<label for="time"></label>
+<input id="time" type="time" name="Время-консультаций-желаемое"><br><br>
+<strong>Способ оплаты</strong> <br>
+<label for="method"></label>
+<select id="method"  name="Способ-оплаты" required>
+<option>Наличными</option>
+<option>Банковской картой</option>
+</select>       
+        <br><br>
+<strong>Опишите проблему кратко</strong><br>
+        <label for="problem"></label>
+        <textarea placeholder="Внимание! Пожалуйста укажите возраст клиента, которому нужна данная консультация." id="problem" type="text" name="описание-проблемы" length="200" required></textarea><br><br>        
+<input id="submitbtn" type="submit"   value="Отправить заказ"><br>
+
+
+
+
+</form>
+
+        
+</div>
+<div class="contact-phone">
+                <img src="hone.png">
+                +7-931-391-80-79
+                <img src="icons8-whatsapp-48.png">
+                +7-965-437-96-89
+                <img src="viver.png">
+                +7-965-437-96-89
+                <img src="mail.png">
+                rosipi89@mail.ru
+            </div>
+</section>
+
+</article>
+
+        </main>
+<div class="modal-window">
+        <span class="close-modal">&#10006;</span>
+<h1 class="centre">Спасибо! Ваш заказ отправлен. <br>В ближайщее время с вами свяжутся.</h1>
+ <div class="alien">
+
+ </div>       
+ </div>
+<script src="jquery-3.3.1.js"></script>
+<script src="javascript.js"></script>
+
+</body>
+</html>

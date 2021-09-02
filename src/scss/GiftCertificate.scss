@@ -1,2 +1,18 @@
 @import 'main.scss';
 @import 'masterClasses.scss';
+.DescriptionBlock-LessonsImage__NoFit {
+    object-fit: initial;
+}
+
+.GetCertificateInline {
+    margin-top: 10%;
+    height: 100vh;
+}
+
+.FAQBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}

@@ -1,9 +1,9 @@
 <?php 
-$to="<mr.amiil@mail.ru>";
+$to="<test@a0555389.xsph.ru>";
 $subject="Новая заявка на обычный масстер-класс";
 $personName=$_POST['FullName'];
 $phoneNumber=$_POST['Phone'];
-$dateTime=$_POST['DateTime'];
+$dateTime=$_POST['Day'];
 $message="
 <table padding="50px;">
 <tr>

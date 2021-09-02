@@ -9,31 +9,21 @@
     <script type="text/javascript" src="/src/js/pagesCommonModules/inject.js"></script>
 
 
+
+
 </head>
 
 
 
 <body class="MasterPage">
-    <img src="/src//img/Icons/goUp.svg" alt="" class="MasterPage-Up Up">
-
     <div class="MainPage-BroswerSupport BroswerSupport">
         <h1 class="BroswerSupport-WarningMsg">Сожалеем ,ваш браузер не поддерживается!</h1>
         <p class="BroswerSupport-pAuto">Установите более современый браузер:</p>
         <div class="BroswerSupport-BrwrBox BrwrBox">
-            <div class="BrwrBox-Item"><img src="/src/img/Icons/brw (1).png" alt="" class="BrwrBox-Img">
-                <a href="https://www.mozilla.org/ru/firefox/new/" class="BrwrBox-LinkImg"></a>
-
-            </div>
-            <div class="BrwrBox-Item"><img src="/src/img/Icons/brw (2).png" alt="" class="BrwrBox-Img">
-                <a href="https://www.google.com/intl/ru_ru/chrome/" class="BrwrBox-LinkImg"></a>
-
-            </div>
-            <div class="BrwrBox-Item"><img src="/src/img/Icons/brw (3).png" alt="" class="BrwrBox-Img">
-                <a href="https://www.opera.com/ru" class="BrwrBox-LinkImg"></a>
-            </div>
-            <div class="BrwrBox-Item"><img src="/src/img/Icons/brw (4).png" alt="" class="BrwrBox-Img">
-                <a href="https://browser.yandex.ru/" class="BrwrBox-LinkImg"></a>
-            </div>
+            <div class="BrwrBox-Item"></div>
+            <div class="BrwrBox-Item"></div>
+            <div class="BrwrBox-Item"></div>
+            <div class="BrwrBox-Item"></div>
         </div>
     </div>
     <img src="/src//img/Icons/tech.svg" alt="" class="MainPage-Tech Tech">
@@ -53,7 +43,7 @@
             <label for="image" class="Form-Label Label">Скриншот проблемы
 
             </label>
-            <input type="file" required id="image" name="скриншот проблемы" class="Form-Field Form-Field__File">
+            <input type="file" id="image" name="скриншот проблемы" class="Form-Field Form-Field__File">
 
             <label for="more" class="Form-Label Label">
                 Опишите проблему*
@@ -65,7 +55,7 @@
         </form>
     </div>
     <div class="MasterPage-YandexMap YandexMap">
-        <div class="YandexMap-Close Close">X</div>
+        <div class="YandexMap-Close">X</div>
         <h1 class="YandexMap-Location">Наш адрес :</h1>
         <h3 class="YandexMap-Location">Санкт‑Петербург,ул. Невский Проспект д.60,ClayAge</h3>
         <div class="YandexMap-Locaction Location">
@@ -86,7 +76,7 @@
     </div>
 
     <div class="MasterPage-Contact Contact">
-        <div class="Contact-Close Close">X</div>
+        <div class="Contact-Close">X</div>
         <h1 class="Contact-Data">Контакты</h1>
         <h3 class="Contact-Data Data"><a href="tel:+79313918079" class="Data-Phone">+7-931-391-80-79</a></h3>
         <p class="Contact-Data">Телефон для дополнительных вопросов , для записи используйте пожалуйста форму на саите.</p>
@@ -138,37 +128,112 @@
 
             <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="dist/AuthorCeramics.html">Авторская
             Керамика</a></li>
-            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="dist/PayInfo.html">Оплата и доставка</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/GiftCertificate.html">Подарочные Сертификаты</a></li>
             <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/ClayAgeLifeHak.html">ClayAge Лайфхаки</a></li>
         </ul>
     </div>
     <img src="/src/img/mainContent//hamb.svg" class="MasterPage-HamburgerIcon HamburgerIcon"></img>
-    <div id="Moon" class="MasterPage-Info Info Info_WhiteBackgroundAndAutoH">
+    <div class="MasterPage-Info Info  Info_WhiteBackgroundAndAutoH">
+        <h2 class="Info-Title"> Информация об оплате</h1>
 
-        <h2 class="Info-Title"> Подарочный сертификат</h1>
+            <div class="Info-DescriptionBlock DescriptionBlock">
 
-            <div class="Info-DescriptionBlock DescriptionBlock DescriptionBlock__Column">
-                <img src="/src/img/mainContent/certificat3.svg" alt="Процесс познания волшебства" title="Процесс познания волшебства" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage__NoFit LoaderIgnore">
-                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column  DescriptionBlock-MainData__JustifyTop">Стоимость 2000рублей</p>
-                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Дни занятий - Суббота ,Воскресение</p>
-                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Адресс - Санкт‑Петербург</p>
-                <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__SpaceTop">Гончарная Студия ClayAge дает вам возможность сделать приятный подарок друзиям и близким ,давая им возможность соприкоснуться с творчеством связанным с глиной.<br><br>Приобретая подарочный сертификат вы дарите своим близким незабываемые
-                    чувства и впечатление от творческого процесса. В нашей гончарной студий сертификат<br> дает гарантию за одно занятие получить готовое изделие,с глазуровкой и обжигом.</p>
+                <div class="DescriptionBlock-FiguresBox FiguresBox">
+                    <figure class="FiguresBox-ContextIllu ContextIllu">
+                        <img src="/src/img/perevod.svg" alt="Японский чайник" class="ContextIllu-IlluImg">
+                        <figcaption class="ContextIllu-Caption">Перевод</figcaption>
+                    </figure>
+                    <figure class="DescriptionBlock-ContextIllu ContextIllu">
+                        <img src="/src/img/rubli.svg" alt="Тяван" class="ContextIllu-IlluImg">
+                        <figcaption class="ContextIllu-Caption">Наличные</figcaption>
+
+                    </figure>
+                </div>
+
+                <p class="DescriptionBlock-Text"> Оплата производится наличными при посещений мастерской либо онлайн переводом по номеру карты или телефона.
+
+                </p>
+                <p class="DescriptionBlock-MainData  DescriptionBlock-MainData__JustifyTop">Перевод по номеру телефона:+864556456464</p>
+
+                <p class="DescriptionBlock-MainData  DescriptionBlock-MainData__JustifyTop">
+                    Перевод по номеру карты : </p>
 
             </div>
 
 
+            <h2 class="Info-Title Info-Title__PaddingTop">Доставка</h2>
 
-            <div class="Info-GetCertificateInline  GetCertificateInline"></div>
-            <div class="FAQBox">
-                <h2 class="FAQBox-Title"> F.A.Q</h1>
-                    <p class="FAQBox-AnswerQuestion"><strong>Я активировал сертификат , что дальше?</strong><br><br> Вам необходимо его распечатать либо показать при посещений мастерской в электроном вариянте.
-                    </p>
-                    <p class="FAQBox-AnswerQuestion"><strong>Как оплатить сертификат?</strong><br><br> На номер ххххх сделайте перевод через СбербанкОнлайн либо 900, указав в сообщений перевода ID Сертификата!
-                    </p>
-                    <p class="FAQBox-AnswerQuestion"><strong>Когда будет проходить занятие?</strong><br><br> Позвоните мастеру и договоритесь о дате и времени занятия!
-                    </p>
+            <div class="Info-DescritionBlock DescriptionBlock">
+                <div class="DescriptionBlock-FiguresBox FiguresBox">
+                    <figure class="FiguresBox-ContextIllu ContextIllu">
+                        <img src="/src/img/deliver.svg" alt="Японский чайник" class="ContextIllu-IlluImg">
+                        <figcaption class="ContextIllu-Caption">CDEK , Boxbery , Почта России.</figcaption>
+                    </figure>
+                    <figure class="DescriptionBlock-ContextIllu ContextIllu">
+                        <img src="/src/img/self.svg" alt="Тяван" class="ContextIllu-IlluImg">
+                        <figcaption class="ContextIllu-Caption">Самовывоз</figcaption>
+
+                    </figure>
+                </div>
+                <p class="DescriptionBlock-Text">Доставка оплачивается за ваш счет, стоимость доставки зависит от расстояния до вашего города ,размера и веса посылки. </p>
+
+                <p class="DescriptionBlock-MainData  DescriptionBlock-MainData__JustifyTop">Самовывоз по адрессу :</p>
+                <p class="DescriptionBlock-MainData  DescriptionBlock-MainData__JustifyTop">Доставка по России осуществляется CDEK , Boxbery , Почта России. </p>
+
+
+
+
+
             </div>
+
+
+    </div>
+
+    <div class="MasterPage-Info Info Info__NoFlex Info_GrayBackground">
+        <h3 class="Info-Title">Цены на занятия по керамике</h3>
+        <div class="Info-TablePrices TablePrices ">
+            <div class="TablePrices-TableHeaderGroup TableHeaderGroup ">
+                <div class="TableHeaderGroup-TableRow TableRow ">
+                    <span class="TableRow-Cell ">Направление</span>
+                    <span class="TableRow-Cell ">Ценна</span>
+                    <span class="TableRow-Cell ">Время</span>
+                    <span class="TableRow-Cell ">Количество занятий</span>
+                </div>
+            </div>
+            <div class="TablePrices-TableRow TableRow ">
+                <span class="TableRow-Cell ">Ежедневный мастер-класс</span>
+                <span class="TableRow-Cell ">1500 руб</span>
+                <span class="TableRow-Cell ">90 минут</span>
+                <span class="TableRow-Cell ">1</span>
+
+            </div>
+
+            <div class="TablePrices-TableRow TableRow ">
+                <span class="TableRow-Cell ">Абонемент 5 занятий(выгодно)</span>
+                <span class="TableRow-Cell ">6500р</span>
+                <span class="TableRow-Cell ">450 мин</span>
+                <span class="TableRow-Cell ">5</span>
+
+            </div>
+
+            <div class="TablePrices-TableRow TableRow ">
+                <span class="TableRow-Cell ">Тематический Масстер-Класс </span>
+                <span class="TableRow-Cell ">2000 руб</span>
+                <span class="TableRow-Cell ">90 мин</span>
+                <span class="TableRow-Cell ">1</span>
+
+            </div>
+
+            <div class="TablePrices-TableRow TableRow ">
+                <span class="TableRow-Cell ">Подарочный сертификат</span>
+                <span class="TableRow-Cell ">2000руб</span>
+                <span class="TableRow-Cell ">90 мин</span>
+                <span class="TableRow-Cell ">1</span>
+
+            </div>
+
+
+        </div>
     </div>
     <div class="MainPage-Footer Footer ">
         <div class="Footer-Copyright Copyright ">
@@ -185,6 +250,8 @@
             <p class="Copyright-Info ">Адрес : Санкт‑Петербург,Невский Проспект 17б,3 этаж</p>
         </div>
     </div>
+
+
     <script src="/src/js/pagesCommonModules/commonSvgInjectControll.js "></script>
 
 </body>

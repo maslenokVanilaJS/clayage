@@ -1,11 +1,13 @@
 @import 'main.scss';
 @import 'masterClasses.scss';
+@import 'AuthorCeramics.scss';
 .ContextIllu {
     display: block;
     width: 50%;
     height: 45vh;
     margin-top: 5%;
     justify-content: space-evenly;
+    @include ContextIllu {}
     &-IlluImg {
         width: 100%;
         height: auto;
@@ -17,6 +19,7 @@
         text-align: center;
         border: dashed 1px black;
         padding: 10px;
+        @include ContextCaption {}
     }
 }
 
@@ -24,4 +27,10 @@
     display: flex;
     //  width: 100%;
     flex-direction: row;
+    @include figBoxes {}
+}
+
+.DescriptionBlock-PartName {
+    margin: auto;
+    margin-top: 10%;
 }

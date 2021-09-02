@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     SVGInject(document.getElementsByClassName('VKButton'));
     SVGInject(document.getElementsByClassName('InstButton'));
     SVGInject(document.getElementsByClassName('ReverseCall'));
+    SVGInject(document.getElementsByClassName('Tech'));
+    SVGInject(document.getElementsByClassName('Up'));
+
 
 
 });
@@ -15,6 +18,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 SVGInject.setOptions({
     afterInject: function(img, svg) {
+        let targets = [
+            document.querySelector(".LocationInfo-MetroStreetIcon"),
+            document.querySelector(".ReverseCall"),
+            document.querySelector(".Tech"),
+
+
+        ];
+        let objectOp = [
+            document.querySelector(".LocationInfo-MetroStreetIcon"),
+            document.querySelector(".ReverseCall"),
+
+
+        ];
+        let objectCl = document.querySelectorAll(".Close");
+
+
+        //    toggleClearView(objectOp, objectCl);
+
+        LockScroll(targets);
         onLoadPathW();
         toggleSomething({
             target: '.LocationInfo-MetroStreetIcon',
@@ -30,6 +52,15 @@ SVGInject.setOptions({
             onOpen: 'Contact__onOpen',
             closer: '.Contact-Close'
         });
+        toggleSomething({
+            target: '.Tech',
+            toogleTrgt: '.Suport',
+            visible: 'Suport__Visible',
+            onOpen: 'Suport__onOpen',
+            closer: '.Suport-Close'
+        });
+
+
         toggleMenuIncon();
         window.onscroll = () => {
             let data = document.querySelector("html").getBoundingClientRect();
@@ -49,6 +80,10 @@ SVGInject.setOptions({
         // sliderHeight();
         menuIconFlowControl();
 
+        scroll(".Up", "#Moon");
+        doWB('Up');
+        doWB('Tech');
+
     }
 });
 
@@ -56,22 +91,64 @@ SVGInject.setOptions({
 
 
 //
+
+function scroll(TAB, TABlocK) {
+    let btn = document.querySelector(TAB);
+    let block = document.querySelector(TABlocK);
+    btn.onclick = () => {
+        block.scrollIntoView({ behavior: 'smooth' });
+    };
+
+}
+
 function toggleSomething(obj) {
 
     document.querySelector(obj.target).onclick = () => {
-        document.querySelector(obj.toogleTrgt).classList.toggle(obj.visible);
-        document.querySelector(obj.toogleTrgt).classList.toggle(obj.onOpen);
+        document.querySelector(obj.toogleTrgt).classList.add(obj.visible);
+        document.querySelector(obj.toogleTrgt).classList.add(obj.onOpen);
         //  document.querySelector('.LocationInfo-MetroStreetIcon_SW').classList.toggle("LocationInfo-MetroStreetIcon_SW_Clicked");  
 
 
     };
     document.querySelector(obj.closer).onclick = () => {
-        document.querySelector(obj.toogleTrgt).classList.toggle(obj.visible);
-        document.querySelector(obj.toogleTrgt).classList.toggle(obj.onOpen);
+        if (document.querySelector("body").classList.contains("body__Lock")) {
+            document.querySelector("body").classList.remove("body__Lock");
+        }
+        document.querySelector(obj.toogleTrgt).classList.remove(obj.visible);
+        document.querySelector(obj.toogleTrgt).classList.remove(obj.onOpen);
         //  document.querySelector('.LocationInfo-MetroStreetIcon_SW').classList.toggle("LocationInfo-MetroStreetIcon_SW_Clicked");  
 
 
     };
+
+};
+
+function toggleClearView(objectOp, objectCl) {
+    for (const target of objectOp) {
+        target.addEventListener('click', () => {
+            document.querySelector(".Tech").classList.add("Tech__ClearView");
+            document.querySelector(".Up").classList.add("Up__ClearView");
+
+        });
+    }
+    for (const target of objectCl) {
+        target.addEventListener('click', () => {
+            document.querySelector(".Tech").classList.remove("Tech__ClearView");
+            document.querySelector(".Up").classList.remove("Up__ClearView");
+
+        });
+    }
+    document.querySelector(".HamburgerIcon").addEventListener('click', () => {
+        if (document.querySelector(".Tech").classList.contains("Tech__ClearView") == false) {
+
+
+
+
+            document.querySelector(".Tech").classList.add("Tech__ClearView");
+            document.querySelector(".Up").classList.add("Up__ClearView");
+        }
+    });
+
 
 };
 
@@ -156,4 +233,24 @@ function noBackground() {
     document.querySelector(".BlockLogo-Name").classList.remove("BlockLogo-Name__Scroled");
     document.querySelector(".BlockLogo-Name").classList.add("BlockLogo-Name__NOBacknd");
     document.querySelector(".Header").classList.remove("Header__OnScroll");
+}
+
+function doWB(target) {
+    if (window.innerWidth <= 1024)
+        document.querySelector(`.${target}`).classList.add(`${target}__Black`);
+}
+
+function LockScroll(targets) {
+    for (const target of targets) {
+
+        target.addEventListener('click', () => {
+            if (document.querySelector("body").classList.contains("body__Lock") == false) {
+                document.querySelector("body").classList.add("body__Lock");
+
+
+            }
+
+
+        });
+    }
 }

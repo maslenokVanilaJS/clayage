@@ -10,11 +10,15 @@ module.exports = {
     entry: {
         main: './src/index.js',
         BuiltCertificateApp: './src/BuiltCertificateApp.js',
+        BuiltCertificateInlineApp: './src/BuiltCertificateInlineApp.js',
         svgControl: './src/js/pagesCommonModules/svg.js',
-        masterClasses: './src/MasterClasses.js',
+        MasterClasses: './src/MasterClasses.js',
         Tematic: './src/Tematic.js',
         AuthorCeramics: './src/AuthorCeramics.js',
-        GiftCertificate: './src/GiftCertificate.js'
+        GiftCertificate: './src/GiftCertificate.js',
+        ClayAgeLifeHak: './src/ClayAgeLifeHak.js',
+        PayInfo: './src/PayInfo.js',
+
     },
     output: {
         filename: '[name].js',
@@ -96,7 +100,8 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        name: '[name].[ext]?[hash]'
+                        name: '[name].[ext]?[hash]',
+                        esModule: false
                     }
                 }, ],
             },
@@ -140,7 +145,7 @@ module.exports = {
             hash: false,
             template: './index.html',
             filename: 'index.html',
-            excludeChunks: ['masterClasses', 'Tematic'],
+            excludeChunks: ['MasterClasses', 'Tematic'],
             chunks: ['positioning', 'normalize']
         }),
 
@@ -148,29 +153,43 @@ module.exports = {
             hash: false,
             filename: 'ClayAgeMasterClasses.html',
             template: './ClayAgeMasterClasses.html',
-            excludeChunks: ['main', 'svgControl', 'positioning', 'Tematic'],
-            chunks: ['normalize']
+            excludeChunks: ['main', 'svgControl', 'positioning', 'Tematic', 'AuthorCeramics'],
+            chunks: ['normalize', 'MasterClasses']
         }),
         new HtmlWebpackPlugin({
             hash: false,
             filename: 'Tematic.html',
             template: './Tematic.html',
-            excludeChunks: ['main', 'svgControl', 'positioning', 'masterClasses'],
+            excludeChunks: ['main', 'svgControl', 'positioning', 'MasterClasses'],
             chunks: ['normalize', 'Tematic']
         }),
         new HtmlWebpackPlugin({
             hash: false,
             filename: 'AuthorCeramics.html',
             template: './AuthorCeramics.html',
-            excludeChunks: ['main', 'svgControl', 'positioning', 'masterClasses', 'Tematic'],
+            excludeChunks: ['main', 'svgControl', 'positioning', 'MasterClasses', 'Tematic'],
             chunks: ['normalize', 'AuthorCeramics']
         }),
         new HtmlWebpackPlugin({
             hash: false,
             filename: 'GiftCertificate.html',
             template: './GiftCertificate.html',
-            excludeChunks: ['main', 'svgControl', 'positioning', 'masterClasses', 'Tematic', 'AuthorCeramics'],
-            chunks: ['normalize', 'GiftCertificate', 'BuiltCertificateApp']
+            excludeChunks: ['main', 'svgControl', 'positioning', 'MasterClasses', 'Tematic', 'AuthorCeramics', 'BuiltCertificateApp'],
+            chunks: ['normalize', 'GiftCertificate', 'BuiltCertificateInlineApp']
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            filename: 'ClayAgeLifeHak.html',
+            template: './ClayAgeLifeHak.html',
+            excludeChunks: ['main', 'svgControl', 'positioning', 'MasterClasses', 'Tematic', 'AuthorCeramics', 'BuiltCertificateApp', 'GiftCertificate', 'BuiltCertificateInlineApp'],
+            chunks: ['normalize', 'ClayAgeLifeHak']
+        }),
+        new HtmlWebpackPlugin({
+            hash: false,
+            filename: 'PayInfo.html',
+            template: './PayInfo.html',
+            excludeChunks: ['main', 'svgControl', 'positioning', 'MasterClasses', 'Tematic', 'AuthorCeramics', 'BuiltCertificateApp', 'GiftCertificate', 'BuiltCertificateInlineApp', 'ClayAgeLifeHak'],
+            chunks: ['normalize', 'PayInfo']
         }),
         new HtmlWebpackExcludeAssetsPlugin(),
         new VueLoaderPlugin()

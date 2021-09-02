@@ -1,0 +1,191 @@
+    @import 'adaptive/adaptiveOther.scss';
+    @import '/commonStyles.scss';
+    @import '../main.scss';
+    .MasterPage {
+        overflow-x: hidden;
+        width: 100%;
+        font-family: Bradley Hand, cursive;
+        background: url("/src/img/mainContent/pat2.jpg");
+        -webkit-overflow-scrolling: touch;
+        &__FreezeScroll {
+            overflow: hidden;
+        }
+        &-Info {
+            @include MasterPage_WidthM {}
+        }
+    }
+    
+    .MasterPage {
+        background: url("/src/img/mainContent/pat2.jpg");
+        -webkit-overflow-scrolling: touch;
+        &__FreezeScroll {
+            overflow: hidden;
+        }
+        &-Info {
+            @include MasterPage_WidthM {}
+        }
+    }
+    
+    .GetLessonsButton {
+        border-radius: 10px;
+        background-color: green;
+        &:hover {
+            background-color: rgb(13, 228, 13);
+        }
+    }
+    
+    .Info__MasterPage {
+        color: black;
+    }
+    
+    .Info-Title__PaddingTop {
+        padding-top: 100px;
+    }
+    
+    .Info-Title {
+        margin: auto;
+        margin-top: 5%;
+        &__TopMinify {
+            margin-top: 0;
+        }
+        &__Top {
+            margin-top: 5%;
+        }
+    }
+    
+    .Info__NoFlex {
+        display: block;
+    }
+    
+    .Info_WhiteBackgroundAndAutoH {
+        background-color: #ffffff;
+        height: auto;
+        margin-top: 120px;
+        color: black
+    }
+    
+    .ContextIllu {
+        display: block;
+        width: 50%;
+        height: 45vh;
+        margin-top: 5%;
+        justify-content: space-evenly;
+        @include ContextIllu {}
+        &-IlluImg {
+            width: 100%;
+            height: auto;
+            height: 100%;
+            object-fit: scale-down;
+        }
+        &-Caption {
+            font-size: 20px;
+            text-align: center;
+            border: dashed 1px black;
+            padding: 10px;
+            @include ContextCaption {}
+        }
+    }
+    
+    .FiguresBox {
+        display: flex;
+        //  width: 100%;
+        flex-direction: row;
+        @include figBoxes {}
+    }
+    
+    .DescriptionBlock-PartName {
+        margin: auto;
+        margin-top: 10%;
+    }
+    
+    .DescriptionBlock {
+        @include Description {}
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        text-align: left;
+        justify-content: space-evenly;
+        padding-top: 40px;
+        &__Reverse {
+            @include Description__Reverse {}
+        }
+        &-Text {
+            width: 85%;
+            margin: auto;
+            font-size: 22px;
+            margin-top: 10%;
+            text-align: justify;
+            text-indent: 5%;
+            @include Description_Text {}
+            &__NoMargin {
+                margin-top: 0;
+            }
+            &__Column {
+                @include ColumnStyleSize {}
+            }
+            &__SpaceTop {
+                margin-top: 5%!important;
+            }
+        }
+        &-MainData {
+            width: 95%;
+            margin: auto;
+            font-size: 38px;
+            @include Description__MainData {}
+            &:before {
+                content: url("/src/img/mainContent/icons8-галочка.svg");
+                margin-right: 25px;
+            }
+            &__JustifyTop {
+                margin-top: 5%;
+            }
+            @include Description_Text {}
+            &__Column {
+                @include ColumnStyleSize {}
+            }
+        }
+        &-LessonsImage {
+            @include Description_Image {}
+            width: 100%;
+            height: 30vw;
+            border-radius: 5px;
+            object-fit: cover;
+            &_Minify {
+                width: 100%;
+                height: 30vw;
+                object-fit: cover;
+            }
+            &__Column {
+                @include ColumnStyleSize {}
+            }
+        }
+        &__Column {
+            @include Description__Column {}
+        }
+    }
+    
+    .TablePrices {
+        display: table;
+        margin: auto;
+        margin-top: 70px;
+        border-collapse: collapse;
+    }
+    
+    .TableHeaderGroup {
+        display: table-header-group;
+    }
+    
+    .TableRow {
+        display: table-row;
+        &-Cell {
+            @include Table_PricesFont {}
+            display: table-cell;
+            padding: 10px;
+            border: rgb(247, 243, 243) solid 1px;
+            font-size: 22px;
+        }
+    }
+    
+    .GetLessonsButton_Margin {
+        margin-top: 180px;
+    }

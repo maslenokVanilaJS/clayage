@@ -1,5 +1,5 @@
 <?php 
-$to="<mr.amiil@mail.ru>";
+$to="<test@a0555389.xsph.ru>";
 $subject="Новая заявка на тематический масстер-класс";
 $personName=$_POST['FullName'];
 $phoneNumber=$_POST['Phone'];

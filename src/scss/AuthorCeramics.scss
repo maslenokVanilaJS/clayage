@@ -1,332 +1,355 @@
-    @import 'main.scss';
-    @import 'masterClasses.scss';
-    @import '/adaptive/adaptiveOther.scss';
-    .MasterPage {
-        background: url("/src/img/mainContent/pat2.jpg");
-        -webkit-overflow-scrolling: touch;
-        //  &__FreezeScroll {
-        //      position: fixed;
-        //     overflow-y: scroll;
-        // } 
-    }
-    
-    .SlaidersContainer {
-        @include SlaidersContainer {}
-        margin-top: 50px;
-        display: flex;
-        flex-direction: row;
-        width: 100vw;
-        height: auto;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    
-    .GetLessonsButton {
-        border-radius: 10px;
-        background-color: green;
-        &:hover {
-            background-color: rgb(13, 228, 13);
-        }
-    }
-    
-    .OutItem {
-        @include Gallery_PurchaseForm {}
-        display: none;
-        z-index: 999999999999;
-        position: fixed;
-        width: 60vw;
-        top: 0;
-        left: 15%;
-        background: #f5f4f4;
-        height: 100vh;
-        &__Visible {
-            display: block;
-        }
-        &-Button {
-            @include ButtonSignUpFormControl {}
-            width: 20vw;
-            margin-top: 60vh;
-            padding: 15px 30px;
-            letter-spacing: 4px;
-            border: none;
-            color: rgb(32, 30, 30);
-            display: block;
-            position: absolute;
-            left: 35%;
-            bottom: 10%;
-            box-shadow: 0px 0px 10px rgb(26, 25, 25);
-            //  
-            background: none;
-            text-transform: uppercase;
-            border-radius: 10px;
-            // 
-            border: none;
-            &:hover {
-                background-color: rgb(255, 217, 0);
-                color: black;
-                box-shadow: 0px 0px 55px rgb(255, 217, 0);
-                transition: 0, 5s all;
-            }
-        }
-    }
-    
-    .ImageBox {
-        @include GalleryPreview_Image {
-            margin-bottom: 15%;
-        }
-        margin-bottom: 50px;
-        width: 30vw;
-        height: auto;
-        display: flex;
-        // border:1px solid black;
-        flex-direction: column;
-        box-shadow: 2px 2px 5px 1px gray;
-        &:hover>&-Item {
-            transform: scale(1.1);
-            transition: all 1s ease-out;
-        }
-        &-Item {
-            @include GalleryPreview_Image {}
-            margin: auto;
-            height: 20vw;
-            width: 20vw;
-            object-fit: cover;
-        }
-        &-GetLessonsButton {
-            width: 80%;
-            margin: auto;
-            margin-bottom: 10%;
-        }
-        &-Text {
-            padding-top: 10%;
-            font-size: 18px;
-            font-style: bold;
-            &__Out {
-                color: red;
-            }
-        }
-    }
-    
-    .HidenGalery {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 999999;
-        display: none;
-        background-color: black;
-        &_Visible {
-            display: block;
-        }
-        &-TogleModule {
-            @include Gallery_ImgContainer__Icons {}
-            width: 50px;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        &_WhiteBackground {
-            background-color: white;
-        }
-        &-Arrow {
-            @include Gallery_ImgContainer__Arrows {}
-            width: 100px;
-            position: absolute;
-            right: 0;
-            z-index: 999999;
-            top: 50%;
-            pointer-events: all;
-            height: 50px;
-        }
-        &-ArrowLeft {
-            @include Gallery_ImgContainer__Arrows {}
-            position: absolute;
-            left: 0;
-            z-index: 999999;
-            pointer-events: all;
-            top: 50%;
-            width: 100px;
-            height: 50px;
-        }
-        &-CloseSlider {
-            @include Gallery_ImgContainer__Icons {}
-            width: 50px;
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-    }
-    
-    .ImgContainer {
-        @include Gallery_ImgContainer {}
-        width: 80%;
-        position: absolute;
-        left: 10%;
-        height: 100%;
-        background-color: #d8caca;
-        opacity: 0;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        z-index: -1;
-        &_JustifyBetween {
-            @include Gallery_ImgContainerGrid {}
-            justify-content: space-between;
-            flex-wrap: wrap;
-            overflow-y: scroll;
-            overflow-x: hidden;
-        }
-        &-MonoliteTogle {
-            @include Gallery_ImgContainer__Icons {}
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 50px;
-        }
-        &-CloseModule {
-            @include Gallery_ImgContainer__Icons {}
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 50px;
-        }
-        &-ItemModule {
-            @include Gallery_ImgContainerGridItem {}
-            width: 23%;
-            height: 43%;
-            object-fit: cover;
-        }
-        &-Item {
-            @include Gallery_ImgContainer__ImagesRatio {}
-            object-fit: cover;
-            max-width: 80%;
-            &__AspectRatio {}
-        }
-        &_Visible {
-            opacity: 1;
-            transition: opacity 0.3s;
-            will-change: opacity;
-            z-index: 1;
-        }
-        &-ModalMessage {
-            background-color: white;
-            opacity: 0.7;
-            width: 23%;
-            position: absolute;
-            z-index: 999999;
-            transition: all 0.5s;
-            border-radius: 10px;
-            border-bottom-left-radius: 0px;
-        }
-    }
-    
-    .Info__MasterPage {
-        color: black;
-    }
-    
-    .Info-Title__PaddingTop {
-        padding-top: 100px;
-    }
-    
-    .Info__NoFlex {
-        display: block;
-    }
-    
-    .InfoBlock {
-        @include Gallery_InfoBlock {}
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        &-GetLessonsButton {
-            @include Gallery_ImgContainerButton {}
-            opacity: inherit;
-            &__FixUrlBar {
-                margin-bottom: calc(5% + 35px);
-            }
-        }
-        &-TextDescrition {
-            text-align: center;
-        }
-    }
-    
-    .PurchaseFormContainer {
-        @include Gallery_PurchaseForm {}
-        width: 60vw;
-        height: 600px;
-        background-color: rgb(255, 255, 255);
-        position: fixed;
-        z-index: 999999;
-        top: 5%;
-        left: 20%;
-        text-align: left;
-        border: black 1px solid;
-        border-radius: 10px;
-        display: none;
-        pointer-events: all;
-        &_Visible {
-            display: block;
-        }
-        &-Close {
-            width: 30px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            &:hover {
-                border: 1px solid black;
-            }
-        }
-    }
-    
-    .PurchaseForm {
-        margin: auto;
-        width: 60%;
-        margin-top: 40px;
-        &-Field {
-            width: 100%;
-            margin-bottom: 40px;
-            border-radius: 10px;
-            //   box-shadow: black 1px 1px;
-            height: 29px;
-            border-style: outset;
-        }
-        &-Select {
-            margin-bottom: 40px;
-        }
-        &-Button {
-            width: 60%;
-            margin: auto;
-            display: block;
-            background-color: rgb(70, 77, 77);
-            height: 30px;
-            border-radius: 10px;
-        }
-    }
-    
-    .SuccesFormSend {
-        @include Gallery_PurchaseFormSendOrFail {}
-        width: 60vw;
-        height: 600px;
-        background-color: rgb(255, 255, 255);
-        position: fixed;
-        z-index: 999999;
-        top: 5%;
-        left: 20%;
-        text-align: left;
-        border: black 1px solid;
-        border-radius: 10px;
-        text-align: center;
-        display: none;
-        &_Visible {
-            display: block;
-        }
-    }
-    
-    img {
-        opacity: 1;
-        transition: opacity 0.3s;
-    }
-    
-    img[data-src] {
-        opacity: 0;
-    }
+   @import '/commonCSS/commonNotMain.scss';
+   .SlaidersContainer {
+       @include SlaidersContainer {}
+       margin-top: 50px;
+       display: flex;
+       flex-direction: row;
+       width: 100vw;
+       height: auto;
+       flex-wrap: wrap;
+       justify-content: space-evenly;
+   }
+   
+   .OutItem {
+       @include Gallery_PurchaseForm {}
+       display: none;
+       z-index: 999999999999;
+       position: fixed;
+       width: 60vw;
+       top: 0;
+       left: 15%;
+       background: #f5f4f4;
+       height: 100vh;
+       &__Visible {
+           display: block;
+       }
+       &-Button {
+           @include ButtonSignUpFormControl {}
+           width: 20vw;
+           margin-top: 60vh;
+           padding: 15px 30px;
+           letter-spacing: 4px;
+           border: none;
+           color: rgb(32, 30, 30);
+           display: block;
+           position: absolute;
+           left: 35%;
+           bottom: 10%;
+           box-shadow: 0px 0px 10px rgb(26, 25, 25);
+           //  
+           background: none;
+           text-transform: uppercase;
+           border-radius: 10px;
+           // 
+           border: none;
+           &:hover {
+               background-color: rgb(255, 217, 0);
+               color: black;
+               box-shadow: 0px 0px 55px rgb(255, 217, 0);
+               transition: 0, 5s all;
+           }
+       }
+   }
+   
+   .ImageBox {
+       @include GalleryPreview_Image {
+           margin-bottom: 15%;
+           overflow: hidden;
+       }
+       margin-bottom: 50px;
+       width: 30vw;
+       height: 40vw;
+       display: flex;
+       // border:1px solid black;
+       flex-direction: column;
+       box-shadow: 2px 2px 5px 1px gray;
+       overflow: hidden;
+       &:hover {
+           box-shadow: 2px 2px 10px 1px gray;
+       }
+       &__ImportantFirst {
+           order: -1;
+       }
+       &__ImportantSecond {
+           order: -2;
+       }
+       /*   &:hover>&-Item {
+             transform: scale(1.1);
+             transition: all 1s ease-out;
+         }*/
+       &-Item {
+           @include GalleryPreview_Image {
+               margin-top: 2%;
+               height: 45%;
+               width: 100%;
+           }
+           transition: all 0.5s;
+           margin: auto;
+           height: 20vw;
+           width: 20vw;
+           object-fit: cover;
+           &:hover {
+               height: 100%;
+           }
+           &__FullHeight {
+               @include GalleryPreview_Image__Touch {}
+           }
+       }
+       &-GetLessonsButton {
+           width: 60%;
+           height: 40px;
+           margin: auto;
+           margin-bottom: 10%;
+           border: none;
+           text-transform: uppercase;
+           &:hover {
+               box-shadow: 2px 2px 10px 1px rgb(36, 223, 11);
+           }
+       }
+       &-Text {
+           padding-top: 10%;
+           font-size: 18px;
+           font-style: bold;
+           &__Out {
+               color: red;
+           }
+           &__In {
+               color: blue;
+           }
+       }
+   }
+   
+   .HidenGalery {
+       position: fixed;
+       width: 100%;
+       height: 100vh;
+       top: 0;
+       left: 0;
+       z-index: 999999;
+       display: none;
+       background-color: black;
+       &_Visible {
+           display: block;
+       }
+       &-TogleModule {
+           @include Gallery_ImgContainer__Icons {}
+           width: 50px;
+           position: absolute;
+           top: 0;
+           left: 0;
+           z-index: 99999;
+           &:hover {
+               box-shadow: 1px 1px 15px 1px white;
+           }
+       }
+       &_WhiteBackground {
+           background-color: white;
+       }
+       &-Arrow {
+           @include Gallery_ImgContainer__Arrows {
+               right: 10%;
+           }
+           width: 100px;
+           position: absolute;
+           right: 0;
+           z-index: 999999;
+           top: 50%;
+           pointer-events: all;
+           height: 50px;
+       }
+       &-ArrowLeft {
+           @include Gallery_ImgContainer__Arrows {
+               left: 10%;
+           }
+           position: absolute;
+           left: 0;
+           z-index: 999999;
+           pointer-events: all;
+           top: 50%;
+           width: 100px;
+           height: 50px;
+       }
+       &-CloseSlider {
+           @include Gallery_ImgContainer__Icons {}
+           width: 50px;
+           position: absolute;
+           right: 0;
+           top: 0;
+           z-index: 99999;
+       }
+   }
+   
+   .ImgContainer {
+       @include Gallery_ImgContainer {}
+       width: 100%;
+       position: absolute;
+       left: 0;
+       height: 100%;
+       background-color: #d8caca;
+       opacity: 0;
+       text-align: center;
+       display: flex;
+       flex-direction: row;
+       z-index: -1;
+       &_JustifyBetween {
+           @include Gallery_ImgContainerGrid {}
+           justify-content: space-between;
+           flex-wrap: wrap;
+           overflow-y: scroll;
+           overflow-x: hidden;
+       }
+       &-MonoliteTogle {
+           @include Gallery_ImgContainer__Icons {}
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 50px;
+           z-index: 999999;
+           &:hover {
+               box-shadow: 1px 1px 15px 1px white;
+           }
+       }
+       &-CloseModule {
+           @include Gallery_ImgContainer__Icons {}
+           position: fixed;
+           top: 0;
+           right: 0;
+           width: 50px;
+       }
+       &-ItemModule {
+           @include Gallery_ImgContainerGridItem {}
+           width: 23%;
+           height: 43%;
+           object-fit: cover;
+           margin-top: 1%;
+       }
+       &-Item {
+           @include Gallery_ImgContainer__ImagesRatio {}
+           object-fit: cover;
+           max-width: 50%;
+           &__AspectRatio {}
+       }
+       &_Visible {
+           opacity: 1;
+           transition: opacity 0.3s;
+           will-change: opacity;
+           z-index: 1;
+       }
+       &-ModalMessage {
+           background-color: white;
+           opacity: 0.7;
+           width: 23%;
+           position: absolute;
+           z-index: 999999;
+           transition: all 0.5s;
+           border-radius: 10px;
+           border-bottom-left-radius: 0px;
+       }
+   }
+   
+   .InfoBlock {
+       @include Gallery_InfoBlock {}
+       display: flex;
+       flex-direction: column;
+       justify-content: space-evenly;
+       width: 50%;
+       margin: auto;
+       height: 80vh;
+       &-GetLessonsButton {
+           @include Gallery_ImgContainerButton {}
+           opacity: inherit;
+           &__FixUrlBar {
+               margin-bottom: calc(5% + 35px);
+           }
+           width:50%;
+           margin: auto;
+       }
+       &-TextDescription {
+           margin-top: 25%;
+           @include Gallery_ImgContainerP {}
+           text-align: center;
+           width: 95%;
+           margin: auto;
+       }
+   }
+   
+   .PurchaseFormContainer {
+       @include Gallery_PurchaseForm {}
+       width: 60vw;
+       height: 600px;
+       background-color: rgb(255, 255, 255);
+       z-index: 999999;
+       top: 5%;
+       left: 20%;
+       text-align: left;
+       border: black 1px solid;
+       border-radius: 10px;
+       display: none;
+       pointer-events: all;
+       &_Visible {
+           display: block;
+           position: fixed;
+       }
+       &-Close {
+           width: 30px;
+           position: absolute;
+           top: 10px;
+           right: 10px;
+           &:hover {
+               border: 1px solid black;
+           }
+       }
+   }
+   
+   .PurchaseForm {
+       margin: auto;
+       width: 60%;
+       margin-top: 40px;
+       &-Field {
+           width: 100%;
+           margin-bottom: 40px;
+           border-radius: 10px;
+           //   box-shadow: black 1px 1px;
+           height: 29px;
+           border-style: outset;
+       }
+       &-Select {
+           margin-bottom: 40px;
+       }
+       &-Button {
+           width: 60%;
+           margin: auto;
+           display: block;
+           background-color: rgb(70, 77, 77);
+           height: 30px;
+           border-radius: 10px;
+       }
+   }
+   
+   .SuccesFormSend {
+       @include Gallery_PurchaseFormSendOrFail {}
+       width: 60vw;
+       height: 600px;
+       background-color: rgb(255, 255, 255);
+       z-index: 999999;
+       top: 5%;
+       left: 20%;
+       text-align: left;
+       border: black 1px solid;
+       border-radius: 10px;
+       text-align: center;
+       display: none;
+       &_Visible {
+           display: block;
+           position: fixed;
+       }
+   }
+   
+   img {
+       opacity: 1;
+       transition: opacity 0.3s;
+   }
+   
+   img[data-src] {
+       opacity: 0;
+   }

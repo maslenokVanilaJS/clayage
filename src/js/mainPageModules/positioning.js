@@ -151,13 +151,10 @@ function sliderControl(obj) {
         let rfr = Math.floor(total / containerWidth);
         let conditionalPoint = total - (containerWidth * rfr);
         let point = (containerWidth * rfr) - containerWidth;
-        console.log(rfr);
-        console.log(conditionalPoint);
+
         nextArrow.onclick = () => {
 
-            console.log(conditionalPoint);
-            console.log(point);
-            console.log(couter);
+
 
             if (couter >= point && couter <= total - containerWidth) {
                 couter += conditionalPoint;
@@ -178,10 +175,7 @@ function sliderControl(obj) {
 
         };
         backArrow.onclick = () => {
-            console.log(conditionalPoint);
-            console.log(point);
-            console.log(couter);
-            console.log(window.getComputedStyle(element).marginLeft);
+
             if (couter == total - containerWidth) {
                 couter -= conditionalPoint;
 
@@ -222,8 +216,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+function checkDOMNode(querySelector) {
+    let boo = true;
+    if (querySelector != null) {
+        if (querySelector.length == 0) {
+            boo = false;
+        }
+    }
+
+    if (querySelector == null) {
+        boo = false;
+    }
+    return boo;
+}
+
 window.addEventListener('load', function() {
     if (window.innerWidth >= 320 && window.innerWidth <= 768) {
+
 
         sliderControl({
             container: '.ImageContainer',
@@ -231,6 +240,8 @@ window.addEventListener('load', function() {
             nextA: '.ImageContainer-ArrowNextBlack'
 
         });
+
+
         //timedSlider();
     } else if (window.innerWidth >= 769 && window.innerWidth <= 1444) {
         //clearImmediate(timedSlider) ;  

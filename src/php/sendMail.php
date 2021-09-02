@@ -1,5 +1,5 @@
 <?php 
-$to="<mr.amiil@mail.ru>";
+$to="<test@a0555389.xsph.ru>";
 $subject="Заказ изделия с сайта";
 $personName=$_POST['ФИО'];
 $email=$_POST['email'];

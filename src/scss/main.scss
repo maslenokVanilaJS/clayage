@@ -5,6 +5,23 @@
                 src: url("/src/font/ArborCasual.ttf") format('truetype'), url("/src/font/ArborCasual.woff"), url("/src/font/ArborCasual.woff2"), url("/src/font/ArborCasual.eot");
             }
             
+            .body__Lock {
+                overflow-y: hidden;
+            }
+            
+            .Close {
+                right: 0px;
+                top: 0;
+                cursor: pointer;
+                position: absolute;
+                width: 40px;
+                font-size: 30px;
+                color: white;
+                border-radius: 20px;
+                border: 2px solid white;
+                text-align: center;
+            }
+            
             .Data-Phone {
                 color: inherit;
             }
@@ -254,7 +271,7 @@
                 background-image: url('/src/img/mainContent/pattern.png');
                 z-index: 19999;
                 &-Close {
-                    right: 28px;
+                    right: 0;
                     cursor: pointer;
                     top: 0;
                     position: absolute;
@@ -294,16 +311,6 @@
                     //  margin:auto;
                 }
                 &-Close {
-                    right: 28px;
-                    top: 0;
-                    cursor: pointer;
-                    position: absolute;
-                    width: 40px;
-                    font-size: 30px;
-                    color: white;
-                    border-radius: 20px;
-                    border: 2px solid white;
-                    text-align: center;
                     @include CloseIconMobileRender {}
                 }
                 @include YandexMapAdaptiveControl {}
@@ -398,7 +405,7 @@
             
             .HamburgerMenu {
                 position: fixed;
-                top: 81px;
+                top: 64px;
                 width: 40vw;
                 height: calc(100vh - 60px);
                 transition: all 1s;
@@ -919,6 +926,7 @@
                 height: 121vh;
                 color: #ffffff;
                 overflow: hidden;
+                background-color: black;
                 @include MainSlaiderImage_320px {}
                 &-Line {
                     width: 10px;
@@ -1109,7 +1117,7 @@
                     top: 0;
                     right: 0;
                     width: 30px;
-                    @include ScrollBarCheck {}
+                    //      @include ScrollBarCheck {}
                 }
                 &-Button {
                     width: 30%;

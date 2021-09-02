@@ -6,144 +6,320 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="/dist/normalize.css" rel="stylesheet">
-    <link href="/dist/masterClasses.css" rel="stylesheet">
+    <script type="text/javascript" src="/src/js/pagesCommonModules/inject.js"></script>
+
 
 
 
 </head>
 
-<body>
 
-    <body class="MasterPage">
-        <div class="MasterPage-Header Header">
-            <div class="Header-BlockLogo BlockLogo">
-                <object data="/src/img/ClayAgeLogo.svg" type="image/svg+xml" class="BlockLogo-ClayAgeLogo ClayAgeLogo"></object>
-                <h1 class="BlockLogo-Name">ClayAge Студия Керамики</h1>
+
+<body class="MasterPage">
+    <img src="/src//img/Icons/goUp.svg" alt="" class="MasterPage-Up Up">
+
+    <div class="MainPage-BroswerSupport BroswerSupport">
+        <h1 class="BroswerSupport-WarningMsg">Сожалеем ,ваш браузер не поддерживается!</h1>
+        <p class="BroswerSupport-pAuto">Установите более современый браузер:</p>
+        <div class="BroswerSupport-BrwrBox BrwrBox">
+            <div class="BrwrBox-Item"><img src="/src/img/Icons/brw (1).png" alt="" class="BrwrBox-Img">
+                <a href="https://www.mozilla.org/ru/firefox/new/" class="BrwrBox-LinkImg"></a>
+
             </div>
-            <div class="Header-LocationInfo">
-                <h3 class="LocationInfo-MetroStreet">Метро Чернышевская,Ул. Кирочная ,д. 17<br>(Артклассер-Мультиспейс)</h3>
+            <div class="BrwrBox-Item"><img src="/src/img/Icons/brw (2).png" alt="" class="BrwrBox-Img">
+                <a href="https://www.google.com/intl/ru_ru/chrome/" class="BrwrBox-LinkImg"></a>
+
             </div>
-            <ul class="Header-NavMenu NavMenu">
-                <li class="NavMenu-Link Link"><object data="/src/img/vk-social-network-logo.svg" type="image/svg+xml"
-                        class="VKButton"><a class="Link-image" target="_blank" href="#"></a></object></li>
-                <li class="NavMenu-Link Link"><object data="/src/img/inst-logo.svg" type="image/svg+xml" class="InstButton"><a
-                            class="Link-image" target="_blank" href="#"></a></object></li>
-                <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">+7xxxxxxxxxx</a></li>
+            <div class="BrwrBox-Item"><img src="/src/img/Icons/brw (3).png" alt="" class="BrwrBox-Img">
+                <a href="https://www.opera.com/ru" class="BrwrBox-LinkImg"></a>
+            </div>
+            <div class="BrwrBox-Item"><img src="/src/img/Icons/brw (4).png" alt="" class="BrwrBox-Img">
+                <a href="https://browser.yandex.ru/" class="BrwrBox-LinkImg"></a>
+            </div>
+        </div>
+    </div>
+    <img src="/src//img/Icons/tech.svg" alt="" class="MainPage-Tech Tech">
+    <div class="MainPage-Suport Suport">
+        <div class="Suport-Close Close">X</div>
+
+        <h3 class="Suport-H3">Неверное отображение? Исправим!</h3>
+        <form action="mail.php" name="Support" class="Suport-Form Form">
+            <input type="hidden" name="project_name" value="ClayAge">
+            <input type="hidden" name="admin_email" value="test@a0555389.xsph.ru">
+            <input type="hidden" name="form_subject" value="Обычный Мастер-Класс заявка">
+
+
+            <input type="hidden" name="браузер" class="Form-Field Form-Field__Hidden">
+
+
+            <label for="image" class="Form-Label Label">Скриншот проблемы
+
+            </label>
+            <input type="file" required id="image" name="скриншот проблемы" class="Form-Field Form-Field__File">
+
+            <label for="more" class="Form-Label Label">
+                Опишите проблему*
+
+            </label>
+            <input type="text" required id="more" maxlength="300" name="дополнительно" class="Form-Field">
+
+            <button type="submit" class="Form-Button Button">Отправить!</button>
+        </form>
+    </div>
+    <div class="MasterPage-YandexMap YandexMap">
+        <div class="YandexMap-Close Close">X</div>
+        <h1 class="YandexMap-Location">Наш адрес :</h1>
+        <h3 class="YandexMap-Location">Санкт‑Петербург,ул. Невский Проспект д.60,ClayAge</h3>
+        <div class="YandexMap-Locaction Location">
+            <img class="Location-SVG" src="/src/img/mainContent/Spb_metro_logo.svg" alt="">
+            <h3 class="Location-MetroName"> Невский Проспект 600м</h3>
+            <img class="Location-SVG" src="/src/img/mainContent/Spb_metro_logo.svg" alt="">
+            <h3 class="Location-MetroName">Гостиный Двор 300метров</h3>
+        </div>
+
+
+
+        <div class="YandexMap-YMapCont YMapCont">
+
+            <a class="YandexMap-Link" href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a>
+            <a class="YandexMap-Link" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.336523%2C59.934246&mode=routes&rtext=59.933950%2C30.339095~59.934075%2C30.333911&rtt=pd&ruri=~&utm_medium=mapframe&utm_source=maps&z=17.6" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты</a>
+            <iframe class="YandexMap-Iframe " src="https://yandex.ru/map-widget/v1/-/CKqwVOiy" frameborder="1" allowfullscreen="true"></iframe>
+        </div>
+    </div>
+
+    <div class="MasterPage-Contact Contact">
+        <div class="Contact-Close Close">X</div>
+        <h1 class="Contact-Data">Контакты</h1>
+        <h3 class="Contact-Data Data"><a href="tel:+79313918079" class="Data-Phone">+7-931-391-80-79</a></h3>
+        <p class="Contact-Data">Телефон для дополнительных вопросов , для записи используйте пожалуйста форму на саите.</p>
+    </div>
+    <div class="MasterPage-Header Header">
+        <div class="Header-BlockLogo BlockLogo">
+
+            <object data="/src/img/mainContent/ClayAgeLogo.svg" type="image/svg+xml" class="BlockLogo-ClayAgeLogo ClayAgeLogo">
+            </object>
+            <a class="BlockLogo-mainPath" href="/dist/index.html">
+                <h1 class="BlockLogo-Name BlockLogo-Name__NOBacknd">ClayAge Студия Керамики</h1>
+            </a>
+        </div>
+        <div class="Header-LocationInfo">
+            <h3 class="LocationInfo-MetroStreet LocationInfo-MetroStreet_LW">Метро Чернышевская,Ул. Кирочная ,д. 17
+                <br>(Артклассер-Мультиспейс)</h3>
+            <img src="/src/img/mainContent/map.svg" type="" class="LocationInfo-MetroStreetIcon LocationInfo-MetroStreetIcon_SW"></img>
+        </div>
+        <ul class="Header-NavMenu NavMenu">
+            <li class="NavMenu-Link Link">
+                <a class="Link-image" target="_blank" href="http://www.vk.com"><img src="/src/img/mainContent/vk-social-network-logo.svg" class="Link-VKButton VKButton"></a>
+            </li>
+            <li class="NavMenu-Link Link">
+                <a class="Link-image" target="_blank" href="http://www.instagram.com"><img src="/src/img/mainContent/inst-logo.svg" class="Link-InstButton InstButton"></a>
+            </li>
+            <li class="NavMenu-Link Link Link_LargeVisible"><a class="Link-tel" target="_blank" type="tel">+7xxxxxxxxxx</a></li>
+            <li class="NavMenu-Link Link Link_SWVisible">
+                <a class="Link-tel tel Link-image" target="_blank" type="tel"><img src="/src/img/mainContent/call.svg" class="tel-ReverseCall ReverseCall"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="MasterPage-HeaderComponent HeaderComponent">
+        <ul class="HeaderComponent-NavMenu NavMenu">
+            <ul class="NavMenu-NavMenuOnHover NavMenuOnHover">
+                <span class="NavMenuOnHover-Target Link-item">Мастер-Классы</span>
+                <li class="NavMenuOnHover-Link Link"><a class="Link-item" target="_blank" href="/dist/ClayAgeMasterClasses.html">Мастер-Классы по керамике</a></li>
+                <li class="NavMenuOnHover-Link Link"><a class="Link-item" target="_blank" href="/dist/Tematic.html">Тематические Мастер-Классы</a> </li>
             </ul>
-        </div>
-        <div class="MasterPage-HeaderComponent HeaderComponent">
-            <ul class="HeaderComponent-NavMenu NavMenu">
-                <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">
-                        Главная
-                    </a></li>
-                <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Тематические Мастер-Классы</a>
-                </li>
-                <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/AuthorCeramics.html">Авторская Керамика</a></li>
-                <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Оплата и доставка</a></li>
-                <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Подарочные Сертификаты</a></li>
-                <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Записаться на мастер-класс</a></li>
-                <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">ClayAge Лайфхаки</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="dist/AuthorCeramics.html">Авторская Керамика</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Оплата и доставка</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Подарочные Сертификаты</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Запись на тематический мастер-класс</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">ClayAge Лайфхаки</a></li>
+        </ul>
+    </div>
 
-        </div>
-        <div class="MasterPage-Info Info Info_WhiteBackgroundAndAutoH">
-            <h2 class="Info-Title"> Описание Тематический мастеркласс - "Ваби-Саби"</h1>
 
-                <div class="Info-DescriptionBlock DescriptionBlock">
-                    <p class="DescriptionBlock-Text">Длительность 3 часа с перерывом на чайную церимонию. <br><br>Тема :<br><br>1.Изготовление японского чайника с боковой ручкой.<br><br>2. Лепка пиалы для японской чайной церимонии -Тяван.</p>
+    <div class="MainPage-HamburgerMenu HamburgerMenu">
+        <ul class="HamburgerMenu-NavMenu NavMenu">
 
-                    <img src="/src/img/japaneseTea.jpg" alt="Процесс познания волшебства" title="Процесс познания волшебства"
-                        class="DescriptionBlock-LessonsImage">
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/ClayAgeMasterClasses.html">Мастер-Классы по керамике</a></li>
+
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="dist/AuthorCeramics.html">Авторская
+            Керамика</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="dist/PayInfo.html">Оплата и доставка</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/GiftCertificate.html">Подарочные Сертификаты</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/ClayAgeLifeHak.html">ClayAge Лайфхаки</a></li>
+        </ul>
+    </div>
+    <img src="/src/img/mainContent//hamb.svg" class="MasterPage-HamburgerIcon HamburgerIcon"></img>
+    <div id="Moon" class="MasterPage-Info Info  Info_WhiteBackgroundAndAutoH">
+        <h2 class="Info-Title"> Описание Тематический мастеркласс - "Ваби-Саби"</h1>
+
+            <div class="Info-DescriptionBlock DescriptionBlock DescriptionBlock__Column">
+                <img src="/src/img/mainContent/japaneseTea.jpg" alt="Процесс познания волшебства" title="Процесс познания волшебства" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage__Column DescriptionBlock-LessonsImage__NoFit LoaderIgnore">
+                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column  DescriptionBlock-MainData__JustifyTop">Длительность 3 часа</p>
+                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Изготовление японского чайника с боковой ручкой</p>
+                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Лепка пиалы для японской чайной церимонии -Тяван</p>
+                <div class="DescriptionBlock-FiguresBox FiguresBox">
+                    <figure class="FiguresBox-ContextIllu ContextIllu">
+                        <img src="/src/img/mainContent/TeaCeremonyItem4.jpg" alt="Японский чайник" class="ContextIllu-IlluImg">
+                        <figcaption class="ContextIllu-Caption">Чайник с ручкой</figcaption>
+                    </figure>
+                    <figure class="DescriptionBlock-ContextIllu ContextIllu">
+                        <img src="/src/img/mainContent/japanesePialas.jpg" alt="Тяван" class="ContextIllu-IlluImg">
+                        <figcaption class="ContextIllu-Caption">Тяван</figcaption>
+
+                    </figure>
                 </div>
+                <p class="DescriptionBlock-Text DescriptionBlock-Text__Column"> В начале мы выкручиваем тулово, ручку, крышку и носик чайника на круге и затем собираем все детали, это первая части. В перерыве пьем чай матя, в уже готовой пиале Тяване из колекции нашей мастерской. Во второй части узнав все нюансы и
+                    историю пиялы тяван в яп. культуре, переходим к изготовлению своей из заготовленного куска шамотной глины.(глина после обжига иметируюшая поверхность камня) В конце занятия мы покрываем все ангобами в классический черный цвет (периода
+                    Эдо). Изделия можно будет забрать через неделю после обжига.
 
-                <div class="Info-DescriptionBlock DescriptionBlock">
+
+                </p>
+
+            </div>
+
+            <!--      <div class="Info-DescriptionBlock DescriptionBlock">
 
 
-                    <img src="/src/img/Pialas.jpg" alt="Почти готовое изделие" title="Почти готовое изделие" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage_Minify">
+                    <img data-src="/src/img/mainContent/Pialas.jpg" alt="Почти готовое изделие" title="Почти готовое изделие" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage_Minify">
                     <p class="DescriptionBlock-Text">
-                        В начале мы выкручиваем тулово, ручку, крышку и носик чайника на круге и затем собираем все детали, это первая части. В
-                        перерыве пьем чай матя, в уже готовой пиале Тяване из колекции нашей мастерской.
+                        В начале мы выкручиваем тулово, ручку, крышку и носик чайника на круге и затем собираем все детали, это первая части. В перерыве пьем чай матя, в уже готовой пиале Тяване из колекции нашей мастерской.
                     </p>
                 </div>
                 <div class="Info-DescriptionBlock DescriptionBlock">
 
 
-                    <img src="/src/img/japanese.jpg" alt="Почти готовое изделие" title=" готовое изделие" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage_Minify">
+                    <img data-src="/src/img/mainContent/japanese.jpg" alt="Почти готовое изделие" title=" готовое изделие" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage_Minify">
                     <p class="DescriptionBlock-Text">
 
-                        Во второй части узнав все нюансы и историю пиялы тяван в яп. культуре, переходим к изготовлению своей из
-                        заготовленного куска шамотной глины.(глина после обжига иметируюшая поверхность камня)
+                        Во второй части узнав все нюансы и историю пиялы тяван в яп. культуре, переходим к изготовлению своей из заготовленного куска шамотной глины.(глина после обжига иметируюшая поверхность камня)
 
                     </p>
                 </div>
 
                 <div class="Info-DescriptionBlock DescriptionBlock">
                     <p class="DescriptionBlock-Text">
-                        В конце занятия мы покрываем все ангобами в классический черный цвет (периода Эдо). Изделия можно будет забрать через
-                        неделю после обжига.
+                        В конце занятия мы покрываем все ангобами в классический черный цвет (периода Эдо). Изделия можно будет забрать через неделю после обжига.
                     </p>
 
-                    <img src="/src/img/blackPiala.jpg" alt="Процесс познания волшебства" title="глазурованноое изделие"
-                        class="DescriptionBlock-LessonsImage">
-                </div>
-                <h2 class="Info-Title">Условия проведения</h2>
+                    <img data-src="/src/img/mainContent/blackPiala.jpg" alt="Процесс познания волшебства" title="глазурованноое изделие" class="DescriptionBlock-LessonsImage">
+                </div>-->
+            <h2 class="Info-Title Info-Title__PaddingTop">Условия проведения</h2>
 
-                <div class="Info-DescritionBlock DescriptionBlock">
-                    <p class="DescriptionBlock-Text">
-                        Масстер-Класс проводиться при условий запись минимум 4-х человек.В связи с этим рекомендуем включить уведомление от сайта,не волнуйтесь вы будете получать уведомление только по поводу мастер-класса если вы на него записались .Как только на него запишеться 4 человека,вы получите уведомление о дате проведения.<br>Также можно следить в нашей группе вк.
-                    </p>
-                    <img src="/src/img/MasterSpace.jpg" alt="" class="DescriptionBlock-LessonsImage">
-                </div>
-        </div>
-        <div class="MasterPage-Info Info Info_GrayBackground">
-            <h3 class="Info-Title">Цены на занятия по керамике</h3>
-            <div class="Info-TablePrices TablePrices">
-                <div class="TablePrices-TableHeaderGroup TableHeaderGroup">
-                    <div class="TableHeaderGroup-TableRow TableRow">
-                        <span class="TableRow-Cell">Направление</span>
-                        <span class="TableRow-Cell">Ценна</span>
-                        <span class="TableRow-Cell">Время</span>
-                        <span class="TableRow-Cell">Количество занятий</span>
-                    </div>
-                </div>
-                <div class="TablePrices-TableRow TableRow">
-                    <span class="TableRow-Cell">Ежедневный мастер-класс</span>
-                    <span class="TableRow-Cell">900 руб</span>
-                    <span class="TableRow-Cell">90 минут</span>
-                    <span class="TableRow-Cell">1</span>
+            <div class="Info-DescritionBlock DescriptionBlock DescriptionBlock__Column">
+                <img data-src="/src/img/mainContent/MasterSpace.jpg" alt="" class="DescriptionBlock-LessonsImage">
+                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column  DescriptionBlock-MainData__JustifyTop">Минимум 4 ученика</p>
 
-                </div>
+                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Предоплата 50%</p>
 
-                <div class="TablePrices-TableRow TableRow">
-                    <span class="TableRow-Cell">Абонемент 5 занятий(выгодно)</span>
-                    <span class="TableRow-Cell">4000 р</span>
-                    <span class="TableRow-Cell">450 мин</span>
-                    <span class="TableRow-Cell">5</span>
+                <p class="DescriptionBlock-MainData DescriptionBlock-MainData__Column">Следите за новостями в группе</p>
 
-                </div>
+                <p class="DescriptionBlock-Text DescriptionBlock-Text__Column DescriptionBlock-Text__SpaceTop">
+                    Масстер-Класс проводиться при условий запись минимум 4-х человек.В связи с этим рекомендуем включить уведомление от сайта,не волнуйтесь вы будете получать уведомление только по поводу мастер-класса если вы на него записались .Как только на него запишеться
+                    4 человека,вы получите уведомление о дате проведения.<br>Также можно следить в нашей группе вк.
+                </p>
 
-                <div class="TablePrices-TableRow TableRow">
-                    <span class="TableRow-Cell">Ежедневный Масстер-Класс дети</span>
-                    <span class="TableRow-Cell">800 руб</span>
-                    <span class="TableRow-Cell">90 мин</span>
-                    <span class="TableRow-Cell">1</span>
+                <form action="mail.php" method="POST " name="Advanced" class="DescriptionBlock-MasterClassSignUpForm MasterClassSignUpForm MasterClassSignUpForm__Advanced">
 
-                </div>
+                    <input type="hidden" name="project_name" value="ClayAge">
+                    <input type="hidden" name="admin_email" value="test@a0555389.xsph.ru">
+                    <input type="hidden" name="form_subject" value="Тематический Мастер-Класс заявка">
+                    <label for="FullName" class="MasterClassSignUpForm-Label">ФИО*</label>
+                    <input type="text" minlength="4" pattern="\D*" name="ФИО" required id="FullName" class="MasterClassSignUpForm-InputField MasterClassSignUpForm-InputField__BlackBorder">
+                    <label for="Phone" class="MasterClassSignUpForm-Label">Телефон* </label>
+                    <input type="tel" placeholder="+79052657689" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" minlength="12" maxlength="12" name="Телефон ученика" required id="Phone" class="MasterClassSignUpForm-InputField MasterClassSignUpForm-InputField__BlackBorder">
 
-                <div class="TablePrices-TableRow TableRow">
-                    <span class="TableRow-Cell">Абонемент 5 занятий дети</span>
-                    <span class="TableRow-Cell">3500 руб</span>
-                    <span class="TableRow-Cell">450 мин</span>
-                    <span class="TableRow-Cell">5</span>
 
-                </div>
+                    <button type="submit" class="MasterClassSignUpForm-Button Button Button__Black">Отправить заявку!</button>
+                </form>
+            </div>
+
+            <div class="Info-SuccesFormSend SuccesFormSend SuccesFormSend__BasicLesson ">
+                <h1 class="SuccesFormSend-Chapter ">Ваша заявка успешно принята!</h1>
+                <p class="SuccesFormSend-Info ">Скоро мы вам перезвоним и сообщим о доступности учителя в указаную вами дату и время!</p>
+                <a href="# " class="SuccesFormSend-About ">подробнее</a>
+                <button class="SuccesFormSend-Button ">Понял,Спасибо!</button>
+            </div>
+            <div class="Info-SuccesFormSend SuccesFormSend SuccesFormSend__AdvancedLesson ">
+                <h1 class="SuccesFormSend-Chapter ">Ваша заявка успешно принята!</h1>
+                <p class="SuccesFormSend-Info ">Скоро мы с вами свяжемся,напоминаем что дата будет назначена после набора группы.Следить за новостями в нашей группе ВК по ссылке ниже.</p>
+                <a href="# " class="SuccesFormSend-About ">подробнее</a>
+                <button class="SuccesFormSend-Button ">Понял,Спасибо!</button>
+            </div>
+
+            <div class="Info-SuccesFormSend SuccesFormSend SuccesFormSend_OnFail ">
+                <h1 class="SuccesFormSend-Chapter ">Что то пошло не так!</h1>
+                <p class="SuccesFormSend-Info ">Проверьте интернет соединенние и повторите попытку!</p>
+                <img src="/src/img/mainContent/wrong.jpg " alt=" " class="SuccesFormSend-Fail ">
 
 
             </div>
-            <button class="Info-GetLessonsButton GetLessonsButton GetLessonsButton_Margin">Записи на масстер-класс!</button>
-        </div>
+    </div>
 
-        <script type="text/javascript" src="/dist/masterClasses.js"></script>
-    </body>
+    <div class="MasterPage-Info Info Info__NoFlex Info_GrayBackground">
+        <h3 class="Info-Title">Цены на занятия по керамике</h3>
+        <div class="Info-TablePrices TablePrices ">
+            <div class="TablePrices-TableHeaderGroup TableHeaderGroup ">
+                <div class="TableHeaderGroup-TableRow TableRow ">
+                    <span class="TableRow-Cell ">Направление</span>
+                    <span class="TableRow-Cell ">Ценна</span>
+                    <span class="TableRow-Cell ">Время</span>
+                    <span class="TableRow-Cell ">Количество занятий</span>
+                </div>
+            </div>
+            <div class="TablePrices-TableRow TableRow ">
+                <span class="TableRow-Cell ">Ежедневный мастер-класс</span>
+                <span class="TableRow-Cell ">1500 руб</span>
+                <span class="TableRow-Cell ">90 минут</span>
+                <span class="TableRow-Cell ">1</span>
+
+            </div>
+
+            <div class="TablePrices-TableRow TableRow ">
+                <span class="TableRow-Cell ">Абонемент 5 занятий(выгодно)</span>
+                <span class="TableRow-Cell ">6500р</span>
+                <span class="TableRow-Cell ">450 мин</span>
+                <span class="TableRow-Cell ">5</span>
+
+            </div>
+
+            <div class="TablePrices-TableRow TableRow ">
+                <span class="TableRow-Cell ">Тематический Масстер-Класс </span>
+                <span class="TableRow-Cell ">2000 руб</span>
+                <span class="TableRow-Cell ">90 мин</span>
+                <span class="TableRow-Cell ">1</span>
+
+            </div>
+
+            <div class="TablePrices-TableRow TableRow ">
+                <span class="TableRow-Cell ">Подарочный сертификат</span>
+                <span class="TableRow-Cell ">2000руб</span>
+                <span class="TableRow-Cell ">90 мин</span>
+                <span class="TableRow-Cell ">1</span>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="MainPage-Footer Footer ">
+        <div class="Footer-Copyright Copyright ">
+            <p class="Copyright-Info ">ClayAge 2015-2021 </p>
+            <p class="Copyright-Info ">Все материалы сайта защишены авторским правом. </p>
+        </div>
+        <div class="Footer-CiteInformationBlock CiteInformationBlock ">
+            <a href=" " class="CiteInformationBlock-NavMenu ">Ценны и оплата</a>
+            <a href=" " class="CiteInformationBlock-NavMenu ">Доставка и самовывоз</a>
+            <a href=" " class="CiteInformationBlock-NavMenu ">Подарочные сертификаты</a>
+        </div>
+        <div class="Footer-Copyright Copyright ">
+            <p class="Copyright-Info ">Номер телефона : +79052917639</p>
+            <p class="Copyright-Info ">Адрес : Санкт‑Петербург,Невский Проспект 17б,3 этаж</p>
+        </div>
+    </div>
+
+
+    <script src="/src/js/pagesCommonModules/commonSvgInjectControll.js "></script>
+
+</body>
 
 </html>

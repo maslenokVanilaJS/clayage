@@ -17,9 +17,58 @@
 </head>
 
 <body class="MainPage">
+    <img src="/src//img/Icons/goUp.svg" alt="" class="MasterPage-Up Up">
 
+    <div class="MainPage-BroswerSupport BroswerSupport">
+        <h1 class="BroswerSupport-WarningMsg">Сожалеем ,ваш браузер не поддерживается!</h1>
+        <p class="BroswerSupport-pAuto">Установите более современый браузер:</p>
+        <div class="BroswerSupport-BrwrBox BrwrBox">
+            <div class="BrwrBox-Item"><img src="/src/img/Icons/brw (1).png" alt="" class="BrwrBox-Img">
+                <a href="https://www.mozilla.org/ru/firefox/new/" class="BrwrBox-LinkImg"></a>
+
+            </div>
+            <div class="BrwrBox-Item"><img src="/src/img/Icons/brw (2).png" alt="" class="BrwrBox-Img">
+                <a href="https://www.google.com/intl/ru_ru/chrome/" class="BrwrBox-LinkImg"></a>
+
+            </div>
+            <div class="BrwrBox-Item"><img src="/src/img/Icons/brw (3).png" alt="" class="BrwrBox-Img">
+                <a href="https://www.opera.com/ru" class="BrwrBox-LinkImg"></a>
+            </div>
+            <div class="BrwrBox-Item"><img src="/src/img/Icons/brw (4).png" alt="" class="BrwrBox-Img">
+                <a href="https://browser.yandex.ru/" class="BrwrBox-LinkImg"></a>
+            </div>
+        </div>
+    </div>
+    <img src="/src//img/Icons/tech.svg" alt="" class="MainPage-Tech Tech">
+    <div class="MainPage-Suport Suport">
+        <div class="Suport-Close Close">X</div>
+
+        <h3 class="Suport-H3">Неверное отображение? Исправим!</h3>
+        <form action="mail.php" name="Support" class="Suport-Form Form">
+            <input type="hidden" name="project_name" value="ClayAge">
+            <input type="hidden" name="admin_email" value="test@a0555389.xsph.ru">
+            <input type="hidden" name="form_subject" value="Обычный Мастер-Класс заявка">
+
+
+            <input type="hidden" name="браузер" class="Form-Field Form-Field__Hidden">
+
+
+            <label for="image" class="Form-Label Label">Скриншот проблемы
+
+            </label>
+            <input type="file" id="image" name="скриншот проблемы" class="Form-Field Form-Field__File">
+
+            <label for="more" class="Form-Label Label">
+                Опишите проблему*
+
+            </label>
+            <input type="text" required id="more" maxlength="300" name="дополнительно" class="Form-Field">
+
+            <button type="submit" class="Form-Button Button">Отправить!</button>
+        </form>
+    </div>
     <div class="MainPage-YandexMap YandexMap">
-        <div class="YandexMap-Close">X</div>
+        <div class="YandexMap-Close Close">X</div>
         <h1 class="YandexMap-Location">Наш адрес :</h1>
         <h3 class="YandexMap-Location">Санкт‑Петербург,ул. Невский Проспект д.60,ClayAge</h3>
         <div class="YandexMap-Locaction Location">
@@ -92,14 +141,12 @@
 
             <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="dist/AuthorCeramics.html">Авторская
             Керамика</a></li>
-            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Оплата и доставка</a></li>
-            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Подарочные Сертификаты</a></li>
-            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Запись на тематический мастер-класс</a>
-            </li>
-            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">ClayAge Лайфхаки</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="dist/PayInfo.html">Оплата и доставка</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/GiftCertificate.html">Подарочные Сертификаты</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/ClayAgeLifeHak.html">ClayAge Лайфхаки</a></li>
         </ul>
     </div>
-    <div class="MainPage-SlaiderContainer SlaiderContainer">
+    <div id="header" class="MainPage-SlaiderContainer SlaiderContainer">
 
         <div class="SlaiderContainer-SlaiderStudio SlaiderStudio">
             <div class="SlaiderStudio-PromoBlockHeader PromoBlockHeader PromoBlockHeader__Visible">
@@ -148,18 +195,18 @@
       <h1 class="SlaiderStudio-TextPromo">Мы вас научим делать качественно и с сердцем!!</h1>
       <h1 class="SlaiderStudio-TextPromo">Приглашаем вас на уроки по изготовлению изделии из глины в нашей студии ClayAge</h1>
  -->
-            <img src="/src/img/mainSlider/Work.jpg" class="SlaiderStudio-Image SlaiderStudio-Image__Visible Image"></img>
-            <img src="/src/img/mainSlider/Advanced.jpg" class="SlaiderStudio-Image Image"></img>
-            <img src="/src/img/mainSlider/ClayAgeAdults.jpg" class="SlaiderStudio-Image Image"></img>
-            <img src="/src/img/mainSlider/ClayAgeMaster.jpg" class="SlaiderStudio-Image Image"></img>
-            <img src="/src/img/mainSlider/Work2.jpg" class="SlaiderStudio-Image Image"></img>
-            <img src="/src/img/mainSlider/Art.jpg" class="SlaiderStudio-Image Image"></img>
+            <img data-src="/src/img/mainSlider/Work.jpg" class="SlaiderStudio-Image SlaiderStudio-Image__Visible Image"></img>
+            <img data-src="/src/img/mainSlider/Advanced.jpg" class="SlaiderStudio-Image Image"></img>
+            <img data-src="/src/img/mainSlider/ClayAgeAdults.jpg" class="SlaiderStudio-Image Image"></img>
+            <img data-src="/src/img/mainSlider/ClayAgeMaster.jpg" class="SlaiderStudio-Image Image"></img>
+            <img data-src="/src/img/mainSlider/Work2.jpg" class="SlaiderStudio-Image Image"></img>
+            <img data-src="/src/img/mainSlider/Art.jpg" class="SlaiderStudio-Image Image"></img>
         </div>
     </div>
     <img src="/src/img/mainContent//hamb.svg" class="MainPage-HamburgerIcon HamburgerIcon"></img>
 
     <div class="MainPage-Info Info Info__Basic Info_WhiteBackground">
-        <h1 class="Info-MasterClasses Info-MasterClasses_Heading Info-MasterClasses_MobileRender">Ежедневные Мастер-Классы по Керамике</h1>
+        <h1 class="Info-MasterClasses Info-MasterClasses_Heading Info-MasterClasses_MobileRender">Еженедельные Мастер-Классы по Керамике</h1>
         <p class="Info-MasterClasses Info-MasterClasses_Paragraph Info-MasterClasses_MobileRender">На наших уроках вам доступно:</p>
         <div class="Info-DescribeBlock DescribeBlock DescribeBlock__Mobile">
             <ul class="DescribeBlock-MasterClassContent MasterClassContent ">
@@ -205,7 +252,7 @@
         </div>
         <div class="Info-DescribeBlock DescribeBlock__Large">
 
-            <img src="/src/img/mainContent/MasterTeacher.jpg" alt="Мастер учитель" class="DescribeBlock-Img">
+            <img data-src="/src/img/mainContent/MasterTeacher.jpg" alt="Мастер учитель" class="DescribeBlock-Img">
             <div class="DescribeBlock-TextBlock TextBlock">
                 <h1 class="TextBlock-MasterClasses TextBlock-MasterClasses_Heading TextBlock-MasterClasses_MobileRender"> Ваш учитель, гончар с многолетним опытом и сотнями авторских работ! </h1>
                 <p class="TextBlock-MasterClasses TextBlock-MasterClasses_Paragraph TextBlock-MasterClasses_Paragraph__MasterAboutStyle"> Сергей Албу ,успешный гончар создавший сотни уникальных керамических изделий вдохновленные природой и аутентичной культурой разных стран и эпох.Он будет ващим учителем и гидом в захватывающем путешествий в мире изготовления керамики.</p>
@@ -274,171 +321,187 @@
             <div class="Info-MasterClassSignUpFormContainer MasterClassSignUpFormContainer  MasterClassSignUpFormContainer__Basic">
                 <object data="/src/img/mainContent/ClayAgeLogo1.svg" type="image/svg+xml" class="MasterClassSignUpForm-HeadLogo HeadLogo"></object>
 
-                <form action="sendMailBasicLesson.php" method="POST" name="basicLesson" class="MasterClassSignUpFormContainer-MasterClassSignUpForm MasterClassSignUpForm MasterClassSignUpForm__Basic">
+
+
+
+
+
+
+                <form action="mail.php" method="POST" name="basicLesson" class="MasterClassSignUpFormContainer-MasterClassSignUpForm MasterClassSignUpForm MasterClassSignUpForm__Basic">
                     <img src="/src/img/Icons/FormComponents/close.svg" alt="" class="MasterClassSignUpForm-CloseForm">
+                    <input type="hidden" name="project_name" value="ClayAge">
+                    <input type="hidden" name="admin_email" value="test@a0555389.xsph.ru">
+                    <input type="hidden" name="form_subject" value="Обычный Мастер-Класс заявка">
+                    <label for="Day" class="MasterClassSignUpForm-Label">Желаемый день*</label>
+                    <select required id="Day" name="Желаемый день" class="MasterClassSignUpForm-Select Select">
+<option value="Суббота" class="Select-Option">Суббота</option>
+<option value="Воскресенье" class="Select-Option">Воскресенье</option>
+                    </select><br><br>
+                    <label for="time" class="MasterClassSignUpForm-Label">Выберите время (с 13:00 до 19:00)*</label>
 
-                    <label for="DateTime" class="MasterClassSignUpForm-Label">Дата и время масстеркласа*</label>
-                    <input type="datetime-local" required id="DateTime" class="MasterClassSignUpForm-InputField">
+                    <input class="MasterClassSignUpForm-InputField" type="time" name="Желаемое время" min="13:00" max="19:00" id="time">
                     <label for="FullName" class="MasterClassSignUpForm-Label">ФИО*</label>
-                    <input type="text" required id="FullName" class="MasterClassSignUpForm-InputField">
-                    <label for="Phone" class="MasterClassSignUpForm-Label">Телефон*</label>
-                    <input type="number" required id="Phone" class="MasterClassSignUpForm-InputField">
+                    <input type="text" minlength="4" pattern="\D*" name="ФИО ученика" required id="FullName" class="MasterClassSignUpForm-InputField">
+                    <label for="Phone" class="MasterClassSignUpForm-Label">Телефон*  </label>
+                    <input type="tel" minlength="12" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder=" +79052657689 " maxlength="12" name="Телефон ученика " placeholder="Мы вам перезвоним! " required id="Phone " class="MasterClassSignUpForm-InputField ">
 
 
-                    <button type="submit" class="MasterClassSignUpForm-Button MasterClassSignUpForm-Button__Basic Button">Отправить заявку!</button>
+                    <button type="submit " class="MasterClassSignUpForm-Button MasterClassSignUpForm-Button__Basic Button ">Отправить заявку!</button>
 
 
                 </form>
             </div>
 
-            <button class="Info-TAB TAB TAB__Lessons">Записаться на урок!</button>
+            <button class="Info-TAB TAB TAB__Lessons ">Записаться на урок!</button>
 
     </div>
 
-    <div class="MainPage-Info Info Info__Advanced Info_GrayBackground">
-        <div class="MainPage-BackgroundBasicMastcls BackgroundMastcls BackgroundMastcls__Advanced"></div>
-        <h1 class="Info-MasterClasses Info-MasterClasses_Heading Info-MasterClasses_MobileRender">Тематические Мастер-Классы по Керамике</h1>
-        <p class="Info-MasterClasses Info-MasterClasses_Paragraph Info-MasterClasses_MobileRender">Уроки более продвинутого уровня</p>
+    <div class="MainPage-Info Info Info__Advanced Info_GrayBackground ">
+        <div class="MainPage-BackgroundBasicMastcls BackgroundMastcls BackgroundMastcls__Advanced "></div>
+        <h1 class="Info-MasterClasses Info-MasterClasses_Heading Info-MasterClasses_MobileRender ">Тематические Мастер-Классы по Керамике</h1>
+        <p class="Info-MasterClasses Info-MasterClasses_Paragraph Info-MasterClasses_MobileRender ">Уроки более продвинутого уровня</p>
 
-        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__Advanced DescribeBlock__Mobile">
+        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__Advanced DescribeBlock__Mobile ">
             <ul class="DescribeBlock-MasterClassContent MasterClassContent ">
-                <li class="MasterClassContent-Details">Обучим продвинутым техникам</li>
-                <li class="MasterClassContent-Details">Изготовите нестандартные изделия</li>
-                <li class="MasterClassContent-Details">Обучим более детально тонкостям изготовления керамики</li>
-                <li class="MasterClassContent-Details">Расскажем о ключевых своиствах материалов</li>
-                <li class="MasterClassContent-Details">Научим работать с печью</li>
-                <li class="MasterClassContent-Details">Проведем экскурсию в историю</li>
-                <li class="MasterClassContent-Details">Обучим стилю природных форм</li>
-                <li class="MasterClassContent-Details">Обучим стилю аутентичных культур</li>
-                <li class="MasterClassContent-Details">Чаепитие</li>
+                <li class="MasterClassContent-Details ">Обучим продвинутым техникам</li>
+                <li class="MasterClassContent-Details ">Изготовите нестандартные изделия</li>
+                <li class="MasterClassContent-Details ">Обучим более детально тонкостям изготовления керамики</li>
+                <li class="MasterClassContent-Details ">Расскажем о ключевых своиствах материалов</li>
+                <li class="MasterClassContent-Details ">Научим работать с печью</li>
+                <li class="MasterClassContent-Details ">Проведем экскурсию в историю</li>
+                <li class="MasterClassContent-Details ">Обучим стилю природных форм</li>
+                <li class="MasterClassContent-Details ">Обучим стилю аутентичных культур</li>
+                <li class="MasterClassContent-Details ">Чаепитие</li>
             </ul>
         </div>
-        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__Desktop  DescribeBlock__Advanced">
+        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__Desktop DescribeBlock__Advanced ">
             <ul class="DescribeBlock-MasterClassContent MasterClassContent ">
-                <li class="MasterClassContent-Details">Обучим продвинутым техникам</li>
-                <li class="MasterClassContent-Details">Изготовите нестандартные изделия</li>
-                <li class="MasterClassContent-Details">Обучим более детально тонкостям изготовления керамики</li>
+                <li class="MasterClassContent-Details ">Обучим продвинутым техникам</li>
+                <li class="MasterClassContent-Details ">Изготовите нестандартные изделия</li>
+                <li class="MasterClassContent-Details ">Обучим более детально тонкостям изготовления керамики</li>
                 <!--
-      <li class="MasterClassContent-Details">Опытный и дружелюбный мастер-наставник</li>
-      <li class="MasterClassContent-Details">Готовое изделие сделанное вашими руками,включая обжиг</li>
-      <li class="MasterClassContent-Details">Приятно проведенное время с пользой</li>-->
+      <li class="MasterClassContent-Details ">Опытный и дружелюбный мастер-наставник</li>
+      <li class="MasterClassContent-Details ">Готовое изделие сделанное вашими руками,включая обжиг</li>
+      <li class="MasterClassContent-Details ">Приятно проведенное время с пользой</li>-->
             </ul>
         </div>
-        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__Desktop  DescribeBlock__Advanced">
+        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__Desktop DescribeBlock__Advanced ">
             <ul class="DescribeBlock-MasterClassContent MasterClassContent ">
 
 
-                <li class="MasterClassContent-Details">Расскажем о ключевых своиствах материалов</li>
-                <li class="MasterClassContent-Details">Научим работать с печью</li>
-                <li class="MasterClassContent-Details">Проведем экскурсию в историю</li>
+                <li class="MasterClassContent-Details ">Расскажем о ключевых своиствах материалов</li>
+                <li class="MasterClassContent-Details ">Научим работать с печью</li>
+                <li class="MasterClassContent-Details ">Проведем экскурсию в историю</li>
             </ul>
         </div>
-        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__MidleRender DescribeBlock__Desktop DescribeBlock__Advanced">
+        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__MidleRender DescribeBlock__Desktop DescribeBlock__Advanced ">
             <ul class="DescribeBlock-MasterClassContent MasterClassContent ">
 
 
-                <li class="MasterClassContent-Details">Обучим стилю природных форм</li>
-                <li class="MasterClassContent-Details">Обучим стилю аутентичных культур</li>
-                <li class="MasterClassContent-Details">Чаепитие</li>
+                <li class="MasterClassContent-Details ">Обучим стилю природных форм</li>
+                <li class="MasterClassContent-Details ">Обучим стилю аутентичных культур</li>
+                <li class="MasterClassContent-Details ">Чаепитие</li>
             </ul>
         </div>
-        <div class="Info-DescribeBlock DescribeBlock__Large DescribeBlock__LargeAdvanced">
+        <div class="Info-DescribeBlock DescribeBlock__Large DescribeBlock__LargeAdvanced ">
 
-            <img src="/src/img/mainContent/MasterSpace.jpg" alt="Ntvf" class="DescribeBlock-Img">
-            <div class="DescribeBlock-TextBlock TextBlock">
-                <h1 class="TextBlock-MasterClasses TextBlock-MasterClasses_Heading TextBlock-MasterClasses_MobileRender"> Не упустите шанс стать мастером! </h1>
-                <p class="TextBlock-MasterClasses TextBlock-MasterClasses_Paragraph   TextBlock-MasterClasses_Paragraph__MasterAboutStyle">
+            <img data-src="/src/img/mainContent/MasterSpace.jpg " alt="Ntvf " class="DescribeBlock-Img ">
+            <div class="DescribeBlock-TextBlock TextBlock ">
+                <h1 class="TextBlock-MasterClasses TextBlock-MasterClasses_Heading TextBlock-MasterClasses_MobileRender "> Не упустите шанс стать мастером! </h1>
+                <p class="TextBlock-MasterClasses TextBlock-MasterClasses_Paragraph TextBlock-MasterClasses_Paragraph__MasterAboutStyle ">
                     Каждый масстер-класс уникален ,поскольку каждый раз посвящен новой теме. Тема мастер-класса изготовление целевого изделия ,к примеру японснкий чайник , изготовления этих изделий требуют более продвинутового уровня.
                 </p>
-                <a href="#" class="TextBlock-Link">подробнее о мастер-классе</a>
+                <a href="# " class="TextBlock-Link ">подробнее о мастер-классе</a>
             </div>
         </div>
-        <h2 class="Info-MasterClasses Info-MasterClasses_Heading">Пример изделий тематического мастер-класса</h1>
+        <h2 class="Info-MasterClasses Info-MasterClasses_Heading ">Пример изделий тематического мастер-класса</h1>
 
-            <div class="Info-DescribeBlock DescribeBlock DescribeBlock__Slaider DescribeBlock__SlaiderMobileRender">
+            <div class="Info-DescribeBlock DescribeBlock DescribeBlock__Slaider DescribeBlock__SlaiderMobileRender ">
 
-                <div class="DescribeBlock-ImageContainer ImageContainer">
-                    <img src="/src/img/Icons/SliderComponents/back.svg" alt="" class="ImageContainer-ArrowBack">
-                    <img src="/src/img/Icons/SliderComponents/next.svg" alt="" class="ImageContainer-ArrowNext">
-                    <img src="/src/img/Icons/SliderComponents/backBlack.svg" alt="" class="ImageContainer-ArrowBackBlack ImageContainer-ArrowBackBlack__Basic">
-                    <img src="/src/img/Icons/SliderComponents/nextBlack.svg" alt="" class="ImageContainer-ArrowNextBlack ImageContainer-ArrowNextBlack__Basic">
+                <div class="DescribeBlock-ImageContainer ImageContainer ">
+                    <img src="/src/img/Icons/SliderComponents/back.svg " alt=" " class="ImageContainer-ArrowBack ">
+                    <img src="/src/img/Icons/SliderComponents/next.svg " alt=" " class="ImageContainer-ArrowNext ">
+                    <img src="/src/img/Icons/SliderComponents/backBlack.svg " alt=" " class="ImageContainer-ArrowBackBlack ImageContainer-ArrowBackBlack__Basic ">
+                    <img src="/src/img/Icons/SliderComponents/nextBlack.svg " alt=" " class="ImageContainer-ArrowNextBlack ImageContainer-ArrowNextBlack__Basic ">
 
-                    <img src="/src/img/mainContent/FloristItem (5).jpg" alt="" class="ImageContainer-Image">
-                    <img src="/src/img/mainContent/SculptureItem (11).jpg" alt="" class="ImageContainer-Image">
-                    <img src="/src/img/mainContent/InterierVase.jpg" alt="" class="ImageContainer-Image">
-                    <img src="/src/img/mainContent/udu Nr.1.jpg" alt="" class="ImageContainer-Image">
-                    <img src="/src/img/mainContent/TeaCeremonyItem5.jpg" alt="" class="ImageContainer-Image">
-                    <img src="/src/img/mainContent/darbuka2.jpg" alt="" class="ImageContainer-Image">
+                    <img src="/src/img/mainContent/FloristItem (5).jpg " alt=" " class="ImageContainer-Image ">
+                    <img src="/src/img/mainContent/SculptureItem (11).jpg " alt=" " class="ImageContainer-Image ">
+                    <img src="/src/img/mainContent/InterierVase.jpg " alt=" " class="ImageContainer-Image ">
+                    <img src="/src/img/mainContent/udu Nr.1.jpg " alt=" " class="ImageContainer-Image ">
+                    <img src="/src/img/mainContent/TeaCeremonyItem5.jpg " alt=" " class="ImageContainer-Image ">
+                    <img src="/src/img/mainContent/darbuka2.jpg " alt=" " class="ImageContainer-Image ">
                 </div>
             </div>
 
-            <!--<img src="/src/img/SculptureItem (10).jpg" alt="" class="Info-ContextImage">  
-<h1 class="Info-MasterClasses Info-MasterClasses_Heading">Тематические Мастер-Классы по гончарному мастерству</h1> 
- <p class="Info-MasterClasses Info-MasterClasses_Paragraph">Продвинутые уроки по керамике на которых вы : </p>
- <ul class="Info-MasterClassContent MasterClassContent">
-  <li class="MasterClassContent-Details">Углубленно изучите тонкость изготовления керамики</li>
-  <li class="MasterClassContent-Details">Почувствуете все волшебство работы с природными материалами</li>
-  <li class="MasterClassContent-Details">Погрузитесь в увлекательный творческий процесс</li>
-  <li class="MasterClassContent-Details">Прокачаете свой скилл </li>
-  <li class="MasterClassContent-Details">Чайнная Церемония и вкусняшки</li>   
+            <!--<img src="/src/img/SculptureItem (10).jpg " alt=" " class="Info-ContextImage ">  
+<h1 class="Info-MasterClasses Info-MasterClasses_Heading ">Тематические Мастер-Классы по гончарному мастерству</h1> 
+ <p class="Info-MasterClasses Info-MasterClasses_Paragraph ">Продвинутые уроки по керамике на которых вы : </p>
+ <ul class="Info-MasterClassContent MasterClassContent ">
+  <li class="MasterClassContent-Details ">Углубленно изучите тонкость изготовления керамики</li>
+  <li class="MasterClassContent-Details ">Почувствуете все волшебство работы с природными материалами</li>
+  <li class="MasterClassContent-Details ">Погрузитесь в увлекательный творческий процесс</li>
+  <li class="MasterClassContent-Details ">Прокачаете свой скилл </li>
+  <li class="MasterClassContent-Details ">Чайнная Церемония и вкусняшки</li>   
  </ul>
-<div class="Info-StudentsWorkExamplesSlaider StudentsWorkExamplesSlaider">
-  <img src="/src/img/Icons/SliderComponents/back.svg" alt="" class="StudentsWorkExamplesSlaider-ArrowBack">
-  <img src="/src/img/Icons/SliderComponents/next.svg" alt="" class="StudentsWorkExamplesSlaider-ArrowNext">
-  <img src="/src/img/FloristItem (5).jpg" alt=""
+<div class="Info-StudentsWorkExamplesSlaider StudentsWorkExamplesSlaider ">
+  <img src="/src/img/Icons/SliderComponents/back.svg " alt=" " class="StudentsWorkExamplesSlaider-ArrowBack ">
+  <img src="/src/img/Icons/SliderComponents/next.svg " alt=" " class="StudentsWorkExamplesSlaider-ArrowNext ">
+  <img src="/src/img/FloristItem (5).jpg " alt=" "
     class="StudentsWorkExamplesSlaider-WorkImage StudentsWorkExamplesSlaider-WorkImage__Visible ">
-  <img src="/src/img/SculptureItem (11).jpg" alt="" class="StudentsWorkExamplesSlaider-WorkImage ">
-  <img src="/src/img/InterierVase.jpg" alt="" class="StudentsWorkExamplesSlaider-WorkImage ">
-  <img src="/src/img/udu Nr.1.jpg" alt=""
-    class="StudentsWorkExamplesSlaider-WorkImage StudentsWorkExamplesSlaider-WorkImageHugeHeight">
-  <img src="/src/img/TeaCeremonyItem5.jpg" alt=""
-    class="StudentsWorkExamplesSlaider-WorkImage StudentsWorkExamplesSlaider-WorkImageHugeHeight">
-  <img src="/src/img/darbuka2.jpg" alt=""
-    class="StudentsWorkExamplesSlaider-WorkImage StudentsWorkExamplesSlaider-WorkImageHugeHeight">
+  <img src="/src/img/SculptureItem (11).jpg " alt=" " class="StudentsWorkExamplesSlaider-WorkImage ">
+  <img src="/src/img/InterierVase.jpg " alt=" " class="StudentsWorkExamplesSlaider-WorkImage ">
+  <img src="/src/img/udu Nr.1.jpg " alt=" "
+    class="StudentsWorkExamplesSlaider-WorkImage StudentsWorkExamplesSlaider-WorkImageHugeHeight ">
+  <img src="/src/img/TeaCeremonyItem5.jpg " alt=" "
+    class="StudentsWorkExamplesSlaider-WorkImage StudentsWorkExamplesSlaider-WorkImageHugeHeight ">
+  <img src="/src/img/darbuka2.jpg " alt=" "
+    class="StudentsWorkExamplesSlaider-WorkImage StudentsWorkExamplesSlaider-WorkImageHugeHeight ">
 </div>
-<h1 class="Info-MasterClasses Info-MasterClasses_Heading">Вы сможете выйти на новый уровень!</h1>
-<p class="Info-MasterClasses Info-MasterClasses_Paragraph">Выше представлены работы ,<br>которые можно
+<h1 class="Info-MasterClasses Info-MasterClasses_Heading ">Вы сможете выйти на новый уровень!</h1>
+<p class="Info-MasterClasses Info-MasterClasses_Paragraph ">Выше представлены работы ,<br>которые можно
   научиться делать на тематических мастер-классах в студии ClayAge. </p>
-<a href="#" class="Info-MasterClasses Info-MasterClasses_Link">подробнее</a>
+<a href="# " class="Info-MasterClasses Info-MasterClasses_Link ">подробнее</a>
 
-<button class="Info-GetLessonsButton GetLessonsButton GetLessonsButton__Lessons">Хочу стать мастером!</button>
+<button class="Info-GetLessonsButton GetLessonsButton GetLessonsButton__Lessons ">Хочу стать мастером!</button>
 -->
-            <button class="Info-TAB TAB TAB__Lessons">Стать мастером!</button>
+            <button class="Info-TAB TAB TAB__Lessons TAB__LessonsA">Стать мастером!</button>
 
             <div class="Info-MasterClassSignUpFormContainer MasterClassSignUpFormContainer MasterClassSignUpFormContainer__Advanced">
                 <object data="/src/img/mainContent/ClayAgeLogo1.svg" type="image/svg+xml" class="MasterClassSignUpForm-HeadLogo HeadLogo HeadLogo__Second"></object>
 
-                <form action="sendMailAdvancedLesson" method="POST" name="Advanced" class="MasterClassSignUpFormContainer-MasterClassSignUpForm MasterClassSignUpForm MasterClassSignUpForm__Advanced ">
-                    <img src="/src/img/Icons/FormComponents/close.svg" alt="" class="MasterClassSignUpForm-CloseForm">
+                <form action="mail.php" method="POST " name="Advanced" class="MasterClassSignUpFormContainer-MasterClassSignUpForm MasterClassSignUpForm MasterClassSignUpForm__Advanced">
+                    <img src="/src/img/Icons/FormComponents/close.svg " alt=" " class="MasterClassSignUpForm-CloseForm">
 
-
+                    <input type="hidden" name="project_name" value="ClayAge">
+                    <input type="hidden" name="admin_email" value="test@a0555389.xsph.ru">
+                    <input type="hidden" name="form_subject" value="Тематический Мастер-Класс заявка">
                     <label for="FullName" class="MasterClassSignUpForm-Label">ФИО*</label>
-                    <input type="text" required id="FullName" class="MasterClassSignUpForm-InputField">
-                    <label for="Phone" class="MasterClassSignUpForm-Label">Телефон*</label>
-                    <input type="number" required id="Phone" class="MasterClassSignUpForm-InputField">
+                    <input type="text" minlength="4" pattern="\D*" name="ФИО" required id="FullName" class="MasterClassSignUpForm-InputField">
+                    <label for="Phone" class="MasterClassSignUpForm-Label">Телефон* </label>
+                    <input type="tel" placeholder="+79052657689" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" minlength="12" maxlength="12" name="Телефон ученика" required id="Phone" class="MasterClassSignUpForm-InputField">
 
 
-                    <button type="submit" class="MasterClassSignUpForm-Button  Button">Отправить заявку!</button>
+                    <button type="submit" class="MasterClassSignUpForm-Button Button">Отправить заявку!</button>
                 </form>
             </div>
 
-            <div class="Info-SuccesFormSend SuccesFormSend SuccesFormSend__BasicLesson">
-                <h1 class="SuccesFormSend-Chapter">Ваша заявка успешно принята!</h1>
-                <p class="SuccesFormSend-Info">Скоро мы вам перезвоним и сообщим о доступности учителя в указаную вами дату и время!</p>
-                <a href="#" class="SuccesFormSend-About">подробнее</a>
-                <button class="SuccesFormSend-Button">Понял,Спасибо!</button>
+            <div class="Info-SuccesFormSend SuccesFormSend SuccesFormSend__BasicLesson ">
+                <h1 class="SuccesFormSend-Chapter ">Ваша заявка успешно принята!</h1>
+                <p class="SuccesFormSend-Info ">Скоро мы вам перезвоним и сообщим о доступности учителя в указаную вами дату и время!</p>
+                <a href="# " class="SuccesFormSend-About ">подробнее</a>
+                <button class="SuccesFormSend-Button ">Понял,Спасибо!</button>
             </div>
-            <div class="Info-SuccesFormSend SuccesFormSend SuccesFormSend__AdvancedLesson">
-                <h1 class="SuccesFormSend-Chapter">Ваша заявка успешно принята!</h1>
-                <p class="SuccesFormSend-Info">Скоро мы с вами свяжемся,напоминаем что дата будет назначена после набора группы.Следить за новостями в нашей группе ВК по ссылке ниже.</p>
-                <a href="#" class="SuccesFormSend-About">подробнее</a>
-                <button class="SuccesFormSend-Button">Понял,Спасибо!</button>
+            <div class="Info-SuccesFormSend SuccesFormSend SuccesFormSend__AdvancedLesson ">
+                <h1 class="SuccesFormSend-Chapter ">Ваша заявка успешно принята!</h1>
+                <p class="SuccesFormSend-Info ">Скоро мы с вами свяжемся,напоминаем что дата будет назначена после набора группы.Следить за новостями в нашей группе ВК по ссылке ниже.</p>
+                <a href="# " class="SuccesFormSend-About ">подробнее</a>
+                <button class="SuccesFormSend-Button ">Понял,Спасибо!</button>
             </div>
 
-            <div class="Info-SuccesFormSend SuccesFormSend SuccesFormSend_OnFail">
-                <h1 class="SuccesFormSend-Chapter">Что то пошло не так!</h1>
-                <p class="SuccesFormSend-Info">Проверьте интернет соединенние и повторите попытку!</p>
-                <img src="/src/img/mainContent/wrong.jpg" alt="" class="SuccesFormSend-Fail">
+            <div class="Info-SuccesFormSend SuccesFormSend SuccesFormSend_OnFail ">
+                <h1 class="SuccesFormSend-Chapter ">Что то пошло не так!</h1>
+                <p class="SuccesFormSend-Info ">Проверьте интернет соединенние и повторите попытку!</p>
+                <img src="/src/img/mainContent/wrong.jpg " alt=" " class="SuccesFormSend-Fail ">
 
 
             </div>
@@ -446,170 +509,169 @@
     </div>
 
 
-    <div class="MainPage-Info Info Info__Gift Info_WhiteBackground">
-        <div class="MainPage-BackgroundBasicMastcls BackgroundMastcls BackgroundMastcls__Gift"></div>
+    <div class="MainPage-Info Info Info__Gift Info_WhiteBackground ">
+        <div class="MainPage-BackgroundBasicMastcls BackgroundMastcls BackgroundMastcls__Gift "></div>
 
-        <h1 class="Info-MasterClasses Info-MasterClasses_Heading Info-MasterClasses_MobileRender">Подарочные сертификаты</h1>
-        <p class="Info-MasterClasses Info-MasterClasses_Paragraph Info-MasterClasses_MobileRender">Подарите занятие близким в нашей студий</p>
+        <h1 class="Info-MasterClasses Info-MasterClasses_Heading Info-MasterClasses_MobileRender ">Подарочные сертификаты</h1>
+        <p class="Info-MasterClasses Info-MasterClasses_Paragraph Info-MasterClasses_MobileRender ">Подарите занятие близким в нашей студий</p>
 
-        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__Gift DescribeBlock__Mobile">
+        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__Gift DescribeBlock__Mobile ">
             <ul class="DescribeBlock-MasterClassContent MasterClassContent ">
-                <li class="MasterClassContent-Details">Обучим работать с гончарным кругом</li>
-                <li class="MasterClassContent-Details">Обучим лепке</li>
-                <li class="MasterClassContent-Details">Обучим глазуровке</li>
-                <li class="MasterClassContent-Details">Предоставим печь для обжига изделия</li>
-                <li class="MasterClassContent-Details">Предоставим инструменты</li>
-                <li class="MasterClassContent-Details">Предоставим глину , материалы</li>
-                <li class="MasterClassContent-Details">за одно занятие получите изделие</li>
-                <li class="MasterClassContent-Details">выгодно</li>
-                <li class="MasterClassContent-Details">Чаепитие</li>
+                <li class="MasterClassContent-Details ">Обучим работать с гончарным кругом</li>
+                <li class="MasterClassContent-Details ">Обучим лепке</li>
+                <li class="MasterClassContent-Details ">Обучим глазуровке</li>
+                <li class="MasterClassContent-Details ">Предоставим печь для обжига изделия</li>
+                <li class="MasterClassContent-Details ">Предоставим инструменты</li>
+                <li class="MasterClassContent-Details ">Предоставим глину , материалы</li>
+                <li class="MasterClassContent-Details ">за одно занятие получите изделие</li>
+                <li class="MasterClassContent-Details ">выгодно</li>
+                <li class="MasterClassContent-Details ">Чаепитие</li>
             </ul>
         </div>
 
-        <div class="Info-DescribeBlock DescribeBlock  DescribeBlock__Desktop DescribeBlock__Gift">
+        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__Desktop DescribeBlock__Gift ">
             <ul class="DescribeBlock-MasterClassContent MasterClassContent ">
-                <li class="MasterClassContent-Details">Обучим работать с гончарным кругом</li>
-                <li class="MasterClassContent-Details">Обучим лепке</li>
-                <li class="MasterClassContent-Details">Обучим глазуровке</li>
+                <li class="MasterClassContent-Details ">Обучим работать с гончарным кругом</li>
+                <li class="MasterClassContent-Details ">Обучим лепке</li>
+                <li class="MasterClassContent-Details ">Обучим глазуровке</li>
 
             </ul>
         </div>
-        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__Desktop  DescribeBlock__Gift">
+        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__Desktop DescribeBlock__Gift ">
             <ul class="DescribeBlock-MasterClassContent MasterClassContent ">
 
 
-                <li class="MasterClassContent-Details">Предоставим печь для обжига изделия</li>
-                <li class="MasterClassContent-Details">Предоставим инструменты</li>
-                <li class="MasterClassContent-Details">Предоставим глину , материалы</li>
+                <li class="MasterClassContent-Details ">Предоставим печь для обжига изделия</li>
+                <li class="MasterClassContent-Details ">Предоставим инструменты</li>
+                <li class="MasterClassContent-Details ">Предоставим глину , материалы</li>
             </ul>
         </div>
-        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__MidleRender DescribeBlock__Desktop DescribeBlock__Gift">
+        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__MidleRender DescribeBlock__Desktop DescribeBlock__Gift ">
             <ul class="DescribeBlock-MasterClassContent MasterClassContent ">
 
 
-                <li class="MasterClassContent-Details">за одно занятие получите изделие</li>
-                <li class="MasterClassContent-Details">выгодно</li>
-                <li class="MasterClassContent-Details">Чаепитие</li>
+                <li class="MasterClassContent-Details ">за одно занятие получите изделие</li>
+                <li class="MasterClassContent-Details ">выгодно</li>
+                <li class="MasterClassContent-Details ">Чаепитие</li>
             </ul>
         </div>
-        <div class="Info-DescribeBlock DescribeBlock__Large DescribeBlock__LargeAdvanced">
+        <div class="Info-DescribeBlock DescribeBlock__Large DescribeBlock__LargeAdvanced ">
 
-            <img src="/src/img/mainContent/gift.jpg" alt="Ntvf" class="DescribeBlock-Img">
-            <div class="DescribeBlock-TextBlock TextBlock">
-                <h1 class="TextBlock-MasterClasses TextBlock-MasterClasses_Heading"> Не упустите шанс подарить радость близким! </h1>
-                <p class="TextBlock-MasterClasses TextBlock-MasterClasses_Paragraph TextBlock-MasterClasses_Paragraph__MasterAboutStyle">
+            <img data-src="/src/img/mainContent/gift.jpg " alt="Ntvf " class="DescribeBlock-Img ">
+            <div class="DescribeBlock-TextBlock TextBlock ">
+                <h1 class="TextBlock-MasterClasses TextBlock-MasterClasses_Heading "> Не упустите шанс подарить радость близким! </h1>
+                <p class="TextBlock-MasterClasses TextBlock-MasterClasses_Paragraph TextBlock-MasterClasses_Paragraph__MasterAboutStyle ">
                     Каждый масстер-класс уникален ,поскольку каждый раз посвящен новой теме. Тема мастер-класса изготовление целевого изделия ,к примеру японснкий чайник , изготовления этих изделий требуют более продвинутового уровня.
                 </p>
-                <a href="#" class="TextBlock-Link">подробнее о мастер-классе</a>
+                <a href="# " class="TextBlock-Link ">подробнее о мастер-классе</a>
             </div>
         </div>
-        <button class="Info-TAB TAB TAB__GetC">Подарите счастье!</button>
+        <button class="Info-TAB TAB TAB__GetC ">Подарите счастье!</button>
 
-        <!--    <h1 class="Info-MasterClasses Info-MasterClasses_Heading">Подарочные сертификаты</h1>
-    <p class="Info-MasterClasses Info-MasterClasses_Paragraph"> Это Возможность сделать приятное близким</p>
+        <!--    <h1 class="Info-MasterClasses Info-MasterClasses_Heading ">Подарочные сертификаты</h1>
+    <p class="Info-MasterClasses Info-MasterClasses_Paragraph "> Это Возможность сделать приятное близким</p>
     <ul class="Info-MasterClassContent MasterClassContent ">
-        <li class="MasterClassContent-Details">Стоимость сертификата 1200р</li>
-        <li class="MasterClassContent-Details">В занятие входит глазуровка изделия</li>
-        <li class="MasterClassContent-Details">Обжиг и повторный обжиг</li>
-        <li class="MasterClassContent-Details">1.5 часа погружения в увлекательное путешествие</li>
-        <li class="MasterClassContent-Details">Все это за одно занятие</li>
+        <li class="MasterClassContent-Details ">Стоимость сертификата 1200р</li>
+        <li class="MasterClassContent-Details ">В занятие входит глазуровка изделия</li>
+        <li class="MasterClassContent-Details ">Обжиг и повторный обжиг</li>
+        <li class="MasterClassContent-Details ">1.5 часа погружения в увлекательное путешествие</li>
+        <li class="MasterClassContent-Details ">Все это за одно занятие</li>
     </ul>
-    <a href="#" class="Info-MasterClasses Info-MasterClasses_Link">подробнее</a>
+    <a href="# " class="Info-MasterClasses Info-MasterClasses_Link ">подробнее</a>
     
-    <button class="Info-GetLessonsButton  GetLessonsButton__GetCertificate">Подарить счастье!</button>-->
-        <div class="Info-GetCerficateAppContainer  GetCertificateMainAppContainer">
-            <img src="/src/img/Icons/FormComponents/close.svg" alt="" class="GetCertificateMainAppContainer-CloseApp">
-            <div class="GetCertificateAppContainer-GetCertificate GetCertificate GetCertificateMain">
+    <button class="Info-GetLessonsButton GetLessonsButton__GetCertificate ">Подарить счастье!</button>-->
+        <div class="Info-GetCerficateAppContainer GetCertificateMainAppContainer ">
+            <img src="/src/img/Icons/FormComponents/close.svg " alt=" " class="GetCertificateMainAppContainer-CloseApp ">
+            <div class="GetCertificateAppContainer-GetCertificate  GetCertificate GetCertificateMain ">
 
             </div>
         </div>
     </div>
 
-    <div class="MainPage-Info Info   Info_FixHMobile Info__Ceramic Info_GrayBackground">
-        <h1 class="Info-MasterClasses Info-MasterClasses__HideMobile Info-MasterClasses_Heading Info-MasterClasses_MobileRender">Магазин авторской Керамики</h1>
+    <div class="MainPage-Info Info Info_FixHMobile Info__Ceramic Info_GrayBackground ">
+        <h1 class="Info-MasterClasses Info-MasterClasses__HideMobile Info-MasterClasses_Heading Info-MasterClasses_MobileRender ">Магазин авторской Керамики</h1>
 
-        <p class="Info-MasterClasses Info-MasterClasses__HideMobile Info-MasterClasses_Paragraph Info-MasterClasses_MobileRender">Керамика на любой вкус высокого качества</p>
+        <p class="Info-MasterClasses Info-MasterClasses__HideMobile Info-MasterClasses_Paragraph Info-MasterClasses_MobileRender ">Керамика на любой вкус высокого качества</p>
 
 
-        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__HideMobile  DescribeBlock__Slaider DescribeBlock__SlaiderMobileRender">
+        <div class="Info-DescribeBlock DescribeBlock DescribeBlock__HideMobile DescribeBlock__Slaider DescribeBlock__SlaiderMobileRender ">
 
             <div class="DescribeBlock-ImageContainer ImageContainer ">
-                <img src="/src/img/Icons/SliderComponents/back.svg" alt="" class="ImageContainer-ArrowBack ImageContainer-ArrowBack__Author">
-                <img src="/src/img/Icons/SliderComponents/next.svg" alt="" class="ImageContainer-ArrowNext ImageContainer-ArrowNext__Author">
-                <img src="/src/img/Icons/SliderComponents/backBlack.svg" alt="" class="ImageContainer-ArrowBackBlack">
-                <img src="/src/img/Icons/SliderComponents/nextBlack.svg" alt="" class="ImageContainer-ArrowNextBlack">
+                <img src="/src/img/Icons/SliderComponents/back.svg " alt=" " class="ImageContainer-ArrowBack ImageContainer-ArrowBack__Author ">
+                <img src="/src/img/Icons/SliderComponents/next.svg " alt=" " class="ImageContainer-ArrowNext ImageContainer-ArrowNext__Author ">
+                <img src="/src/img/Icons/SliderComponents/backBlack.svg " alt=" " class="ImageContainer-ArrowBackBlack ">
+                <img src="/src/img/Icons/SliderComponents/nextBlack.svg " alt=" " class="ImageContainer-ArrowNextBlack ">
 
 
-                <img src="/src/img/mainContent/SculptureItem (1).jpg" alt="" class="ImageContainer-Image">
-                <img src="/src/img/mainContent/InterierVase (6).jpg" alt="" class="ImageContainer-Image">
-                <img src="/src/img/mainContent/FloristItem (1).jpg" alt="" class="ImageContainer-Image">
-                <img src="/src/img/mainContent/TeaCeremonyItem5.jpg" alt="" class="ImageContainer-Image">
-                <img src="/src/img/mainContent/InterierItem (2).jpg" alt="" class="ImageContainer-Image">
-                <img src="/src/img/mainContent/TeaCeremonyItem12.jpg" alt="" class="ImageContainer-Image">
+                <img src="/src/img/mainContent/SculptureItem (1).jpg " alt=" " class="ImageContainer-Image ">
+                <img src="/src/img/mainContent/InterierVase (6).jpg " alt=" " class="ImageContainer-Image ">
+                <img src="/src/img/mainContent/FloristItem (1).jpg " alt=" " class="ImageContainer-Image ">
+                <img src="/src/img/mainContent/TeaCeremonyItem5.jpg " alt=" " class="ImageContainer-Image ">
+                <img src="/src/img/mainContent/InterierItem (2).jpg " alt=" " class="ImageContainer-Image ">
+                <img src="/src/img/mainContent/TeaCeremonyItem12.jpg " alt=" " class="ImageContainer-Image ">
             </div>
 
 
         </div>
-        <div class="MainPage-BackgroundBasicMastcls BackgroundMastcls BackgroundMastcls__Author"></div>
+        <div class="MainPage-BackgroundBasicMastcls BackgroundMastcls BackgroundMastcls__Author "></div>
 
-        <!--   <h1 class="Info-MasterClasses Info-MasterClasses_Heading Info-MasterClasses_MobileRender">Уникальная авторская керамика!</h1>-->
+        <!--   <h1 class="Info-MasterClasses Info-MasterClasses_Heading Info-MasterClasses_MobileRender ">Уникальная авторская керамика!</h1>-->
 
 
-        <div class="Info-DescribeBlock DescribeBlock__BackgroundClear DescribeBlock__Large DescribeBlock__LargeAdvanced">
+        <div class="Info-DescribeBlock DescribeBlock__BackgroundClear DescribeBlock__Large DescribeBlock__LargeAdvanced ">
 
 
             <div class="DescribeBlock-TextBlock TextBlock TextBlock__ReColorText ">
-                <h1 class="TextBlock-MasterClasses TextBlock-MasterClasses__HideDesktop TextBlock-MasterClasses_Heading">Магазин авторской керамики
+                <h1 class="TextBlock-MasterClasses TextBlock-MasterClasses__HideDesktop TextBlock-MasterClasses_Heading ">Магазин авторской керамики
                 </h1>
-                <div class="TextBlock-DescribeBlock DescribeBlock DescribeBlock__HideDesktop DescribeBlock__Slaider DescribeBlock__SlaiderMobileRender">
+                <div class="TextBlock-DescribeBlock DescribeBlock DescribeBlock__HideDesktop DescribeBlock__Slaider DescribeBlock__SlaiderMobileRender ">
 
                     <div class="DescribeBlock-ImageContainer ImageContainer ">
-                        <img src="/src/img/Icons/SliderComponents/back.svg" alt="" class="ImageContainer-ArrowBack ">
-                        <img src="/src/img/Icons/SliderComponents/next.svg" alt="" class="ImageContainer-ArrowNext ">
-                        <img src="/src/img/Icons/SliderComponents/back.svg" alt="" class="ImageContainer-ArrowBackBlack  ImageContainer-ArrowBackBlack__AuthorBack">
-                        <img src="/src/img/Icons/SliderComponents/next.svg" alt="" class="ImageContainer-ArrowNextBlack  ImageContainer-ArrowNextBlack__AuthorNext">
+                        <img src="/src/img/Icons/SliderComponents/back.svg " alt=" " class="ImageContainer-ArrowBack ">
+                        <img src="/src/img/Icons/SliderComponents/next.svg " alt=" " class="ImageContainer-ArrowNext ">
+                        <img src="/src/img/Icons/SliderComponents/back.svg " alt=" " class="ImageContainer-ArrowBackBlack ImageContainer-ArrowBackBlack__AuthorBack ">
+                        <img src="/src/img/Icons/SliderComponents/next.svg " alt=" " class="ImageContainer-ArrowNextBlack ImageContainer-ArrowNextBlack__AuthorNext ">
 
 
-                        <img src="/src/img/mainContent/SculptureItem (1).jpg" alt="" class="ImageContainer-Image">
-                        <img src="/src/img/mainContent/InterierVase (6).jpg" alt="" class="ImageContainer-Image">
-                        <img src="/src/img/mainContent/FloristItem (1).jpg" alt="" class="ImageContainer-Image">
-                        <img src="/src/img/mainContent/TeaCeremonyItem5.jpg" alt="" class="ImageContainer-Image">
-                        <img src="/src/img/mainContent/InterierItem (2).jpg" alt="" class="ImageContainer-Image">
-                        <img src="/src/img/mainContent/TeaCeremonyItem12.jpg" alt="" class="ImageContainer-Image">
+                        <img src="/src/img/mainContent/SculptureItem (1).jpg " alt=" " class="ImageContainer-Image ">
+                        <img src="/src/img/mainContent/InterierVase (6).jpg " alt=" " class="ImageContainer-Image ">
+                        <img src="/src/img/mainContent/FloristItem (1).jpg " alt=" " class="ImageContainer-Image ">
+                        <img src="/src/img/mainContent/TeaCeremonyItem5.jpg " alt=" " class="ImageContainer-Image ">
+                        <img src="/src/img/mainContent/InterierItem (2).jpg " alt=" " class="ImageContainer-Image ">
+                        <img src="/src/img/mainContent/TeaCeremonyItem12.jpg " alt=" " class="ImageContainer-Image ">
                     </div>
                 </div>
-                <p class="TextBlock-MasterClasses TextBlock-MasterClasses__ClearMargin TextBlock-MasterClasses_Paragraph TextBlock-MasterClasses_Paragraph__MasterAboutStyle">
+                <p class="TextBlock-MasterClasses TextBlock-MasterClasses__ClearMargin TextBlock-MasterClasses_Paragraph TextBlock-MasterClasses_Paragraph__MasterAboutStyle ">
                     Оригинальная керамика сделанная в нашей Мастерской ClayAge.Керамика для флористов ,интериерная керамика ,оригинальные наборы для чаепития.
                 </p>
-                <a href="#" class="TextBlock-Link">подробнее о мастер-классе</a>
+                <a href="# " class="TextBlock-Link ">подробнее о мастер-классе</a>
             </div>
         </div>
 
 
-        <button class="Info-TAB TAB">Хочу ваше изделие!</button>
+        <button class="Info-TAB TAB ">Хочу ваше изделие!</button>
     </div>
     </div>
     </div>
-    <div class="MainPage-Footer Footer">
-        <div class="Footer-Copyright Copyright">
-            <p class="Copyright-Info">ClayAge 2015-2021 </p>
-            <p class="Copyright-Info">Все материалы сайта защишены авторским правом. </p>
+    <div class="MainPage-Footer Footer ">
+        <div class="Footer-Copyright Copyright ">
+            <p class="Copyright-Info ">ClayAge 2015-2021 </p>
+            <p class="Copyright-Info ">Все материалы сайта защишены авторским правом. </p>
         </div>
-        <div class="Footer-CiteInformationBlock CiteInformationBlock">
-            <a href="" class="CiteInformationBlock-NavMenu">Ценны и оплата</a>
-            <a href="" class="CiteInformationBlock-NavMenu">Доставка и самовывоз</a>
-            <a href="" class="CiteInformationBlock-NavMenu">Подарочные сертификаты</a>
+        <div class="Footer-CiteInformationBlock CiteInformationBlock ">
+            <a href=" " class="CiteInformationBlock-NavMenu ">Ценны и оплата</a>
+            <a href=" " class="CiteInformationBlock-NavMenu ">Доставка и самовывоз</a>
+            <a href=" " class="CiteInformationBlock-NavMenu ">Подарочные сертификаты</a>
         </div>
-        <div class="Footer-Copyright Copyright">
-            <p class="Copyright-Info">Номер телефона : +79052917639</p>
-            <p class="Copyright-Info">Адрес : Санкт‑Петербург,Невский Проспект 17б,3 этаж</p>
+        <div class="Footer-Copyright Copyright ">
+            <p class="Copyright-Info ">Номер телефона : +79052917639</p>
+            <p class="Copyright-Info ">Адрес : Санкт‑Петербург,Невский Проспект 17б,3 этаж</p>
         </div>
     </div>
-    <script type="text/javascript" src="/src/js/pagesCommonModules/inject.js"></script>
-    <script src="/dist/main.js"></script>
+    <script type="text/javascript " src="/src/js/pagesCommonModules/inject.js "></script>
+    <script src="/dist/main.js "></script>
 
-    <script src="/dist/svgControl.js"></script>
-    <script src="/dist/BuiltCertificateApp.js"></script>
+    <script src="/dist/BuiltCertificateApp.js "></script>
 
 </body>
 

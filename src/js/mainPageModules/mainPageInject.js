@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     SVGInject(document.getElementsByClassName('VKButton'));
     SVGInject(document.getElementsByClassName('InstButton'));
     SVGInject(document.getElementsByClassName('ReverseCall'));
+    SVGInject(document.getElementsByClassName('Up'));
+
 
 
 });
@@ -15,6 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 SVGInject.setOptions({
     afterInject: function(img, svg) {
+        let targets = [
+            document.querySelector(".LocationInfo-MetroStreetIcon"),
+            document.querySelector(".ReverseCall"),
+            document.querySelector(".TAB__Lessons"),
+            document.querySelector(".TAB__LessonsA"),
+            document.querySelector(".TAB__GetC"),
+            document.querySelector(".Tech"),
+
+
+        ];
+
+        LockScroll(targets);
+
         onLoadPathW();
         toggleSomething({
             target: '.LocationInfo-MetroStreetIcon',
@@ -30,6 +45,16 @@ SVGInject.setOptions({
             onOpen: 'Contact__onOpen',
             closer: '.Contact-Close'
         });
+        toggleSomething({
+            target: '.Tech',
+            toogleTrgt: '.Suport',
+            visible: 'Suport__Visible',
+            onOpen: 'Suport__onOpen',
+            closer: '.Suport-Close'
+        });
+
+
+
         toggleMenuIncon();
         window.onscroll = () => {
             let data = document.querySelector(".SlaiderContainer").getBoundingClientRect();
@@ -48,12 +73,27 @@ SVGInject.setOptions({
 
         // sliderHeight();
         menuIconFlowControl();
+        scroll(".Up", "#header");
 
     }
 });
 //
 
 // Functions that make SVG interactive
+function LockScroll(targets) {
+    for (const target of targets) {
+
+        target.addEventListener('click', () => {
+            if (document.querySelector("body").classList.contains("body__Lock") == false) {
+                document.querySelector("body").classList.add("body__Lock");
+
+
+            }
+
+
+        });
+    }
+}
 
 function sliderHeight() {
     let targetSlider = document.querySelectorAll('.StudentsWorkExamplesSlaider');
@@ -67,22 +107,32 @@ function sliderHeight() {
     //    document.querySelector('.StudentsWorkExamplesSlaider').style.height = `${imgHeight}` + 'px';
 };
 
+function scroll(TAB, TABlocK) {
+    let btn = document.querySelector(TAB);
+    let block = document.querySelector(TABlocK);
+    btn.onclick = () => {
+        block.scrollIntoView({ behavior: 'smooth' });
+    };
 
+}
 
 
 function toggleSomething(obj) {
 
     document.querySelector(obj.target).onclick = () => {
-        document.querySelector(obj.toogleTrgt).classList.toggle(obj.visible);
-        document.querySelector(obj.toogleTrgt).classList.toggle(obj.onOpen);
+        document.querySelector(obj.toogleTrgt).classList.add(obj.visible);
+        document.querySelector(obj.toogleTrgt).classList.add(obj.onOpen);
         //  document.querySelector('.LocationInfo-MetroStreetIcon_SW').classList.toggle("LocationInfo-MetroStreetIcon_SW_Clicked");  
 
 
     };
     document.querySelector(obj.closer).onclick = () => {
-        document.querySelector(obj.toogleTrgt).classList.toggle(obj.visible);
-        document.querySelector(obj.toogleTrgt).classList.toggle(obj.onOpen);
-        //  document.querySelector('.LocationInfo-MetroStreetIcon_SW').classList.toggle("LocationInfo-MetroStreetIcon_SW_Clicked");  
+        if (document.querySelector("body").classList.contains("body__Lock")) {
+            document.querySelector("body").classList.remove("body__Lock");
+        }
+        document.querySelector(obj.toogleTrgt).classList.remove(obj.visible);
+        document.querySelector(obj.toogleTrgt).classList.remove(obj.onOpen);
+        //  document.querySelector('.LocationInfo-MetroStreetIcon_SW').classList.remove("LocationInfo-MetroStreetIcon_SW_Clicked");  
 
 
     };
