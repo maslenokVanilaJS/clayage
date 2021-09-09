@@ -158,6 +158,11 @@
             &__Column {
                 @include ColumnStyleSize {}
             }
+            &__FullSize {
+                height: auto;
+                margin: auto;
+                width: 60%;
+            }
         }
         &__Column {
             @include Description__Column {}

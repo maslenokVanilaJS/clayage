@@ -276,10 +276,10 @@
    .PurchaseFormContainer {
        @include Gallery_PurchaseForm {}
        width: 60vw;
-       height: 600px;
+       height: auto;
        background-color: rgb(255, 255, 255);
        z-index: 999999;
-       top: 5%;
+       top: 0%;
        left: 20%;
        text-align: left;
        border: black 1px solid;
@@ -305,6 +305,11 @@
        margin: auto;
        width: 60%;
        margin-top: 40px;
+       &-if {
+           &__NoDeliver {
+               display: none;
+           }
+       }
        &-Field {
            width: 100%;
            margin-bottom: 40px;
@@ -312,6 +317,9 @@
            //   box-shadow: black 1px 1px;
            height: 29px;
            border-style: outset;
+           &__NoDeliver {
+               visibility: hidden;
+           }
        }
        &-Select {
            margin-bottom: 40px;

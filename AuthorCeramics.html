@@ -67,7 +67,7 @@
         </form>
     </div>
     <div class="MasterPage-YandexMap YandexMap">
-        <div class="YandexMap-Close">X</div>
+        <div class="YandexMap-Close Close">X</div>
         <h1 class="YandexMap-Location">Наш адрес :</h1>
         <h3 class="YandexMap-Location">Санкт‑Петербург,ул. Невский Проспект д.60,ClayAge</h3>
         <div class="YandexMap-Locaction Location">
@@ -88,7 +88,7 @@
     </div>
 
     <div class="MasterPage-Contact Contact">
-        <div class="Contact-Close">X</div>
+        <div class="Contact-Close Close">X</div>
         <h1 class="Contact-Data">Контакты</h1>
         <h3 class="Contact-Data Data"><a href="tel:+79313918079" class="Data-Phone">+7-931-391-80-79</a></h3>
         <p class="Contact-Data">Телефон для дополнительных вопросов , для записи используйте пожалуйста форму на саите.</p>
@@ -96,8 +96,9 @@
     <div class="MasterPage-Header Header">
         <div class="Header-BlockLogo BlockLogo">
             <object data="/src/img/mainContent/ClayAgeLogo.svg" type="image/svg+xml" class="BlockLogo-ClayAgeLogo ClayAgeLogo"></object>
-            <h1 class="BlockLogo-Name BlockLogo-Name__NOBacknd">ClayAge Студия Керамики</h1>
-        </div>
+            <a class="BlockLogo-mainPath" href="/dist/index.html">
+                <h1 class="BlockLogo-Name BlockLogo-Name__NOBacknd">ClayAge Студия Керамики</h1>
+            </a>        </div>
         <div class="Header-LocationInfo">
             <h3 class="LocationInfo-MetroStreet LocationInfo-MetroStreet_LW">Метро Чернышевская,Ул. Кирочная ,д. 17
                 <br>(Артклассер-Мультиспейс)</h3>
@@ -138,31 +139,31 @@
             <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/ClayAgeMasterClasses.html">Мастер-Классы по керамике</a></li>
             <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/Tematic.html">ТематическиеМастер-Классы</a> </li>
 
-            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="dist/PayInfo.html">Оплата и доставка</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/PayInfo.html">Оплата и доставка</a></li>
             <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/GiftCertificate.html">Подарочные Сертификаты</a></li>
             <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/ClayAgeLifeHak.html">ClayAge Лайфхаки</a></li>
         </ul>
     </div>
     <img src="/src/img/mainContent//hamb.svg" class="MasterPage-HamburgerIcon HamburgerIcon"></img>
 
-    <div class="MasterPage-Info Info Info__MasterPage Info_WhiteBackgroundAndAutoH">
+    <div id="Moon" class="MasterPage-Info Info Info__MasterPage Info_WhiteBackgroundAndAutoH">
         <h2 class="Info-Title"> Авторская Керамика</h1>
 
-            <div class="Info-DescriptionBlock DescriptionBlock">
-                <img src="/src/img/mainContent/fondatours.jpg" alt="Процесс познания волшебства" title="Процесс познания волшебства" class="DescriptionBlock-LessonsImage   LoaderIgnore">
+            <div class="Info-DescriptionBlock DescriptionBlock DescriptionBlock__Column">
+                <img src="/src/img/mainContent/fondatours.jpg" alt="Процесс познания волшебства" title="Процесс познания волшебства" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage__FullSize DescriptionBlock-LessonsImage__Column LoaderIgnore">
 
-                <p class="DescriptionBlock-Text">Студия ClayAge основана двумя керамистами: Светланой Парамоновой и Сергеем Албу, влюбленными друг в друга и в творчество, связанное с глиной. Светлана, будучи членом Творческого союза художников России и Сергей уже с 2003 года занимаясь
+                <p class="DescriptionBlock-Text DescriptionBlock-Text__Column">Студия ClayAge основана двумя керамистами: Светланой Парамоновой и Сергеем Албу, влюбленными друг в друга и в творчество, связанное с глиной. Светлана, будучи членом Творческого союза художников России и Сергей уже с 2003 года занимаясь
                     гончарным делом и скульптурой пришли к своему стилю — сочетание природных форм и элементов аутентичных культур.
                 </p>
             </div>
-            <div class="Info-DescriptionBlock DescriptionBlock DescriptionBlock__Reverse">
+            <div class="Info-DescriptionBlock DescriptionBlock DescriptionBlock__Column DescriptionBlock__Reverse">
 
 
-                <p class="DescriptionBlock-Text">
+                <p class="DescriptionBlock-Text DescriptionBlock-Text__Column">
                     В изделиях, выкрученных на круге или сделанных вручную, используются только натуральные керамические массы и глазури, изготовленные по собственным рецептам.
                     <br> Все работы, представленные на сайте, имеются только в единственном экземпляре и их можно приобрести для украшения вашего интерьера или в качестве оригинального подарка.
                 </p>
-                <img data-src="/src/img/mainContent/InterierVase.jpg" alt="Почти готовое изделие" title="Почти готовое изделие" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage_Minify">
+                <!--   <img data-src="/src/img/mainContent/InterierVase.jpg" alt="Почти готовое изделие" title="Почти готовое изделие" class="DescriptionBlock-LessonsImage DescriptionBlock-LessonsImage_Minify"> -->
 
             </div>
             <!--<div class="Info-DescriptionBlock DescriptionBlock">
@@ -1801,15 +1802,18 @@
 
                 <div class="Info-PurchaseFormContainer PurchaseFormContainer ">
                     <form action="sendMail.php " name="purchase " method="post " class="PurchaseFormContainer-PurchaseForm PurchaseForm ">
-                        ФИО*<br>
-                        <input type="text " name="ФИО " class="PurchaseForm-Field " required><br>Адресс доставки*   <br>
-                         <input type="text " name="address " class="PurchaseForm-Field " required><br>   E-mail* <br>
-                        <input type="email " name="email " placeholder="Вы получите инструкцию для оплаты картой " class="PurchaseForm-Field " required><br> Тип доставки*<br>
+                      Тип доставки*<br>
                         <select name="Тип Доставки " class="PurchaseForm-Select Select " required>
-<option value="Самовывоз " class="Select-Option " >Самовывоз</option>
 <option value="Куриерская служба " class="Select-Option " >Куриерская служба</option>
 
-</select><br> Телефон для связи с вами* <br>
+                            <option value="Самовывоз " class="Select-Option " >Самовывоз</option>
+
+</select><br>
+                        ФИО*<br>
+                        <input id="after "  type="text " name="ФИО " class="PurchaseForm-Field " required><br><span id="if " class="PurchaseForm-if "> Адресс доставки*</span>   <br>
+                         <input id="tooggleIf " type="text " name="address " class="PurchaseForm-Field " required><br>   E-mail* <br>
+                        <input type="email " name="email " placeholder="Вы получите инструкцию для оплаты картой " class="PurchaseForm-Field " required><br> 
+                        Телефон для связи с вами* <br>
                         <input type="number " name="Телефон " class="PurchaseForm-Field " required><br> изделие которое вы хотите приобрести<br>
                         <input name="ID " value=" " class="PurchaseForm-Field PurchaseForm-Field_Price " readonly required><br>
                         <button type="submit " class="PurchaseForm-Button Button ">Отправить заказ!</button>

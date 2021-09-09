@@ -16,6 +16,8 @@
 
 
 <body class="MasterPage">
+    <img src="/src//img/Icons/goUp.svg" alt="" class="MasterPage-Up Up">
+
     <div class="MainPage-BroswerSupport BroswerSupport">
         <h1 class="BroswerSupport-WarningMsg">Сожалеем ,ваш браузер не поддерживается!</h1>
         <p class="BroswerSupport-pAuto">Установите более современый браузер:</p>
@@ -55,7 +57,7 @@
         </form>
     </div>
     <div class="MasterPage-YandexMap YandexMap">
-        <div class="YandexMap-Close">X</div>
+        <div class="YandexMap-Close Close">X</div>
         <h1 class="YandexMap-Location">Наш адрес :</h1>
         <h3 class="YandexMap-Location">Санкт‑Петербург,ул. Невский Проспект д.60,ClayAge</h3>
         <div class="YandexMap-Locaction Location">
@@ -76,7 +78,7 @@
     </div>
 
     <div class="MasterPage-Contact Contact">
-        <div class="Contact-Close">X</div>
+        <div class="Contact-Close Close">X</div>
         <h1 class="Contact-Data">Контакты</h1>
         <h3 class="Contact-Data Data"><a href="tel:+79313918079" class="Data-Phone">+7-931-391-80-79</a></h3>
         <p class="Contact-Data">Телефон для дополнительных вопросов , для записи используйте пожалуйста форму на саите.</p>
@@ -84,8 +86,9 @@
     <div class="MasterPage-Header Header">
         <div class="Header-BlockLogo BlockLogo">
             <object data="/src/img/mainContent/ClayAgeLogo.svg" type="image/svg+xml" class="BlockLogo-ClayAgeLogo ClayAgeLogo"></object>
-            <h1 class="BlockLogo-Name BlockLogo-Name__NOBacknd">ClayAge Студия Керамики</h1>
-        </div>
+            <a class="BlockLogo-mainPath" href="/dist/index.html">
+                <h1 class="BlockLogo-Name BlockLogo-Name__NOBacknd">ClayAge Студия Керамики</h1>
+            </a>        </div>
         <div class="Header-LocationInfo">
             <h3 class="LocationInfo-MetroStreet LocationInfo-MetroStreet_LW">Метро Чернышевская,Ул. Кирочная ,д. 17
                 <br>(Артклассер-Мультиспейс)</h3>
@@ -111,7 +114,7 @@
                 <li class="NavMenuOnHover-Link Link"><a class="Link-item" target="_blank" href="/dist/ClayAgeMasterClasses.html">Мастер-Классы по керамике</a></li>
                 <li class="NavMenuOnHover-Link Link"><a class="Link-item" target="_blank" href="/dist/Tematic.html">Тематические Мастер-Классы</a> </li>
             </ul>
-            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="dist/AuthorCeramics.html">Авторская Керамика</a></li>
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/AuthorCeramics.html">Авторская Керамика</a></li>
             <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Оплата и доставка</a></li>
             <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Подарочные Сертификаты</a></li>
             <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="#">Запись на тематический мастер-класс</a></li>
@@ -126,14 +129,14 @@
             <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/ClayAgeMasterClasses.html">Мастер-Классы по керамике</a></li>
             <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/Tematic.html">ТематическиеМастер-Классы</a> </li>
 
-            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="dist/AuthorCeramics.html">Авторская
+            <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/AuthorCeramics.html">Авторская
             Керамика</a></li>
             <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/GiftCertificate.html">Подарочные Сертификаты</a></li>
             <li class="NavMenu-Link Link"><a class="Link-item" target="_blank" href="/dist/ClayAgeLifeHak.html">ClayAge Лайфхаки</a></li>
         </ul>
     </div>
     <img src="/src/img/mainContent//hamb.svg" class="MasterPage-HamburgerIcon HamburgerIcon"></img>
-    <div class="MasterPage-Info Info  Info_WhiteBackgroundAndAutoH">
+    <div id="Moon" class="MasterPage-Info Info  Info_WhiteBackgroundAndAutoH">
         <h2 class="Info-Title"> Информация об оплате</h1>
 
             <div class="Info-DescriptionBlock DescriptionBlock">

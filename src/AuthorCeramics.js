@@ -3,7 +3,7 @@ import "./js/galleryPreview/galleryPreview"
 import interactivity from "./js/pagesCommonModules/svg"
 import "./js/loader/loaderV1.1"
 import { isInViewport, insertLoaderGalleryBuy, insertLoadersIntoBox } from "./js/loader/loaderV1.1"
-
+import "./js/formLogicBuy/buyFormL"
 
 insertLoadersIntoBox(isInViewport, document.querySelectorAll(".ImageBox-Item"), document.querySelectorAll(".DescriptionBlock-LessonsImage"));
 
