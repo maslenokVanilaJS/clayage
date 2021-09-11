@@ -183,7 +183,7 @@
                 background: #000000;
                 color: white;
                 display: flex;
-                flex-wrap: nowrap;
+                flex-wrap: wrap;
                 background-image: url("/src/img/mainContent/pattern.png");
                 //background-repeat: no-repeat;
                 //background-size: cover;
@@ -782,11 +782,13 @@
                         left: 40%;
                         @include InfoBlockSliderArrowsBlackMobileRender {}
                         &__AuthorBack {
-                            top: 34.5%;
+                            top: 31.5%;
                             @include exampleWSliderArrowsAuthorMobileRender {}
                         }
                         &__Basic {
                             top: 85%;
+                            @include exampleWSliderArrowsAuthorMobileRenderB {}
+
                         }
                     }
                 }
@@ -808,10 +810,11 @@
                         right: 40%;
                         @include InfoBlockSliderArrowsBlackMobileRender {}
                         &__AuthorNext {
-                            top: 34.5%;
+                            top: 31.5%;
                             @include exampleWSliderArrowsAuthorMobileRender {}
                         }
                         &__Basic {
+                            @include exampleWSliderArrowsAuthorMobileRenderB {}
                             top: 85%;
                         }
                     }

@@ -2,6 +2,34 @@
     @import'adaptive/adaptive.scss';
     @import'adaptiveBlocksModules/commonAdaptive.scss';
     //Form Send Both State
+    .Footer-Developer{
+        width: 100%;
+        text-align: left;
+        text-indent: 3vw;
+    }
+.DevBox{
+    width:60vw;
+    height: 60vh;
+    position: fixed;
+    border-radius: 10%;
+    background-color: aqua;
+    left: 20vw;
+    top: 20vh;
+    display: none;
+    &__Show{
+        display: block;
+        animation: doDevBox 1s     forwards;
+    }
+}
+    .Footer-DevLink{
+         text-align: left;
+        text-indent: 3vw;
+     //   color: rgb(10, 40, 136);
+&:hover{
+ animation: doLight 1s forwards;
+}
+ 
+     }
     .BroswerSupport {
         position: absolute;
         left: 0;
@@ -281,3 +309,21 @@
             fill: rgb(10, 10, 10);
         }
     }
+    @keyframes doLight {
+         0%{
+text-shadow: none;
+        }
+        100%{
+            text-shadow: 8px 0px 22px rgba(101,41,215,1);
+        }
+    }
+
+    @keyframes doDevBox {
+        0%{
+border-radius: 90%;
+width:5vw;
+       }
+       100%{
+border-radius: 5%;   
+width: 60vw;    }
+   }

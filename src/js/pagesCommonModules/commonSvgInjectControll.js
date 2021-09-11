@@ -159,13 +159,13 @@ function toggleMenuIncon() {
         document.querySelector('.HamburgerIcon path').classList.toggle('hamburgerPath__White');
         document.querySelector('.MasterPage').classList.toggle('MainPage__FlowControlDependencie');
         document.querySelector(".Header").classList.toggle('Header__ToggleMenuStyle');
-        if (pageYOffset < mainImageH) {
+        if (pageYOffset < mainImageH  && document.querySelector(".HamburgerIcon").classList.contains("HamburgerIcon__TogglePosition")==false) {
             document.querySelector('.HamburgerIcon').classList.toggle('HamburgerIcon__TogglePosition');
 
         }
 
     };
-    if (pageYOffset >= mainImageH) {
+    if (pageYOffset > mainImageH && document.querySelector(".HamburgerIcon").classList.contains("HamburgerIcon__TogglePosition")==false) {
         document.querySelector('.HamburgerIcon').classList.toggle('HamburgerIcon__TogglePosition');
     };
 };

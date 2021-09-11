@@ -4,6 +4,7 @@ import './js/blockOldB/checkBroswer'
 
 import './js/mainPageModules/positioning.js'
 import 'web-animations-js'
+import './js/DevBox/DevBox'
 
 import './js/mainPageModules/workExampleSlider.js'
 import './js/mainPageModules/mainPageInject.js'

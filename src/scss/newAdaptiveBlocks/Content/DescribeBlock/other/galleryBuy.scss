@@ -140,7 +140,7 @@
     
     @mixin Gallery_ImgContainerButton {
         @media (min-width: 320px) and (max-width: 425px) {
-            width: 80vw;
+            width: 50vw;
             margin: auto;
             @content
         }

@@ -1802,9 +1802,12 @@
 
                 <div class="Info-PurchaseFormContainer PurchaseFormContainer ">
                     <form action="sendMail.php " name="purchase " method="post " class="PurchaseFormContainer-PurchaseForm PurchaseForm ">
-                      Тип доставки*<br>
+                        <input type="hidden" name="project_name" value="ClayAge">
+                        <input type="hidden" name="admin_email" value="test@a0555389.xsph.ru">
+                        <input type="hidden" name="form_subject" value="Обычный Мастер-Класс заявка">
+                        Тип доставки*<br>
                         <select name="Тип Доставки " class="PurchaseForm-Select Select " required>
-<option value="Куриерская служба " class="Select-Option " >Куриерская служба</option>
+<option  value="Куриерская служба " class="Select-Option " >Куриерская служба</option>
 
                             <option value="Самовывоз " class="Select-Option " >Самовывоз</option>
 
@@ -1882,6 +1885,7 @@
             <button class="Info-GetLessonsButton GetLessonsButton GetLessonsButton_Margin ">Записи на масстер-класс!</button>
         </div>
         <div class="MainPage-Footer Footer ">
+          <h1 class="Footer-Developer"><a href="https://github.com/maslenokVanilaJS" class="Footer-DevLink"> Developed by maslenokVanilaJs</a></h1>  
             <div class="Footer-Copyright Copyright ">
                 <p class="Copyright-Info ">ClayAge 2015-2021 </p>
                 <p class="Copyright-Info ">Все материалы сайта защишены авторским правом. </p>
