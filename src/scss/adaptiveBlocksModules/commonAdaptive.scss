@@ -54,3 +54,32 @@
         @content
     }
 }
+@mixin width_HeightDevBox {
+    @media (min-width:320px)and (max-width:640px) {
+        position: fixed;
+        top: 0;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+        @content
+
+
+    }
+}
+
+@mixin  DevBoxAni {
+    @media (min-width:320px)and (max-width:640px) {
+        animation: forwards 1s doDevBoxMobi;
+        @content
+
+        
+    }
+}
+@mixin  DevBoxAniHide {
+    @media (min-width:320px)and (max-width:640px) {
+        animation: forwards 1s doDevBoxHideMobi;
+        @content
+
+        
+    }
+}

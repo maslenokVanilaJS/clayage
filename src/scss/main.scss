@@ -152,6 +152,10 @@
                 &:focus {
                     outline: none;
                 }
+                &-Link{
+                    text-decoration: none;
+                    color: #fff;
+                }
             }
             
             .MasterTeacherAbout {
@@ -219,8 +223,7 @@
                     //  flex-direction: column;
                     height: 50px;
                 }
-                & :last-child {}
-            }
+             }
             
             .GetCertificateMain {
                 position: fixed;
@@ -402,7 +405,10 @@
                 fill: white;
                 @include hamburgerAnimation {}
             }
-            
+            .Link:hover{
+text-decoration: underline;
+color: #fff;
+            }
             .HamburgerMenu {
                 position: fixed;
                 top: 64px;
@@ -421,6 +427,7 @@
                     height: 100%;
                     margin-top: 0;
                     margin-bottom: 0;
+
                 }
                 &_Visible {
                     display: block;

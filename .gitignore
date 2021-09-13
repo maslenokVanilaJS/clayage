@@ -1,6 +1,7 @@
 /src/img
 /src/font
 /src/vue
+/src/js/MagicBox
 busika.html
 *.json
 /node_modules

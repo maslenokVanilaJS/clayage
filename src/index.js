@@ -5,7 +5,7 @@ import './js/blockOldB/checkBroswer'
 import './js/mainPageModules/positioning.js'
 import 'web-animations-js'
 import './js/DevBox/DevBox'
-
+import './js/MagicBox/MagicBox'
 import './js/mainPageModules/workExampleSlider.js'
 import './js/mainPageModules/mainPageInject.js'
 import './js/mainPageModules/formControl.js'
@@ -18,6 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //   insertLoadersIntoBox(isInViewport, document.querySelectorAll(".DescribeBlock-Img"));
 
 });
-
+console.log(MagicBox());
 
 //getLenght('none',all);
